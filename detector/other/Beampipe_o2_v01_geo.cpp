@@ -308,11 +308,11 @@ static DD4hep::Geometry::Ref_t create_element(DD4hep::Geometry::LCDD& lcdd,
 	tubeLog.placeVolume( wallLog,  Transform3D() );
 	tubeLog2.placeVolume( wallLog2,  Transform3D() );
 	
-	
-	// place golad coating as a daughter of the wall (?)
-	tubeLog.placeVolume( goldLog,  Transform3D() );
-	tubeLog2.placeVolume( goldLog2,  Transform3D() );
-	
+	if( crossType == ODH::kCenter ) { 	
+	  // place golad coating as a daughter of the wall (?)
+	  tubeLog.placeVolume( goldLog,  Transform3D() );
+	  tubeLog2.placeVolume( goldLog2,  Transform3D() );
+	}	
       }
     }  
       break;
