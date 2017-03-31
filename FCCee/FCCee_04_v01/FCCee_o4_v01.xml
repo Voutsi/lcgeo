@@ -20,7 +20,7 @@
     </includes>
     
     <define>
-        <constant name="world_side" value="7000*mm"/>
+        <constant name="world_side" value="6000*mm"/>
         <constant name="world_x" value="world_side"/>
         <constant name="world_y" value="world_side"/>
         <constant name="world_z" value="world_side"/>
@@ -301,7 +301,7 @@
         <vis name="QD0CoilIVis"     alpha="1.0" r="1.0"   g="0.498"   b="0.0"   showDaughters="true"  visible="true"/>
         <vis name="QD0CoilOVis"     alpha="1.0" r="1.0"   g="0.25"   b="0.0"   showDaughters="true"  visible="true"/>
         <vis name="CompSolVis"     alpha="1.0" r="0.5"   g="0.5"   b="0.0"   showDaughters="true"  visible="true"/>
-        <vis name="ScreenSolVis"     alpha="0.0" r="1"   g="1"   b="0"   showDaughters="true"  visible="true"/>
+        <vis name="ScreenSolVis"     alpha="1.0" r="1"   g="1"   b="0"   showDaughters="true"  visible="true"/>
         <vis name="ColliVis"        alpha="1.0" r="0.7"   g="0.5"   b="1"   showDaughters="true"  visible="true"/>
         <vis name="TantalumVis"     alpha="0.0" r="1"   g="0.5"   b="0.5"   showDaughters="true"  visible="true"/>
 
@@ -310,18 +310,19 @@
     </display>
     
     <include ref="Materials_v01.xml"/>
-
     <include ref="Beampipe_o4_v02.xml"/>  
-    <!--include ref="Mask.xml"/-->  
 
     <include ref="BeamInstrumentation_o3_v01.xml"/>     
-<!--
+
+
     <include ref="LumiCal_o2_v01_02.xml"/>
     <include ref="LumiCal_o2_v01_02_plusInstr.xml"/>
--->
-    <!--include ref="HOMAbsorber_o1_v02.xml"/-->
 
+<!--
+    <include ref="HOMAbsorber_o1_v02.xml"/>
+-->
     <include ref="Vertex_o3_v05.xml"/>  
+
 
     <include ref="InnerTracker_o3_v03.xml"/>   
     <include ref="OuterTracker_o2_v03_03.xml"/>
