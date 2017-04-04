@@ -63,7 +63,7 @@
 	<constant name="BeamPipeWidthFirstCone"   	value="1.0*mm" />
         <constant name="CentralBeamPipe_zmax" value="12.5*cm"/>
         <constant name="BePartEnd_z" value="90.0*cm"/>
-	<constant name="SeparatedBeamPipe_z" value="100*cm"/>
+	<constant name="SeparatedBeamPipe_z" value="107*cm"/>
         <constant name="CentralBeamPipe_rmax" value="15.0*mm"/>
 	<constant name="BeamPipeGoldWidth" value="0.005*mm" /> 
 	<constant name="BeamPipeGoldTolerance" value="0.001*mm" />  <!-- dummy tolerance, some small non zero value -->
@@ -86,7 +86,7 @@
         <constant name="ConeBeamPipe_rmax_1"  value="InnerTracker_half_length * 0.1 + 1*mm" />
 
         <constant name="BigBeamPipe_zmax" value="1120*mm"/>
-        <constant name="SeparatedBeamPipe_rmax"  value="12*mm"/>
+        <constant name="SeparatedBeamPipe_rmax"  value="15*mm"/>
         <constant name="BeamPipeTantalShieldWidth"  value="0.5*mm"/>
         <constant name="BeamPipe_end" value="12500*mm"/>
 
