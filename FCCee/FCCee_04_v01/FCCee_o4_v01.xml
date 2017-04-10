@@ -266,7 +266,8 @@
 
     </limits>
     <regions>
-        <region name="SiTrackerBarrelRegion" eunit="MeV" lunit="mm" cut="0.001" threshold="0.001">
+        <region name="SiTrackerBarrelRegion">      
+        <!--region name="SiTrackerBarrelRegion" eunit="MeV" lunit="mm" cut="0.001" threshold="0.001"-->
             <limitsetref name="SiTrackerBarrelRegionLimitSet"/>
         </region>
     </regions>
