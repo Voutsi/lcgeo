@@ -204,8 +204,8 @@
 
         <constant name="LumiCal_dz" value="(LumiCal_max_z-LumiCal_min_z)/2.0"/>
 
-       <constant name="LumiCal_Rinn1" value="48*mm"/>
-       <constant name="LumiCal_Rinn2" value="60*mm"/>
+       <constant name="LumiCal_Rinn1" value="50*mm"/>
+       <constant name="LumiCal_Rinn2" value="53*mm"/>
        <constant name="LumiCal_Rout1" value="100*mm"/>
        <constant name="LumiCal_Rout2" value="120*mm"/>
 
