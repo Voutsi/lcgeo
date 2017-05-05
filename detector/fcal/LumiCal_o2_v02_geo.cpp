@@ -189,10 +189,10 @@ static DD4hep::Geometry::Ref_t create_detector(DD4hep::Geometry::LCDD& lcdd,
             
             DD4hep::Geometry::Position layer_pos(0,0,referencePosition+0.5*layerThickness);
             referencePosition += layerThickness;
-	    if (i==1 || i==20 || i==39){
+
             DD4hep::Geometry::PlacedVolume pv = envelopeVol.placeVolume(layer_vol,layer_pos);
             pv.addPhysVolID("layer",thisLayerId);
-	    }
+
 	    rInn1 = rInn2 ;
 	    rOut1 = rOut2 ;
 
