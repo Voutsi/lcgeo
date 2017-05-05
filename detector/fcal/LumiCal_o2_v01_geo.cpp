@@ -46,8 +46,8 @@ static DD4hep::Geometry::Ref_t create_detector(DD4hep::Geometry::LCDD& lcdd,
     const double lcalInnerZ = dimensions.inner_z();
     const double lcalOuterZ = dimensions.outer_z() ;
     const double rInnerStart = dimensions.rmin1();
-    const double rOuterStart = dimensions.rmin2();
-    const double rInnerEnd = dimensions.rmax1();
+    const double rOuterStart = dimensions.rmax1();
+    const double rInnerEnd = dimensions.rmin2();
     const double rOuterEnd = dimensions.rmax2();
     //const double zHalf = dimensions.zhalf();
     const double lcalThickness = DD4hep::Layering(xmlLumiCal).totalThickness();
@@ -60,8 +60,11 @@ static DD4hep::Geometry::Ref_t create_detector(DD4hep::Geometry::LCDD& lcdd,
     //** DD4hep/TGeo seems to need rad (as opposed to the manual)
     const double phi1 = 0 ;
     const double phi2 = 360.0*dd4hep::degree;
-    const double thetaInn = 0.050*dd4hep::rad;
-    const double thetaOut = 0.140*dd4hep::rad;
+    //const double thetaInn = 0.050*dd4hep::rad;
+    //const double thetaOut = 0.140*dd4hep::rad;
+    const double thetaInn = 0.015*dd4hep::rad;
+    const double thetaOut = 0.095*dd4hep::rad;
+
 
     std::cout << " LumiCal dimensions " << "rInnerStart " << rInnerStart << "rInnerEnd " << rInnerEnd << "rOuterStart " << rOuterStart << "rOuterEnd " << rOuterEnd << " size along z " << lcalThickness <<  " starts at " << lcalInnerZ << " ends at " << lcalOuterZ << "centered at " << lcalCentreZ << std::endl ;
 
@@ -123,8 +126,8 @@ static DD4hep::Geometry::Ref_t create_detector(DD4hep::Geometry::LCDD& lcdd,
         std::cout << "Layer Thickness " << layerThickness/dd4hep::cm << " cm" << std::endl;
         
 	// Initialisation for rInn1 and rOut1 for the first conical layer
-	double rInn1 = rInnerStart ;
-	double rOut1 = rOuterStart ;
+	double rInn1 = rInnerStart + 0.1*dd4hep::cm;
+	double rOut1 = rOuterStart;
 	double rInn2 = 0 ;
 	double rOut2 = 0 ; 
 
@@ -154,15 +157,26 @@ static DD4hep::Geometry::Ref_t create_detector(DD4hep::Geometry::LCDD& lcdd,
             double thickness_sum=0;
             
             DD4hep::DDRec::LayeredCalorimeterData::Layer caloLayer ;
-            
+
+	    double rSliceInn2, rSliceOut2 ;
+	    double rSliceInn1 = rInn1;
+	    double rSliceOut1 = rOut1;
+
+	     
             for(DD4hep::XML::Collection_t collSlice(xmlLayer,_U(slice)); collSlice; ++collSlice)  {
                 DD4hep::XML::Component compSlice = collSlice;
                 const double      slice_thickness = compSlice.thickness();
                 const std::string sliceName = layer_name + DD4hep::XML::_toString(sliceID,"slice%d");
                 DD4hep::Geometry::Material   slice_material  = lcdd.material(compSlice.materialStr());
                 
+
                 //DD4hep::Geometry::Tube sliceBase(lcalInnerR,lcalOuterR,slice_thickness/2);
-		DD4hep::Geometry::ConeSegment sliceBase(slice_thickness/2.,rInn1,rOut1,rInn2,rOut2,phi1,phi2);
+		rSliceInn2 = rSliceInn1 + tan(thetaInn)*slice_thickness ;
+		rSliceOut2 = rSliceOut1 + tan(thetaOut)*slice_thickness ;
+
+		std::cout << " Starting radii for slice " << collSlice << " rSliceInn1 " << rSliceInn1 << " rSliceOut1 " <<rSliceOut1  << " material " << compSlice.materialStr() << std::endl ;
+
+		DD4hep::Geometry::ConeSegment sliceBase(slice_thickness/2.,rSliceInn1,rSliceOut1,rSliceInn2,rSliceOut2,phi1,phi2);
                 
                 DD4hep::Geometry::Volume slice_vol (sliceName,sliceBase,slice_material);
                 
@@ -189,8 +203,10 @@ static DD4hep::Geometry::Ref_t create_detector(DD4hep::Geometry::LCDD& lcdd,
                     
                 inThisLayerPosition += slice_thickness;
                 ++sliceID;
+		rSliceInn1 = rSliceInn2 ;
+		rSliceOut1 = rSliceOut2 ;
             }//For all slices in this layer
-       
+	    
             //-----------------------------------------------------------------------------------------
 
 	    // Is that needed or is only used for making a gear file?
@@ -209,12 +225,13 @@ static DD4hep::Geometry::Ref_t create_detector(DD4hep::Geometry::LCDD& lcdd,
             //Why are we doing this for each layer, this just needs to be done once and then placed multiple times
             //Do we need unique IDs for each piece?
             layer_vol.setVisAttributes(lcdd,xmlLayer.visStr());
-            
+
             DD4hep::Geometry::Position layer_pos(0,0,referencePosition+0.5*layerThickness);
             referencePosition += layerThickness;
+            //if (i==1 || i==20 || i==39){
             DD4hep::Geometry::PlacedVolume pv = envelopeVol.placeVolume(layer_vol,layer_pos);
             pv.addPhysVolID("layer",thisLayerId);
-
+	    //}
 	    rInn1 = rInn2 ;
 	    rOut1 = rOut2 ;
 
