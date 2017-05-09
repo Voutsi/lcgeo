@@ -70,7 +70,7 @@
         <constant name="VertexEndcap_rmin3" value="CentralBeamPipe_rmax + VertexEndcap_offset"/>
         <constant name="VertexEndcap_rmin4" value="CentralBeamPipe_rmax + VertexEndcap_offset"/>
         <constant name="VertexEndcapModuleThickness" value="1.05*mm"/>
-        <constant name="VertexEndcapOverlap" value="1*mm"/>
+        <constant name="VertexEndcapOverlap" value="0*mm"/>
     </define>
     
     
