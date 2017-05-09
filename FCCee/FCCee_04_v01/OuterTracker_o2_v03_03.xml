@@ -62,7 +62,6 @@
     
     <detectors>
         <detector id="DetID_OT_Barrel" name="OuterTrackerBarrel" type="TrackerBarrel_o1_v03" readout="OuterTrackerBarrelCollection" region="SiTrackerBarrelRegion" limits="SiTrackerBarrelRegionLimitSet">
-        <!--detector id="DetID_OT_Barrel" name="OuterTrackerBarrel" type="TrackerBarrel_o1_v03" readout="OuterTrackerBarrelCollection" reflect="true"-->
             <envelope vis="OTVis">
                 <shape type="Assembly"/>
             </envelope>

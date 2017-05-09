@@ -42,7 +42,7 @@
                         <!-- <shape type="BooleanShape" operation="Subtraction">  -->
                             <shape type="BooleanShape" operation="Subtraction">
                                 <shape type="BooleanShape" operation="Subtraction"  >
-                                    <shape type="Tube" rmin="CentralBeamPipe_rmax" rmax="InnerTracker_outer_radius" dz="InnerTracker_half_length+env_safety"/>
+                                    <shape type="Tube" rmin="CentralBeamPipe_rmax" rmax="InnerTracker_outer_radius" dz="InnerTracker_half_length+env_safety-0.5*cm"/>
                                     <!--<shape type="Cone" rmin1="0" rmax1="CentralBeamPipe_rmax" rmin2="0" rmax2="ConeBeamPipe_rmax" z="(ConeBeamPipe_zmax-CentralBeamPipe_zmax)/2.0"/>  -->
 				    <shape type="Cone" rmin1="0" rmax1="CentralBeamPipe_rmax" rmin2="0" rmax2="ConeBeamPipe_rmax_1" z="(ConeBeamPipe_zmax-CentralBeamPipe_zmax)/2.0"/>
                                     <position x="0" y="0" z="(ConeBeamPipe_zmax-CentralBeamPipe_zmax)/2.0 + CentralBeamPipe_zmax" />
@@ -97,7 +97,6 @@
     
     <detectors>
         <detector id="DetID_IT_Barrel" name="InnerTrackerBarrel" type="TrackerBarrel_o1_v03" readout="InnerTrackerBarrelCollection" region="SiTrackerBarrelRegion" limits="SiTrackerBarrelRegionLimitSet">
-        <!--detector id="DetID_IT_Barrel" name="InnerTrackerBarrel" type="TrackerBarrel_o1_v03" readout="InnerTrackerBarrelCollection" reflect="true"-->
             <envelope vis="ITVis">
                 <shape type="Assembly"/>
             </envelope>
@@ -270,22 +269,21 @@
                 <ring r="InnerTracker_Endcap_outer_radius_5-18*cm"   zstart="InnerTracker_Endcap_z_5-2*mm" nmodules="28" dz="1*mm" module="InnerTrackerEndcapModule_3" phi0="0" />
                 <ring r="InnerTracker_Endcap_outer_radius_5-29.9*cm" zstart="InnerTracker_Endcap_z_5+2*mm" nmodules="22" dz="1*mm" module="InnerTrackerEndcapModule_3" phi0="0" />             
             </layer>
-            
             <layer id="6">
                 <ring r="InnerTracker_Endcap_outer_radius_6-6.1*cm"  zstart="InnerTracker_Endcap_z_6+2*mm" nmodules="36" dz="1*mm" module="InnerTrackerEndcapModule_3" phi0="0" />
-                <ring r="InnerTracker_Endcap_outer_radius_6-16.8*cm"   zstart="InnerTracker_Endcap_z_6-2*mm" nmodules="28" dz="1*mm" module="InnerTrackerEndcapModule_3" phi0="0" />
+                <ring r="InnerTracker_Endcap_outer_radius_6-16.8*cm" zstart="InnerTracker_Endcap_z_6-2*mm" nmodules="28" dz="1*mm" module="InnerTrackerEndcapModule_3" phi0="0" />
                 <ring r="InnerTracker_Endcap_outer_radius_6-27.5*cm" zstart="InnerTracker_Endcap_z_6+2*mm" nmodules="22" dz="1*mm" module="InnerTrackerEndcapModule_3" phi0="0" />             
             </layer>            
-            
         </detector>
     </detectors>
     
     <detectors>
+      <!--
         <detector name="InnerTrackerBarrelSupport" type="TrackerBarrelSupport_o1_v01" id="0" insideTrackingVolume="true" reflect="true" >
             <envelope>
                 <shape type="Assembly"/>
             </envelope>
-            <layer id="0" inner_r="InnerTracker_outer_radius-1*cm" outer_z="InnerTracker_half_length" vis="SupportVis">
+            <layer id="0" inner_r="InnerTracker_outer_radius-2*cm" outer_z="InnerTracker_half_length" vis="SupportVis">
                 <slice material="CarbonFiber" thickness="1.15/3.7*cm" />
             </layer>
             <layer id="1" inner_r="InnerTracker_Barrel_radius_0-0.5*cm" outer_z="InnerTracker_Barrel_half_length_0" vis="SupportVis">
@@ -315,12 +313,12 @@
            </layer>
            <layer id="5" inner_r="195*mm" inner_z="InnerTracker_Endcap_z_5+1*cm" outer_r="555*mm" vis="SupportVis">
 	           <slice material="CarbonFiber" thickness="1.04/3.7*cm" />
-           </layer>   
-           <layer id="6" inner_r="220*mm" inner_z="InnerTracker_Endcap_z_6+1*cm" outer_r="555*mm" vis="SupportVis">
+           </layer>
+            <layer id="6" inner_r="220*mm" inner_z="InnerTracker_Endcap_z_6+1*cm" outer_r="555*mm" vis="SupportVis">
 	           <slice material="CarbonFiber" thickness="1.04/3.7*cm" />
-           </layer>           
+           </layer>
         </detector>
-        
+        -->
         
 <!--
         <detector name="BeampipeShell" type="ConicalSupport_o1_v01" reflect="true" insideTrackingVolume="true">
@@ -332,7 +330,7 @@
         </detector>
 -->
         
-        
+       
     </detectors>
     
     <plugins>
@@ -351,7 +349,7 @@
             <argument value="n_y=1."/>
         </plugin>
     </plugins>
-    
+   
 </lccdd>
 
 
