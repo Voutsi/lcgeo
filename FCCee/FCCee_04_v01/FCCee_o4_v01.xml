@@ -194,7 +194,7 @@
         <constant name="YokeEndcap_outer_symmetry" value="12"/>
         <constant name="YokeEndcap_inner_symmetry" value="0"/>
         
-        <constant name="CompSol_min_z" value="1300*mm"/>
+        <constant name="CompSol_min_z" value="1250*mm"/>
 
 <!--
         <constant name="LumiCal_outer_radius" value="190*mm"/>
@@ -218,12 +218,6 @@
 	<constant name="LumiCal_Tot_Rinn2" value="LumiCal_Rinn2 + LumiCal_Instr_Rinn2"/>
 	<constant name="LumiCal_Tot_Rout1" value="LumiCal_Rout1 + LumiCal_Instr_Rout1"/>
 	<constant name="LumiCal_Tot_Rout2" value="LumiCal_Rout2 + LumiCal_Instr_Rout2"/>
-	
-	<constant name="LumiCal_Tot_Rinn1" value="LumiCal_Rinn1 + LumiCal_Instr_Rinn1"/>
-	<constant name="LumiCal_Tot_Rinn2" value="LumiCal_Rinn2 + LumiCal_Instr_Rinn2"/>
-	<constant name="LumiCal_Tot_Rout1" value="LumiCal_Rout1 + LumiCal_Instr_Rout1"/>
-	<constant name="LumiCal_Tot_Rout2" value="LumiCal_Rout2 + LumiCal_Instr_Rout2"/>
-
         
         <constant name="BeamCal_inner_radius" value="32*mm"/>
         <constant name="BeamCal_outer_radius" value="150*mm"/>

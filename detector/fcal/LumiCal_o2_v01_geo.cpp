@@ -60,11 +60,10 @@ static DD4hep::Geometry::Ref_t create_detector(DD4hep::Geometry::LCDD& lcdd,
     //** DD4hep/TGeo seems to need rad (as opposed to the manual)
     const double phi1 = 0 ;
     const double phi2 = 360.0*dd4hep::degree;
-    //const double thetaInn = 0.050*dd4hep::rad;
-    //const double thetaOut = 0.140*dd4hep::rad;
-    const double thetaInn = 0.015*dd4hep::rad;
-    const double thetaOut = 0.095*dd4hep::rad;
-
+    const double thetaInn = atan(( rInnerEnd - rInnerStart ) / lcalThickness);
+    const double thetaOut = atan(( rOuterEnd - rOuterStart ) / lcalThickness) ;
+    //const double thetaInn = 0.03*dd4hep::rad;
+    //const double thetaOut = 0.095*dd4hep::rad;
 
     std::cout << " LumiCal dimensions " << "rInnerStart " << rInnerStart << "rInnerEnd " << rInnerEnd << "rOuterStart " << rOuterStart << "rOuterEnd " << rOuterEnd << " size along z " << lcalThickness <<  " starts at " << lcalInnerZ << " ends at " << lcalOuterZ << "centered at " << lcalCentreZ << std::endl ;
 
@@ -127,7 +126,7 @@ static DD4hep::Geometry::Ref_t create_detector(DD4hep::Geometry::LCDD& lcdd,
         
 	// Initialisation for rInn1 and rOut1 for the first conical layer
 	double rInn1 = rInnerStart + 0.1*dd4hep::cm;
-	double rOut1 = rOuterStart;
+	double rOut1 = rOuterStart - 0.1*dd4hep::cm;
 	double rInn2 = 0 ;
 	double rOut2 = 0 ; 
 
