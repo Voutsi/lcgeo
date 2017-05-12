@@ -80,7 +80,7 @@
 	<constant name="ConeBeamPipe_rmax_1"  value="131*mm"/>  
 -->
 <!-- instead : the support cone extends until the end of the inner tracker, no Tube -->
-        <constant name="InnerTracker_half_length" value="2190*mm" />
+        <constant name="InnerTracker_half_length" value="2345*mm" />
 
         <constant name="ConeBeamPipe_zmax" value="InnerTracker_half_length" />
         <constant name="ConeBeamPipe_rmax_1"  value="InnerTracker_half_length * 0.1 + 1*mm" />
@@ -136,7 +136,7 @@
         
         <constant name="OuterTracker_inner_radius" value="580*mm"/>
         <constant name="OuterTracker_outer_radius" value="1500*mm - 0.1*mm"/>  <!-- to avoid overlap with CaloFace-->
-        <constant name="OuterTracker_half_length" value="2190*mm"/>
+        <constant name="OuterTracker_half_length" value="2345*mm"/>
         
         <constant name="ECalBarrel_inner_radius" value="1500*mm"/>
         <constant name="ECalBarrel_outer_radius" value="1659*mm"/>
@@ -204,15 +204,20 @@
 
         <constant name="LumiCal_dz" value="(LumiCal_max_z-LumiCal_min_z)/2.0"/>
 
-	<constant name="LumiCal_Rinn1" value="69.375*mm"/>
-	<constant name="LumiCal_Rinn2" value="72*mm"/>
+	<constant name="LumiCal_Rinn1" value="48*mm"/>
+	<constant name="LumiCal_Rinn2" value="53.23*mm"/>
 	<constant name="LumiCal_Rout1" value="100*mm"/>
-	<constant name="LumiCal_Rout2" value="116.6*mm"/>
+	<constant name="LumiCal_Rout2" value="116.55*mm"/>
 	
 	<constant name="LumiCal_Instr_Rinn1" value="100*mm + env_safety"/>
-	<constant name="LumiCal_Instr_Rinn2" value="116.6*mm + env_safety"/>
+	<constant name="LumiCal_Instr_Rinn2" value="116.55*mm + env_safety"/>
 	<constant name="LumiCal_Instr_Rout1" value="125*mm"/>
-	<constant name="LumiCal_Instr_Rout2" value="171.36*mm"/>
+	<constant name="LumiCal_Instr_Rout2" value="164.39*mm"/>
+	
+	<constant name="LumiCal_Tot_Rinn1" value="LumiCal_Rinn1 + LumiCal_Instr_Rinn1"/>
+	<constant name="LumiCal_Tot_Rinn2" value="LumiCal_Rinn2 + LumiCal_Instr_Rinn2"/>
+	<constant name="LumiCal_Tot_Rout1" value="LumiCal_Rout1 + LumiCal_Instr_Rout1"/>
+	<constant name="LumiCal_Tot_Rout2" value="LumiCal_Rout2 + LumiCal_Instr_Rout2"/>
 	
 	<constant name="LumiCal_Tot_Rinn1" value="LumiCal_Rinn1 + LumiCal_Instr_Rinn1"/>
 	<constant name="LumiCal_Tot_Rinn2" value="LumiCal_Rinn2 + LumiCal_Instr_Rinn2"/>
