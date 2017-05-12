@@ -16,6 +16,8 @@
         <detector name="ECalPlug" type="GenericCalEndcap_o1_v01" id="DetID_ECal_Plug" readout="ECalPlugCollection" vis="ECALVis" >
             
             <comment>Hadronic Calorimeter Endcap</comment>
+
+	    <type_flags type=" DetType_CALORIMETER + DetType_ELECTROMAGNETIC + DetType_ENDCAP + DetType_AUXILIARY"/>
             
             <envelope vis="ECALVis">
                 <shape type="BooleanShape" operation="Subtraction" material="Air">
