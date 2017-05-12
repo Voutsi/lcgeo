@@ -54,7 +54,9 @@
         <detector name="HCalEndcap" type="GenericCalEndcap_o1_v01" id="DetID_HCAL_Endcap" readout="HCalEndcapCollection" vis="HCALVis" >
             
             <comment>Hadronic Calorimeter Endcap</comment>
-            
+
+	    <type_flags type=" DetType_CALORIMETER + DetType_HADRONIC + DetType_ENDCAP"/>
+
             <envelope vis="HCALVis">
                 <shape type="Assembly"/>
             </envelope>
@@ -94,7 +96,9 @@
         <detector name="HCalRing" type="GenericCalEndcap_o1_v01" id="DetID_HCAL_Ring" readout="HCalRingCollection" vis="HCALVis" >
             
             <comment>Hadronic Calorimeter Endcap</comment>
-            
+
+	    <type_flags type=" DetType_CALORIMETER + DetType_HADRONIC + DetType_ENDCAP + DetType_AUXILIARY"/>
+
             <envelope vis="HCALVis">
                 <shape type="Assembly"/>
             </envelope>
