@@ -23,7 +23,7 @@
 
          <shape type="BooleanShape" operation="Intersection">
            <shape type="Box"  dx="world_side" dy="world_side" dz="world_side"/>
-           <shape type="Cone"  rmin1="LumiCal_Rinn1-env_safety" rmax1="LumiCal_Rout1+env_safety"  rmin2="LumiCal_Rinn2-env_safety" rmax2="LumiCal_Rout2+env_safety" z="88*mm+env_safety"/>
+           <shape type="Cone"  rmin1="LumiCal_Rinn1" rmax1="LumiCal_Rout1"  rmin2="LumiCal_Rinn2" rmax2="LumiCal_Rout2" z="LumiCal_dz"/>
 	   <position x="tan(0.5*abs(CrossingAngle))*(LumiCal_min_z+LumiCal_dz)" y="0" z="LumiCal_min_z+LumiCal_dz"/>
            <rotation x="0" y="0.5*abs(CrossingAngle)" z="0"/>
          </shape>
@@ -31,7 +31,7 @@
 
          <shape type="BooleanShape" operation="Intersection" >
            <shape type="Box"  dx="world_side" dy="world_side" dz="world_side"/>
-	   <shape type="Cone"  rmin1="LumiCal_Rinn2-env_safety" rmax1="LumiCal_Rout2+env_safety"  rmin2="LumiCal_Rinn1-env_safety" rmax2="LumiCal_Rout1+env_safety"  z="88*mm+env_safety"/>
+	   <shape type="Cone"  rmin1="LumiCal_Rinn2" rmax1="LumiCal_Rout2"  rmin2="LumiCal_Rinn1" rmax2="LumiCal_Rout1"  z="LumiCal_dz"/>
            <position x="tan(0.5*abs(CrossingAngle))*(LumiCal_min_z+LumiCal_dz)" y="0" z="-(LumiCal_min_z+LumiCal_dz)"/>
            <rotation x="pi" y="pi-0.5*abs(CrossingAngle)" z="0"/>
 	 </shape>
