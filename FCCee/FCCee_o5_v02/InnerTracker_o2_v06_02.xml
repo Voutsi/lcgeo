@@ -9,25 +9,12 @@
         <constant name="InnerTracker_Barrel_half_length_1" value="482*mm"/>
         <constant name="InnerTracker_Barrel_half_length_2" value="692*mm"/>
              
-        <!--constant name="InnerTracker_Endcap_outer_radius_0" value="255*mm"/-->
         <constant name="InnerTracker_Endcap_z_0" value="524*mm"/>
-        
-        <!--constant name="InnerTracker_Endcap_outer_radius_1" value="555*mm"/-->
         <constant name="InnerTracker_Endcap_z_1" value="808*mm"/>
-        
-        <!--constant name="InnerTracker_Endcap_outer_radius_2" value="555*mm"/-->
         <constant name="InnerTracker_Endcap_z_2" value="1093*mm"/>
-        
-        <!--constant name="InnerTracker_Endcap_outer_radius_3" value="555*mm"/-->
         <constant name="InnerTracker_Endcap_z_3" value="1377*mm"/>
-        
-        <!--constant name="InnerTracker_Endcap_outer_radius_4" value="555*mm"/-->
         <constant name="InnerTracker_Endcap_z_4" value="1661*mm"/>
-        
-        <!--constant name="InnerTracker_Endcap_outer_radius_5" value="555*mm"/-->
         <constant name="InnerTracker_Endcap_z_5" value="1946*mm"/>
-        
-        <!--constant name="InnerTracker_Endcap_outer_radius_6" value="555*mm"/-->
         <constant name="InnerTracker_Endcap_z_6" value="2190*mm"/>
 
         <constant name="InnerTracker_Endcap_radius_0" value="78*mm"/>
@@ -272,6 +259,10 @@
                 <trd x="181.2*mm" y="45.3*mm"/>
                 <include ref="TrackerDiskModuleOut.xml"/>
             </module>
+            <module name="InnerTrackerEndcapModule_12x5_Out" vis="InnerTrackerModuleVis">
+                <trd x="181.2*mm" y="75.5*mm"/>
+                <include ref="TrackerDiskModuleOut.xml"/>
+            </module>
             <module name="InnerTrackerEndcapModule_12x8_Out" vis="InnerTrackerModuleVis">
                 <trd x="181.2*mm" y="120.8*mm"/>
                 <include ref="TrackerDiskModuleOut.xml"/>
@@ -405,6 +396,10 @@
                 <trd x="181.2*mm" y="45.3*mm"/>
                 <include ref="TrackerDiskModuleIn.xml"/>
             </module>
+            <module name="InnerTrackerEndcapModule_12x5_In" vis="InnerTrackerModuleVis">
+                <trd x="181.2*mm" y="75.5*mm"/>
+                <include ref="TrackerDiskModuleIn.xml"/>
+            </module>
             <module name="InnerTrackerEndcapModule_12x8_In" vis="InnerTrackerModuleVis">
                 <trd x="181.2*mm" y="120.8*mm"/>
                 <include ref="TrackerDiskModuleIn.xml"/>
@@ -416,7 +411,7 @@
                 <ring r="InnerTracker_Endcap_radius_0+6*ITM"  zstart="InnerTracker_Endcap_z_0" nmodules="24" dz="3*mm" module="InnerTrackerEndcapModule_4x4_Out" phi0="0"/>
                 <ring r="InnerTracker_Endcap_radius_0+10*ITM"  zstart="InnerTracker_Endcap_z_0" nmodules="24" dz="3*mm" module="InnerTrackerEndcapModule_5x4_Out" phi0="0"/>
                 <ring r="InnerTracker_Endcap_radius_0+14*ITM" zstart="InnerTracker_Endcap_z_0" nmodules="24" dz="3*mm" module="InnerTrackerEndcapModule_6x4_Out" phi0="0"/>
-                <ring r="InnerTracker_Endcap_radius_0+18*ITM" zstart="InnerTracker_Endcap_z_0" nmodules="24" dz="3*mm" module="InnerTrackerEndcapModule_8x4_Out" phi0="0"/>
+                <ring r="InnerTracker_Endcap_radius_0+18*ITM" zstart="InnerTracker_Endcap_z_0" nmodules="24" dz="3*mm" module="InnerTrackerEndcapModule_8x7_Out" phi0="0"/>
             </layer>
 
             <layer id="1">
@@ -436,8 +431,7 @@
                 <ring r="InnerTracker_Endcap_radius_2+9*ITM"  zstart="InnerTracker_Endcap_z_2" nmodules="24" dz="3*mm" module="InnerTrackerEndcapModule_8x8_Out"  phi0="0"/>
                 <ring r="InnerTracker_Endcap_radius_2+17*ITM" zstart="InnerTracker_Endcap_z_2" nmodules="24" dz="3*mm" module="InnerTrackerEndcapModule_10x8_Out"  phi0="0"/>
                 <ring r="InnerTracker_Endcap_radius_2+25*ITM" zstart="InnerTracker_Endcap_z_2" nmodules="24" dz="3*mm" module="InnerTrackerEndcapModule_12x3_Out" phi0="0"/>
-                <ring r="InnerTracker_Endcap_radius_2+28*ITM" zstart="InnerTracker_Endcap_z_2" nmodules="24" dz="3*mm" module="InnerTrackerEndcapModule_11x3_Out" phi0="0"/>
-                <ring r="InnerTracker_Endcap_radius_2+31*ITM" zstart="InnerTracker_Endcap_z_2" nmodules="26" dz="3*mm" module="InnerTrackerEndcapModule_11x2_Out" phi0="0"/>
+                <ring r="InnerTracker_Endcap_radius_2+28*ITM" zstart="InnerTracker_Endcap_z_2" nmodules="24" dz="3*mm" module="InnerTrackerEndcapModule_12x5_Out" phi0="0"/>
             </layer>
 
 
