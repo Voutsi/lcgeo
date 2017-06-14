@@ -164,15 +164,15 @@
         
         <constant name="HCalEndcap_inner_radius" value="250*mm"/>
         <constant name="HCalEndcap_outer_radius" value="3566*mm"/>
-        <constant name="HCalEndcap_min_z" value="2360*mm"/>
-        <constant name="HCalEndcap_max_z" value="3526*mm"/>
+        <constant name="HCalEndcap_min_z" value="2539*mm"/>
+        <constant name="HCalEndcap_max_z" value="3705*mm"/>
         <constant name="HCalEndcap_symmetry" value="12"/>
         <constant name="HCalEndcap_zcutout" value="200*mm"/>
-        <constant name="HCalEndcap_rcutout" value="180*mm"/>
+        <constant name="HCalEndcap_rcutout" value="0*mm"/>
         
-        <constant name="HCalRing_inner_radius" value="1730*mm"/>
+        <constant name="HCalRing_inner_radius" value="2370*mm"/>
         <constant name="HCalRing_outer_radius" value="HCalEndcap_outer_radius"/>
-        <constant name="HCalRing_min_z" value="2250*mm"/>
+        <constant name="HCalRing_min_z" value="2353.5*mm"/>
         <constant name="HCalRing_max_z" value="HCalEndcap_min_z"/>
         <constant name="HCalRing_symmetry" value="12"/>
         
@@ -325,19 +325,17 @@
 
     <include ref="BeamInstrumentation_o3_v01.xml"/>     
 
-
     <include ref="LumiCal_o2_v01_02.xml"/>
     <include ref="LumiCal_o2_v01_02_plusInstr.xml"/>
 
     <include ref="Vertex_o4_v02.xml"/>  
-
     <include ref="InnerTracker_o2_v06_02.xml"/>  
     <include ref="OuterTracker_o2_v06_02.xml"/>
-  
+
     <include ref="ECalBarrel_o2_v01_03.xml"/>
     <include ref="ECalEndcap_o2_v01_03.xml"/>
     <include ref="ECalPlug_o1_v01_03.xml"/>
-    
+
     <include ref="HCalBarrel_o1_v01_01.xml"/>
     <include ref="HCalEndcap_o1_v01_01.xml"/>
 
