@@ -314,16 +314,19 @@
         <vis name="CompSolVis"     alpha="1.0" r="0.5"   g="0.5"   b="0.0"   showDaughters="true"  visible="true"/>
         <vis name="ScreenSolVis"     alpha="1.0" r="1"   g="1"   b="0"   showDaughters="true"  visible="true"/>
         <vis name="ColliVis"        alpha="1.0" r="0.7"   g="0.5"   b="1"   showDaughters="true"  visible="true"/>
-        <vis name="TantalumVis"     alpha="0.0" r="1"   g="0.5"   b="0.5"   showDaughters="true"  visible="true"/>
+        <vis name="TantalumVis"     alpha="1.0" r="1"   g="0.5"   b="0.5"   showDaughters="true"  visible="true"/>
 
         <vis name="BPMVis"      alpha="1.0" r="0.25"  g="0.88"    b="0.81"  showDaughters="true"  visible="true"/>                           
         <vis name="SupportVis"  alpha="1"   r="0.2"   g="0.2"     b="0.2"   showDaughters="false" visible="true"/>        
     </display>
     
     <include ref="Materials_v01.xml"/>
+<!--
     <include ref="Beampipe_o4_v02.xml"/>  
-
     <include ref="BeamInstrumentation_o3_v01.xml"/>     
+-->
+    <include ref="Beampipe_o4_v02_noNotch_Ta_cone.xml"/>  
+    <include ref="BeamInstrumentation_o3_v01_overlap.xml"/> 
 
     <include ref="LumiCal_o2_v01_02.xml"/>
     <include ref="LumiCal_o2_v01_02_plusInstr.xml"/>
