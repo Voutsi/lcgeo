@@ -20,7 +20,7 @@
     </includes>
     
     <define>
-        <constant name="world_side" value="6000*mm"/>
+        <constant name="world_side" value="6100*mm"/>
         <constant name="world_x" value="world_side"/>
         <constant name="world_y" value="world_side"/>
         <constant name="world_z" value="world_side"/>
@@ -178,19 +178,19 @@
         
         <constant name="Solenoid_inner_radius" value="3719*mm"/>
         <constant name="Solenoid_outer_radius" value="4272*mm"/>
-        <constant name="Solenoid_half_length" value="4129*mm"/>
-        <constant name="Solenoid_Coil_half_length" value="3900*mm"/>        
+        <constant name="Solenoid_half_length" value="3705*mm"/>
+        <constant name="Solenoid_Coil_half_length" value="3476*mm"/>
         <constant name="Solenoid_Coil_radius" value="3930*mm"/>
         
         <constant name="YokeBarrel_inner_radius" value="4479*mm"/>
         <constant name="YokeBarrel_outer_radius" value="6000*mm"/>
-        <constant name="YokeBarrel_half_length" value="4179*mm"/>
+        <constant name="YokeBarrel_half_length" value="3755*mm"/>
         <constant name="YokeBarrel_symmetry" value="12"/>
         
         <constant name="YokeEndcap_inner_radius" value="400*mm"/>
         <constant name="YokeEndcap_outer_radius" value="6000*mm"/>
-        <constant name="YokeEndcap_min_z" value="3576*mm"/>
-        <constant name="YokeEndcap_max_z" value="5100*mm"/>
+        <constant name="YokeEndcap_min_z" value="3755*mm"/>
+        <constant name="YokeEndcap_max_z" value="5300*mm"/>
         <constant name="YokeEndcap_outer_symmetry" value="12"/>
         <constant name="YokeEndcap_inner_symmetry" value="0"/>
         
