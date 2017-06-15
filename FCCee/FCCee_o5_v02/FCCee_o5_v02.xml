@@ -206,13 +206,14 @@
 
 	<constant name="LumiCal_Rinn1" value="48*mm"/>
 	<constant name="LumiCal_Rinn2" value="53.23*mm"/>
-	<constant name="LumiCal_Rout1" value="100*mm"/>
-	<constant name="LumiCal_Rout2" value="116.55*mm"/>
+	<constant name="LumiCal_Rout1" value="98.225*mm"/>
+	<constant name="LumiCal_Rout2" value="113.903*mm"/>
 	
-	<constant name="LumiCal_Instr_Rinn1" value="100*mm + env_safety"/>
-	<constant name="LumiCal_Instr_Rinn2" value="116.55*mm + env_safety"/>
-	<constant name="LumiCal_Instr_Rout1" value="125*mm"/>
-	<constant name="LumiCal_Instr_Rout2" value="168*mm"/>
+	<constant name="LumiCal_Instr_Rinn1" value="98.225*mm + env_safety"/>
+	<constant name="LumiCal_Instr_Rinn2" value="113.903*mm + env_safety"/>
+	<constant name="LumiCal_Instr_Rout1" value="128.225*mm"/>
+	<constant name="LumiCal_Instr_Rout2" value="150*mm"/>
+	
 	
 	<constant name="LumiCal_Tot_Rinn1" value="LumiCal_Rinn1 + LumiCal_Instr_Rinn1"/>
 	<constant name="LumiCal_Tot_Rinn2" value="LumiCal_Rinn2 + LumiCal_Instr_Rinn2"/>
