@@ -54,7 +54,7 @@
                     <shape type="Tube" rmin="0" rmax="ConeBeamPipe_rmax_1" dz="(InnerTracker_half_length-ConeBeamPipe_zmax)/2.0+10*env_safety"/>
                     <position x="0" y="0" z="-(InnerTracker_half_length-ConeBeamPipe_zmax)/2.0-ConeBeamPipe_zmax-10*env_safety" />
                 </shape>
-                <shape type="Tube" rmin="0" rmax="Vertex_outer_radius" dz="Vertex_half_length"/>
+                <shape type="Tube" rmin="0" rmax="Vertex_outer_radius" dz="Vertex_half_length+0.5*cm"/>
             </shape>
 
 

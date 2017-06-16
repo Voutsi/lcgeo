@@ -67,19 +67,7 @@
         <constant name="CentralBeamPipe_rmax" value="15.0*mm"/>
 	<constant name="BeamPipeGoldWidth" value="0.005*mm" /> 
 	<constant name="BeamPipeGoldTolerance" value="0.001*mm" />  <!-- dummy tolerance, some small non zero value -->
-<!--
-        <constant name="ConeBeamPipe_zmax" value="1100*mm"/>
-        <constant name="ConeBeamPipe_rmax" value="116.0*mm"/>
--->
-        <!-- <constant name="ConeBeamPipe_rmax" value="221.0*mm"/>  -->
 
-<!--  a cone until lumi front face, within the 100 mrad cone. To be followed by a Tube in the support of InnerTracker_o2_v03_02.xml -->
-<!--
-     	
-        <constant name="ConeBeamPipe_zmax" value="1300*mm"/>
-	<constant name="ConeBeamPipe_rmax_1"  value="131*mm"/>  
--->
-<!-- instead : the support cone extends until the end of the inner tracker, no Tube -->
         <constant name="InnerTracker_half_length" value="2300*mm" />
 
         <constant name="ConeBeamPipe_zmax" value="InnerTracker_half_length" />
@@ -127,12 +115,10 @@
         
         <constant name="Vertex_inner_radius" value="17*mm"/>
         <constant name="Vertex_outer_radius" value="111*mm"/>
-        <constant name="Vertex_half_length" value="320*mm"/>
+        <constant name="Vertex_half_length" value="300*mm"/>
 
         <constant name="InnerTracker_inner_radius" value="61*mm"/>
         <constant name="InnerTracker_outer_radius" value="680*mm"/>
-        <!--<constant name="InnerTracker_half_length" value="2345*mm"/>  -->
-        <!-- <constant name="InnerTracker_half_length" value="2190*mm" />  -->   <!-- given above -->
         
         <constant name="OuterTracker_inner_radius" value="718*mm"/>
         <constant name="OuterTracker_outer_radius" value="2140*mm"/>  <!-- to avoid overlap with CaloFace-->
@@ -196,9 +182,6 @@
         
         <constant name="CompSol_min_z" value="1250*mm"/>
 
-<!--
-        <constant name="LumiCal_outer_radius" value="190*mm"/>
--->
         <constant name="LumiCal_max_z" value="CompSol_min_z - 5*cm" />
         <constant name="LumiCal_min_z" value="LumiCal_max_z - 17.42*cm"/>
 
@@ -213,7 +196,6 @@
 	<constant name="LumiCal_Instr_Rinn2" value="113.903*mm + env_safety"/>
 	<constant name="LumiCal_Instr_Rout1" value="128.225*mm"/>
 	<constant name="LumiCal_Instr_Rout2" value="150*mm"/>
-	
 	
 	<constant name="LumiCal_Tot_Rinn1" value="LumiCal_Rinn1 + LumiCal_Instr_Rinn1"/>
 	<constant name="LumiCal_Tot_Rinn2" value="LumiCal_Rinn2 + LumiCal_Instr_Rinn2"/>
@@ -249,6 +231,7 @@
         <constant name="GlobalTrackerReadoutID" type="string" value="system:5,side:-2,layer:6,module:11,sensor:8"/>
     </define>
     
+<!--
     <limits>
         <limitset name="cal_limits">
             <limit name="step_length_max" particles="*" value="5.0" unit="mm" />
@@ -261,19 +244,8 @@
             <limit name="range_min" particles="*" value="5.0" unit="mm" />
         </limitset>
 
-<!-- for ILD vertex detector: -->
-        <limitset name="Tracker_limits">
-            <limit name="step_length_max" particles="*" value="5.0" unit="mm" />
-        </limitset>
-
     </limits>
-    <!--
-       <regions>
-         <region name="SiTrackerBarrelRegion">      
-           <limitsetref name="SiTrackerBarrelRegionLimitSet"/>
-         </region>
-       </regions>
-       -->
+
     <regions>
       <region name="BeampipeRegion"            />
       <region name="VertexBarrelRegion"        />
@@ -283,42 +255,53 @@
       <region name="InnerTrackerEndcapRegion"  />
       <region name="OuterTrackerEndcapRegion"  />
     </regions>
- 
+ -->
     
+    <limits>
+        <limitset name="cal_limits">
+            <limit name="step_length_max" particles="*" value="5.0" unit="mm" />
+        </limitset>
+    </limits>
+    <regions>
+        <region name="BeampipeRegion"            />
+        <region name="VertexBarrelRegion"        />
+        <region name="VertexEndcapRegion"        />
+        <region name="InnerTrackerBarrelRegion"  />
+        <region name="OuterTrackerBarrelRegion"  />
+        <region name="InnerTrackerEndcapRegion"  />
+        <region name="OuterTrackerEndcapRegion"  />
+    </regions>
+
+
     <display>
 
-<!--
-        <vis name="VXDVis"      alpha="1.0" r="0.2"   g="0.2"     b="0.2"   showDaughters="true"  visible="true"/>
--->
       <vis name="VXDVis"        alpha="0.1" r="0.1" g=".5"  b=".5"   showDaughters="true"  visible="false"/>
-
       <vis name="VXDLayerVis"   alpha="1.0" r="0.1" g=".5"  b=".5"   showDaughters="true"  visible="true"/>
-
       <vis name="VXDSupportVis" alpha="1.0" r="0.0" g="1.0" b="0.0"  showDaughters="true"  visible="false"/>
 
 
-        <vis name="ITVis"       alpha="0.0" r="0.54"  g="0.43"    b="0.04"  showDaughters="true"  visible="false"/>
-        <vis name="OTVis"       alpha="0.0" r="0.8"   g="0.8"     b="0.4"   showDaughters="true"  visible="false"/>
-        <vis name="ECALVis"     alpha="1.0" r="0.2"   g="0.6"     b="0"     showDaughters="true"  visible="true"/>
-        <vis name="HCALVis"     alpha="1.0" r="0.078" g="0.01176" b="0.588" showDaughters="true"  visible="true"/>
-        <vis name="SOLVis"      alpha="1.0" r="0.4"   g="0.4"     b="0.4"   showDaughters="true"  visible="true"/>
-        <vis name="YOKEVis"     alpha="1.0" r="0.6"   g="0.0"     b="0.0"   showDaughters="true"  visible="true"/>
+      <vis name="ITVis"       alpha="1.0" r="0.54"  g="0.43"    b="0.04"  showDaughters="true"  visible="true"/>
+      <vis name="OTVis"       alpha="1.0" r="0.8"   g="0.8"     b="0.4"   showDaughters="true"  visible="true"/>
+      <vis name="ECALVis"     alpha="1.0" r="0.2"   g="0.6"     b="0"     showDaughters="true"  visible="true"/>
+      <vis name="HCALVis"     alpha="1.0" r="0.078" g="0.01176" b="0.588" showDaughters="true"  visible="true"/>
+      <vis name="SOLVis"      alpha="1.0" r="0.4"   g="0.4"     b="0.4"   showDaughters="true"  visible="true"/>
+      <vis name="YOKEVis"     alpha="1.0" r="0.6"   g="0.0"     b="0.0"   showDaughters="true"  visible="true"/>
 
-        <vis name="LCALInstrVis"     alpha="1.0" r="0.35"  g="0.0"     b="0.47"  showDaughters="true"  visible="true"/>
+      <vis name="LCALInstrVis"     alpha="1.0" r="0.35"  g="0.0"     b="0.47"  showDaughters="true"  visible="true"/>
 
-        <vis name="LCALVis"    alpha="1.0" r="0.25"  g="0.88"    b="0.81"  showDaughters="true"  visible="true"/>
+      <vis name="LCALVis"    alpha="1.0" r="0.25"  g="0.88"    b="0.81"  showDaughters="true"  visible="true"/>
 
-        <vis name="BCALVis"     alpha="1.0" r="0.0"   g="0.4"     b="0.4"   showDaughters="true"  visible="true"/>
-        <vis name="KICKVis"     alpha="1.0" r="1.0"   g="0.498"   b="0.0"   showDaughters="true"  visible="true"/> 
-        <vis name="QD0CoilIVis"     alpha="1.0" r="1.0"   g="0.498"   b="0.0"   showDaughters="true"  visible="true"/>
-        <vis name="QD0CoilOVis"     alpha="1.0" r="1.0"   g="0.25"   b="0.0"   showDaughters="true"  visible="true"/>
-        <vis name="CompSolVis"     alpha="1.0" r="0.5"   g="0.5"   b="0.0"   showDaughters="true"  visible="true"/>
-        <vis name="ScreenSolVis"     alpha="1.0" r="1"   g="1"   b="0"   showDaughters="true"  visible="true"/>
-        <vis name="ColliVis"        alpha="1.0" r="0.7"   g="0.5"   b="1"   showDaughters="true"  visible="true"/>
-        <vis name="TantalumVis"     alpha="1.0" r="1"   g="0.5"   b="0.5"   showDaughters="true"  visible="true"/>
+      <vis name="BCALVis"     alpha="1.0" r="0.0"   g="0.4"     b="0.4"   showDaughters="true"  visible="true"/>
+      <vis name="KICKVis"     alpha="1.0" r="1.0"   g="0.498"   b="0.0"   showDaughters="true"  visible="true"/> 
+      <vis name="QD0CoilIVis"     alpha="1.0" r="1.0"   g="0.498"   b="0.0"   showDaughters="true"  visible="true"/>
+      <vis name="QD0CoilOVis"     alpha="1.0" r="1.0"   g="0.25"   b="0.0"   showDaughters="true"  visible="true"/>
+      <vis name="CompSolVis"     alpha="1.0" r="0.5"   g="0.5"   b="0.0"   showDaughters="true"  visible="true"/>
+      <vis name="ScreenSolVis"     alpha="1.0" r="1"   g="1"   b="0"   showDaughters="true"  visible="true"/>
+      <vis name="ColliVis"        alpha="1.0" r="0.7"   g="0.5"   b="1"   showDaughters="true"  visible="true"/>
+      <vis name="TantalumVis"     alpha="1.0" r="1"   g="0.5"   b="0.5"   showDaughters="true"  visible="true"/>
 
-        <vis name="BPMVis"      alpha="1.0" r="0.25"  g="0.88"    b="0.81"  showDaughters="true"  visible="true"/>                           
-        <vis name="SupportVis"  alpha="1"   r="0.2"   g="0.2"     b="0.2"   showDaughters="false" visible="true"/>        
+      <vis name="BPMVis"      alpha="1.0" r="0.25"  g="0.88"    b="0.81"  showDaughters="true"  visible="true"/>                           
+      <vis name="SupportVis"  alpha="1"   r="0.2"   g="0.2"     b="0.2"   showDaughters="false" visible="true"/>        
     </display>
 
     <include ref="${DD4hepINSTALL}/DDDetectors/compact/detector_types.xml"/>
@@ -340,7 +323,6 @@
 
     <include ref="ECalBarrel_o2_v01_03.xml"/>
     <include ref="ECalEndcap_o2_v01_03.xml"/>
-    <!--include ref="ECalPlug_o1_v01_03.xml"/-->
 
     <include ref="HCalBarrel_o1_v01_01.xml"/>
     <include ref="HCalEndcap_o1_v01_01.xml"/>
@@ -352,6 +334,7 @@
 
 
     <plugins>
+      <plugin name="DD4hepVolumeManager"/>
       <plugin name="InstallSurfaceManager"/>
     </plugins>
 
