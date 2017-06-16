@@ -58,7 +58,7 @@
                 <slice material="Air" thickness="0.35*cm" />
                 <slice material="Aluminium" thickness="0.1*cm" />
                 <slice material="Air" thickness="1.0*cm" />
-                <slice material="Iron" thickness="24.4*cm" vis="YokeAbsorberVis" radiator="yes"/>
+                <slice material="Iron" thickness="17.7*cm" vis="YokeAbsorberVis" radiator="yes"/>
             </layer>
             
 
