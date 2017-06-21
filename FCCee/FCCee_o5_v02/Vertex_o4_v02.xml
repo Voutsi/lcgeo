@@ -48,9 +48,9 @@
         
         <!-- <constant name="VertexBarrel_Layer1_width" value="13*mm"/>  -->
   	<!-- make it consisten with 13 staves in L1 at R = 1.9 cm : -->
-        <constant name="VertexBarrel_Layer1_width" value="11.3*mm"/> 
-        <constant name="VertexBarrel_Layer2_width" value="19.15*mm"/>
-        <constant name="VertexBarrel_Layer3_width" value="22.24*mm"/>
+        <constant name="VertexBarrel_Layer1_width" value="12.20*mm"/> 
+        <constant name="VertexBarrel_Layer2_width" value="20.20*mm"/>
+        <constant name="VertexBarrel_Layer3_width" value="23.20*mm"/>
         
         <constant name="VertexBarrel_Layer1_offset" value="1*mm"/>
         <constant name="VertexBarrel_Layer2_offset" value="1*mm"/>
@@ -178,6 +178,7 @@
                 <module_component thickness="0.005*cm" material="Silicon" sensitive="true" vis="SiVertexSensitiveVis2"/>
 
             </module>
+
             <layer id="0"  vis="SiVertexLayerVis">
                 <ring r="(VertexEndcap_rmax + VertexEndcap_rmin1) / 2" zstart="VertexEndcap_z1 - VertexEndcapModuleThickness/2.0" nmodules="(int) VertexEndcapModules" dz="0*cm" phi0="pi/(VertexEndcapModules)" module="SiVertexEndcapModule1"/>
             </layer>
@@ -197,8 +198,6 @@
             <layer id="5"  vis="SiVertexLayerVis">
                 <ring r="(VertexEndcap_rmax + VertexEndcap_rmin3) / 2" zstart="VertexEndcap_z3+VertexEndcapModuleThickness/2.0" nmodules="(int) VertexEndcapModules" dz="0*cm" phi0="pi/(VertexEndcapModules)" module="SiVertexEndcapModule6"/>
             </layer>
- 
-
 
         </detector>
     </detectors> 
