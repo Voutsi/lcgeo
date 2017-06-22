@@ -37,7 +37,7 @@
 		 inner_z = "LumiCal_min_z"/>
             
             
-            <layer repeat="40" vis="SeeThrough">
+            <layer repeat="30" vis="SeeThrough">
                 <slice material = "Silicon" thickness = "4.355*mm" 	sensitive = "no"  vis="SupportVis"/>
             </layer>
             
