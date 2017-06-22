@@ -68,7 +68,7 @@
 		 r_gap = "2*mm"/>
             
             
-            <layer repeat="40" vis="SeeThrough">
+            <layer repeat="30" vis="SeeThrough">
 
                 <slice material = "TungstenDens24" thickness = "3.5*mm" 		   vis="BCLayerVis1" />
                 <slice material = "Air"     thickness = "0.1*mm" />

@@ -182,20 +182,20 @@
         
         <constant name="CompSol_min_z" value="1250*mm"/>
 
-        <constant name="LumiCal_max_z" value="CompSol_min_z - 5*cm" />
-        <constant name="LumiCal_min_z" value="LumiCal_max_z - 17.42*cm"/>
+        <constant name="LumiCal_max_z" value="118.065*cm" />
+        <constant name="LumiCal_min_z" value="105*cm"/>
 
         <constant name="LumiCal_dz" value="(LumiCal_max_z-LumiCal_min_z)/2.0"/>
 
-	<constant name="LumiCal_Rinn1" value="48*mm"/>
-	<constant name="LumiCal_Rinn2" value="53.23*mm"/>
-	<constant name="LumiCal_Rout1" value="98.225*mm"/>
-	<constant name="LumiCal_Rout2" value="113.903*mm"/>
+	<constant name="LumiCal_Rinn1" value="52.5*mm"/>
+	<constant name="LumiCal_Rinn2" value="54.46*mm"/>
+	<constant name="LumiCal_Rout1" value="101.25*mm"/>
+	<constant name="LumiCal_Rout2" value="113.662*mm"/>
 	
-	<constant name="LumiCal_Instr_Rinn1" value="98.225*mm + env_safety"/>
-	<constant name="LumiCal_Instr_Rinn2" value="113.903*mm + env_safety"/>
-	<constant name="LumiCal_Instr_Rout1" value="128.225*mm"/>
-	<constant name="LumiCal_Instr_Rout2" value="150*mm"/>
+	<constant name="LumiCal_Instr_Rinn1" value="101.25*mm + env_safety"/>
+	<constant name="LumiCal_Instr_Rinn2" value="113.662*mm + env_safety"/>
+	<constant name="LumiCal_Instr_Rout1" value="131.25*mm"/>
+	<constant name="LumiCal_Instr_Rout2" value="147.6*mm"/>
 	
 	<constant name="LumiCal_Tot_Rinn1" value="LumiCal_Rinn1 + LumiCal_Instr_Rinn1"/>
 	<constant name="LumiCal_Tot_Rinn2" value="LumiCal_Rinn2 + LumiCal_Instr_Rinn2"/>
@@ -331,7 +331,6 @@
 
     <include ref="YokeBarrel_o1_v01_02.xml"/>
     <include ref="YokeEndcap_o1_v01_02.xml"/>
-
 
     <plugins>
       <plugin name="DD4hepVolumeManager"/>
