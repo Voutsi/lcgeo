@@ -75,7 +75,7 @@
                 <include ref="OuterTrackerBarrelModuleDown.xml"/>
             </module>
 
-<!--
+
             <layer module="OuterTrackerBarrelModule_In" id="0" vis="OuterTrackerLayerVis" type="4">
                 <rphi_layout phi_tilt="0*deg" nphi="53*4" phi0="0" rc="OuterTracker_Barrel_radius_0" dr="5.5*mm"/>
                 <z_layout dr="0" z0="OuterTracker_Barrel_half_length-15.05*mm" nz="84"/>
@@ -88,7 +88,7 @@
                 <rphi_layout phi_tilt="0*deg" nphi="113*4" phi0="0" rc="OuterTracker_Barrel_radius_2" dr="5.5*mm"/>
                 <z_layout dr="0" z0="OuterTracker_Barrel_half_length-15.05*mm" nz="84"/>
             </layer>
--->
+
         </detector>
 
     
