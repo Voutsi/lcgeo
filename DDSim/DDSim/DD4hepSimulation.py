@@ -235,16 +235,16 @@ class DD4hepSimulation(object):
       exit(1)
 
   @staticmethod
-  def getDetectorLists( lcdd ):
-    ''' get lists of trackers and calorimeters that are defined in lcdd (the compact xml file)'''
+  def getDetectorLists( detectorDescription ):
+    ''' get lists of trackers and calorimeters that are defined in detectorDescription (the compact xml file)'''
     import DDG4
   #  if len(detectorList):
   #    print " subset list of detectors given - will only instantiate these: " , detectorList
     trackers,calos = [],[]
-    for i in lcdd.detectors():
+    for i in detectorDescription.detectors():
       det = DDG4.DetElement(i.second.ptr())
       name = det.name()
-      sd =  lcdd.sensitiveDetector( name )
+      sd =  detectorDescription.sensitiveDetector( name )
       if sd.isValid():
         detType = sd.type()
   #      if len(detectorList) and not(name in detectorList):
@@ -273,9 +273,9 @@ class DD4hepSimulation(object):
     #kernel.setOutputLevel('Compact',1)
 
     kernel.loadGeometry("file:"+ self.compactFile )
-    lcdd = kernel.lcdd()
+    detectorDescription = kernel.detectorDescription()
 
-    DDG4.importConstants( lcdd )
+    DDG4.importConstants( detectorDescription )
 
   #----------------------------------------------------------------------------------
 
@@ -394,13 +394,32 @@ class DD4hepSimulation(object):
     part.MinDistToParentVertex= self.part.minDistToParentVertex
     part.OutputLevel = self.output.part
     part.enableUI()
+
+
+    if self.part.enableDetailedHitsAndParticleInfo:
+      self.part.setDumpDetailedParticleInfo( kernel, DDG4 )
+
+    #----------------------------------
+
+
+
+
     user = DDG4.Action(kernel,"Geant4TCUserParticleHandler/UserParticleHandler")
     try:
       user.TrackingVolume_Zmax = DDG4.tracker_region_zmax
       user.TrackingVolume_Rmax = DDG4.tracker_region_rmax
-    except AttributeError as e:
-      print "No Attribute: ", str(e)
 
+      print " *** definition of tracker region *** "
+      print "    tracker_region_zmax = " ,  user.TrackingVolume_Zmax
+      print "    tracker_region_rmax = " ,  user.TrackingVolume_Rmax
+      print " ************************************ "
+
+    except AttributeError as e:
+      print "ERROR - attribute of tracker region missing in detector model   ", str(e)
+      print "   make sure to specify the global constants tracker_region_zmax and tracker_region_rmax "
+      print "   this is needed for the MC-truth link of created sim-hits  !  "
+      exit(1)
+      
     #  user.enableUI()
     part.adopt(user)
 
@@ -414,9 +433,9 @@ class DD4hepSimulation(object):
       exit(1)
 
     #=================================================================================
-    # get lists of trackers and calorimeters in lcdd
+    # get lists of trackers and calorimeters in detectorDescription
 
-    trk,cal = self.getDetectorLists( lcdd )
+    trk,cal = self.getDetectorLists( detectorDescription )
 
     # ---- add the trackers:
     try:
@@ -461,6 +480,11 @@ class DD4hepSimulation(object):
 
     kernel.run()
     kernel.terminate()
+
+    userTime, sysTime,_cuTime, _csTime, _elapsedTime = os.times()
+    if self.printLevel <= 3:
+      print "DDSim            INFO  Execution Time: %3.2f s (User), %3.2f s (System)"% (userTime, sysTime)
+
 
   def __setMagneticFieldOptions(self, simple):
     """ create and configure the magnetic tracking setup """
@@ -611,12 +635,18 @@ class DD4hepSimulation(object):
       for pattern in self.action.mapActions:
         if pattern.lower() in det.lower():
           action = self.action.mapActions[pattern]
+          print  '       replace default action with : ' , action 
           break
       seq,act = setupFuction( det, type=action )
       self.filter.applyFilters( seq, det, defaultFilter )
+
       ##set detailed hit creation mode for this
       if self.enableDetailedShowerMode:
-        act.HitCreationMode = 2
+        if isinstance(act, list):
+          for a in act:
+            a.HitCreationMode = 2
+        else:
+          act.HitCreationMode = 2
 
   def __printSteeringFile( self, parser):
     """print the parameters formated as a steering file"""

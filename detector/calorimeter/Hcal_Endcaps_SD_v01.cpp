@@ -49,8 +49,29 @@
 #include "DDRec/DetectorData.h"
 
 using namespace std;
-using namespace DD4hep;
-using namespace DD4hep::Geometry;
+
+using dd4hep::BUILD_ENVELOPE;
+using dd4hep::Box;
+using dd4hep::DetElement;
+using dd4hep::Detector;
+using dd4hep::IntersectionSolid;
+using dd4hep::Layering;
+using dd4hep::Material;
+using dd4hep::PlacedVolume;
+using dd4hep::PolyhedraRegular;
+using dd4hep::Position;
+using dd4hep::Readout;
+using dd4hep::Ref_t;
+using dd4hep::Rotation3D;
+using dd4hep::RotationZ;
+using dd4hep::RotationZYX;
+using dd4hep::Segmentation;
+using dd4hep::SensitiveDetector;
+using dd4hep::Transform3D;
+using dd4hep::Volume;
+using dd4hep::_toString;
+
+using dd4hep::rec::LayeredCalorimeterData;
 
 //#define VERBOSE 1
 
@@ -59,15 +80,16 @@ using namespace DD4hep::Geometry;
 #define DD4HEP_VERSION_GE(a,b) 0 
 #endif
 
-static Ref_t create_detector(LCDD& lcdd, xml_h element, SensitiveDetector sens)  {
+static Ref_t create_detector(Detector& theDetector, xml_h element, SensitiveDetector sens)  {
   //unused:  static double tolerance = 0e0;
 
   xml_det_t   x_det     = element;
   string      det_name    = x_det.nameStr();
+  string      det_type    = x_det.typeStr();
   Layering    layering(x_det);
 
-  Material    air         = lcdd.air();
-  Material    stavesMaterial    = lcdd.material(x_det.materialStr());
+  Material    air         = theDetector.air();
+  Material    stavesMaterial    = theDetector.material(x_det.materialStr());
 
   int           det_id    = x_det.id();
   xml_comp_t    x_staves  = x_det.staves();
@@ -76,11 +98,11 @@ static Ref_t create_detector(LCDD& lcdd, xml_h element, SensitiveDetector sens) 
 
   // --- create an envelope volume and position it into the world ---------------------
   
-  Volume envelope = XML::createPlacedEnvelope( lcdd,  element , sdet ) ;
+  Volume envelope = dd4hep::xml::createPlacedEnvelope( theDetector,  element , sdet ) ;
   
-  XML::setDetectorTypeFlag( element, sdet ) ;
+  dd4hep::xml::setDetectorTypeFlag( element, sdet ) ;
 
-  if( lcdd.buildType() == BUILD_ENVELOPE ) return sdet ;
+  if( theDetector.buildType() == BUILD_ENVELOPE ) return sdet ;
 
   //-----------------------------------------------------------------------------------
 
@@ -92,7 +114,6 @@ static Ref_t create_detector(LCDD& lcdd, xml_h element, SensitiveDetector sens) 
   Readout readout = sens.readout();
   Segmentation seg = readout.segmentation();
   
-//  cout << "Segmentation: "<< seg->type() << endl;
   std::vector<double> cellSizeVector = seg.segmentation()->cellDimensions(0);
   double cell_sizeX      = cellSizeVector[0];
   double cell_sizeY      = cellSizeVector[1];
@@ -104,22 +125,23 @@ static Ref_t create_detector(LCDD& lcdd, xml_h element, SensitiveDetector sens) 
 // Use them to build HcalEndcaps
 //
 //====================================================================
-  // The way to read constant from XML/LCDD file.
-  double      Hcal_radiator_thickness          = lcdd.constant<double>("HcalSD_radiator_thickness");
-  double      HcalEndcap_nlayers               = lcdd.constant<double>("HcalEndcapSD_nlayers");
+  // The way to read constant from XML/THEDETECTOR file.
+  double      Hcal_radiator_thickness          = theDetector.constant<double>("HcalSD_radiator_thickness");
+  double      HcalEndcap_nlayers               = theDetector.constant<double>("HcalEndcapSD_nlayers");
 
-  double      HcalEndcap_inner_radius          = lcdd.constant<double>("HcalEndcap_inner_radius");
-  double      HcalEndcap_outer_radius          = lcdd.constant<double>("HcalEndcap_outer_radius");
-  double      HcalEndcap_min_z                 = lcdd.constant<double>("HcalEndcap_min_z");
-  double      HcalEndcap_max_z                 = lcdd.constant<double>("HcalEndcap_max_z");
+  double      HcalEndcap_inner_radius          = theDetector.constant<double>("HcalEndcap_inner_radius");
+  double      HcalEndcap_outer_radius          = theDetector.constant<double>("HcalEndcap_outer_radius");
+  double      HcalEndcap_min_z                 = theDetector.constant<double>("HcalEndcap_min_z");
+  double      HcalEndcap_max_z                 = theDetector.constant<double>("HcalEndcap_max_z");
 
-  double      Hcal_stave_gaps                  = lcdd.constant<double>("HcalSD_stave_gaps");
-  double      Hcal_lateral_plate_thickness     = lcdd.constant<double>("HcalSD_endcap_lateral_structure_thickness");
-  double      Hcal_back_plate_thickness        = lcdd.constant<double>("HcalSD_back_plate_thickness");
-  int         HcalEndcap_symmetry              = lcdd.constant<int>("HcalEndcap_symmetry");
+  double      Hcal_stave_gaps                  = theDetector.constant<double>("HcalSD_stave_gaps");
+  double      Hcal_lateral_plate_thickness     = theDetector.constant<double>("HcalSD_endcap_lateral_structure_thickness");
+  double      Hcal_back_plate_thickness        = theDetector.constant<double>("HcalSD_back_plate_thickness");
+  int         HcalEndcap_symmetry              = theDetector.constant<int>("HcalEndcap_symmetry");
 
 // Some verbose output
   cout << " \n\n\n CREATE DETECTOR: Hcal_Endcaps_SD_v01" << endl;
+  cout << " \n\n\n Detector Type " << det_type<< endl;
   cout<<"  cell_sizeX, cell_sizeY:  "<<cell_sizeX <<" "<<cell_sizeY <<endl;
   cout<<"  HcalEndcap_inner_radius: "<< HcalEndcap_inner_radius <<endl;
   cout<<"  HcalEndcap_outer_radius: "<< HcalEndcap_outer_radius <<endl;
@@ -143,10 +165,6 @@ static Ref_t create_detector(LCDD& lcdd, xml_h element, SensitiveDetector sens) 
 // general calculated parameters
 //
 //====================================================================
-
-//  double Hcal_total_dim_z   = HcalEndcap_nlayers * layer_thickness 
-//                            + Hcal_back_plate_thickness;
-  double Hcal_total_dim_z   = HcalEndcap_nlayers * layer_thickness ;
 
 
 // ========= Create Hcal end cap ring   ====================================
@@ -174,15 +192,17 @@ static Ref_t create_detector(LCDD& lcdd, xml_h element, SensitiveDetector sens) 
   double rmin = pRMin;
   double rmax = pRMax;
   int numSide = HcalEndcap_symmetry;
+  //double phiStart = M_PI/numSide;
+  double phiStart = 0.0;
 
-  PolyhedraRegular HcalEndCapSolid( numSide, M_PI/numSide, rmin, rmax,  zlen);
+  PolyhedraRegular HcalEndCapSolid( numSide, phiStart, rmin, rmax,  zlen);
 
   Volume  HcalEndCapLogical("HcalEndCapLogical",HcalEndCapSolid, stavesMaterial);
 
 
   //========== fill data for reconstruction ============================
-  DDRec::LayeredCalorimeterData* caloData = new DDRec::LayeredCalorimeterData ;
-  caloData->layoutType = DDRec::LayeredCalorimeterData::EndcapLayout ;
+  LayeredCalorimeterData* caloData = new LayeredCalorimeterData ;
+  caloData->layoutType = LayeredCalorimeterData::EndcapLayout ;
   caloData->inner_symmetry = 4  ;
   caloData->outer_symmetry = 0  ;
 //  caloData->outer_symmetry = numSide  ;
@@ -210,20 +230,18 @@ static Ref_t create_detector(LCDD& lcdd, xml_h element, SensitiveDetector sens) 
   lpRMin = rmin + Hcal_lateral_plate_thickness;
 
   // G4Polyhedra Envelope parameters
-  //double phiStart = M_PI/numSide;
-  double phiStart = 0.0;
 
   double lzlen = lpDz*2.;
 
   PolyhedraRegular HcalEndCapChamberSolid( numSide, phiStart, lpRMin, lpRMax,  lzlen);
 
-  Box IntersectionStaveBox( lpRMax, lpRMax, Hcal_total_dim_z);
+  Box IntersectionStaveBox( lpRMax, lpRMax, zlen);
 
   // set up the translation and rotation for the intersection process 
   // this happens in the mother volume coordinate system, so a coordinate transformation is needed
   Position IntersectXYZtrans((pRMax + (Hcal_stave_gaps/2.)), 
 			     (pRMax + (Hcal_stave_gaps/2.)),
-			     (Hcal_total_dim_z/2.));
+			     (zlen/2.));
 
   RotationZYX rot(0.,0.,0.);
   Transform3D tran3D(rot,IntersectXYZtrans);
@@ -252,11 +270,6 @@ static Ref_t create_detector(LCDD& lcdd, xml_h element, SensitiveDetector sens) 
 	   layer_id++)
 	{
 	  double Zoff = (layer_id- (number_of_chambers+1)/2.0)* layer_thickness; 
-//	  double Zoff = zlen/2.
-//	    - (number_of_chambers-layer_id) *(Hcal_chamber_thickness + Hcal_radiator_thickness)
-//	    - (layer_id-1) *(Hcal_chamber_thickness + Hcal_radiator_thickness)
-//	    - Hcal_radiator_thickness + Hcal_chamber_thickness/2.0;
-
 	  
 	  //====================================================================
 	  // Create Hcal Endcap Chamber without radiator ...!! TK  with radiator defined as slice in xml 
@@ -266,12 +279,12 @@ static Ref_t create_detector(LCDD& lcdd, xml_h element, SensitiveDetector sens) 
           string layer_name      = det_name+_toString(layer_id,"_layer%d");
 	  Volume HcalEndCapStaveLogical("HcalEndCapStaveLogical",HcalEndCapStaveSolid, air);
 
-	  DDRec::LayeredCalorimeterData::Layer caloLayer ;
+	  LayeredCalorimeterData::Layer caloLayer ;
 	  caloLayer.cellSize0 = cell_sizeX;
 	  caloLayer.cellSize1 = cell_sizeY;
 
 	  // Create the slices (sublayers) within the Hcal Barrel Chamber.
-	  double slice_pos_z = layer_thickness/2.;
+	  double slice_pos_z = -layer_thickness/2.;
 	  int slice_number = 0;
 
 	  double nRadiationLengths=0.;
@@ -280,29 +293,28 @@ static Ref_t create_detector(LCDD& lcdd, xml_h element, SensitiveDetector sens) 
 
 	  nRadiationLengths   = Hcal_radiator_thickness/(stavesMaterial.radLength());
 	  nInteractionLengths = Hcal_radiator_thickness/(stavesMaterial.intLength());
-	  thickness_sum       = Hcal_radiator_thickness;
 
 	  for(xml_coll_t k(x_layer,_U(slice)); k; ++k)  {
 	    xml_comp_t x_slice = k;
 	    string   slice_name      = layer_name + _toString(slice_number,"_slice%d");
 	    double   slice_thickness = x_slice.thickness();
-	    Material slice_material  = lcdd.material(x_slice.materialStr());
+	    Material slice_material  = theDetector.material(x_slice.materialStr());
             if(stave_id==1 && layer_id==1)
 	      cout<<"  Layer_slice:  "<<  slice_name<<" slice_thickness:  "<< slice_thickness<< endl;
 	    DetElement slice(layer_name,_toString(slice_number,"slice%d"),x_det.id());
 	    
-	    slice_pos_z -= slice_thickness/2.;
+	    slice_pos_z += slice_thickness/2.;
 	    
 	    // Slice volume
 	    PolyhedraRegular slicePolyhedraRegularSolid( numSide, phiStart, lpRMin, lpRMax,  slice_thickness);
 	    
-	    Box sliceIntersectionStaveBox( lpRMax, lpRMax, Hcal_total_dim_z);
+	    Box sliceIntersectionStaveBox( lpRMax, lpRMax, zlen);
 	    
 	    // set up the translation and rotation for the intersection process 
 	    // this happens in the mother volume coordinate system, so a coordinate transformation is needed
 	    Position sIntersectXYZtrans((pRMax + (Hcal_stave_gaps/2.)), 
 					(pRMax + (Hcal_stave_gaps/2.)),
-					(Hcal_total_dim_z/2.));
+					(zlen/2.));
 	    
 	    RotationZYX srot(0.,0.,0.);
 	    Transform3D stran3D(srot,sIntersectXYZtrans);
@@ -336,7 +348,7 @@ static Ref_t create_detector(LCDD& lcdd, xml_h element, SensitiveDetector sens) 
 	    thickness_sum += slice_thickness/2;
 
 	    // Set region, limitset, and vis.
-	    slice_vol.setAttributes(lcdd,x_slice.regionStr(),x_slice.limitsStr(),x_slice.visStr());
+	    slice_vol.setAttributes(theDetector,x_slice.regionStr(),x_slice.limitsStr(),x_slice.visStr());
 	    // slice PlacedVolume
 	    PlacedVolume slice_phv = HcalEndCapStaveLogical.placeVolume(slice_vol,Position(0.,0.,slice_pos_z));
 	    if ( x_slice.isSensitive() ) {
@@ -345,7 +357,7 @@ static Ref_t create_detector(LCDD& lcdd, xml_h element, SensitiveDetector sens) 
 	    
 	    slice.setPlacement(slice_phv);
 	    // Increment x position for next slice.
-	    slice_pos_z -= slice_thickness/2.;
+	    slice_pos_z += slice_thickness/2.;
 	    // Increment slice number.
 	    ++slice_number;             
 	  }
@@ -360,7 +372,8 @@ static Ref_t create_detector(LCDD& lcdd, xml_h element, SensitiveDetector sens) 
 	  string stave_name = _toString(stave_id,"stave%d");
 	  DetElement layer(module_det, l_name+stave_name, det_id);
 	  
-	  double angle_module = M_PI/2. * ( stave_id );
+// git +	  double angle_module = -M_PI/2. *  stave_id;
+	  double angle_module = M_PI/2. *  stave_id;
 	  
 	  Position l_pos(0., 0., Zoff);
 	  RotationZ lrotz(angle_module);
@@ -393,7 +406,7 @@ static Ref_t create_detector(LCDD& lcdd, xml_h element, SensitiveDetector sens) 
 
   // Set stave visualization.
   if (x_staves)   {
-    HcalEndCapLogical.setVisAttributes(lcdd.visAttributes(x_staves.visStr()));
+    HcalEndCapLogical.setVisAttributes(theDetector.visAttributes(x_staves.visStr()));
    }
 
   //====================================================================
@@ -404,10 +417,10 @@ static Ref_t create_detector(LCDD& lcdd, xml_h element, SensitiveDetector sens) 
   
   for(int module_num=0;module_num<2;module_num++) {
 
-    int module_id = ( module_num == 0 ) ? 6:0;
+    int module_id = ( module_num == 0 ) ? 0:6;
     double this_module_z_offset = ( module_id == 0 ) ? -endcap_z_offset : endcap_z_offset; 
     double this_module_rotY = ( module_id == 0 ) ? M_PI:0.0; 
-    cout <<"  Hcal_Endcaps: module_id, z_offset, roty=  "<< module_id <<" "<<this_module_z_offset<< " "<<this_module_rotY <<endl;
+    cout <<"  Hcal_Endcaps: module_id, module_num, z_offset, roty=  "<< module_id <<" "<<module_num<<" "<<this_module_z_offset<< " "<<this_module_rotY <<endl;
   
     Position mxyzVec(0,0,this_module_z_offset);
     RotationZYX mrot(0,this_module_rotY,0);
@@ -422,7 +435,7 @@ static Ref_t create_detector(LCDD& lcdd, xml_h element, SensitiveDetector sens) 
 
   }
   
-  sdet.addExtension< DDRec::LayeredCalorimeterData >( caloData ) ;
+  sdet.addExtension< LayeredCalorimeterData >( caloData ) ;
 
   return sdet;
   

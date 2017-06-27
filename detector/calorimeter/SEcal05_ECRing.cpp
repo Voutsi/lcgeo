@@ -61,8 +61,28 @@
 #include "DDRec/DetectorData.h"
 
 using namespace std;
-using namespace DD4hep;
-using namespace DD4hep::Geometry;
+
+using dd4hep::BUILD_ENVELOPE;
+using dd4hep::Box;
+using dd4hep::DetElement;
+using dd4hep::Detector;
+using dd4hep::Layering;
+using dd4hep::Material;
+using dd4hep::PlacedVolume;
+using dd4hep::Position;
+using dd4hep::Readout;
+using dd4hep::Ref_t;
+using dd4hep::Rotation3D;
+using dd4hep::RotationZYX;
+using dd4hep::Segmentation;
+using dd4hep::SensitiveDetector;
+using dd4hep::SubtractionSolid;
+using dd4hep::Transform3D;
+using dd4hep::Tube;
+using dd4hep::Volume;
+using dd4hep::_toString;
+
+using dd4hep::rec::LayeredCalorimeterData;
 
 //#define VERBOSE 1
 
@@ -71,15 +91,15 @@ using namespace DD4hep::Geometry;
 #define DD4HEP_VERSION_GE(a,b) 0 
 #endif
 
-static Ref_t create_detector(LCDD& lcdd, xml_h element, SensitiveDetector sens)  {
+static Ref_t create_detector(Detector& theDetector, xml_h element, SensitiveDetector sens)  {
   static double tolerance = 0e0;
 
   xml_det_t     x_det     = element;
   string        det_name  = x_det.nameStr();
   Layering      layering (element);
 
-  Material      air       = lcdd.air();
-  //unused: Material      vacuum    = lcdd.vacuum();
+  Material      air       = theDetector.air();
+  //unused: Material      vacuum    = theDetector.vacuum();
 
   int           det_id    = x_det.id();
   xml_comp_t    x_staves  = x_det.staves();
@@ -87,17 +107,17 @@ static Ref_t create_detector(LCDD& lcdd, xml_h element, SensitiveDetector sens) 
 
   // --- create an envelope volume and position it into the world ---------------------
   
-  Volume envelope = XML::createPlacedEnvelope( lcdd,  element , sdet ) ;
+  Volume envelope = dd4hep::xml::createPlacedEnvelope( theDetector,  element , sdet ) ;
   
-  XML::setDetectorTypeFlag( element, sdet ) ;
+  dd4hep::xml::setDetectorTypeFlag( element, sdet ) ;
 
-  if( lcdd.buildType() == BUILD_ENVELOPE ) return sdet ;
+  if( theDetector.buildType() == BUILD_ENVELOPE ) return sdet ;
 
   //-----------------------------------------------------------------------------------
 
   sens.setType("calorimeter");
 
-  Material stave_material  = lcdd.material(x_staves.materialStr());
+  Material stave_material  = theDetector.material(x_staves.materialStr());
 
   //  DetElement    module_det("module0",det_id); // need 2 separate modules, move to a little later
 
@@ -115,59 +135,61 @@ static Ref_t create_detector(LCDD& lcdd, xml_h element, SensitiveDetector sens) 
 //
 //====================================================================
 
-  int N_FIBERS_W_STRUCTURE = 2; 
-  int N_FIBERS_ALVOULUS = 3;
+//  int N_FIBERS_W_STRUCTURE = 2; 
+//  int N_FIBERS_ALVOULUS = 3;
 
   //  read parametere from compact.xml file
-  double Ecal_Alveolus_Air_Gap              = lcdd.constant<double>("Ecal_Alveolus_Air_Gap");
-  double Ecal_Slab_shielding                = lcdd.constant<double>("Ecal_Slab_shielding");
-  double Ecal_Slab_copper_thickness         = lcdd.constant<double>("Ecal_Slab_copper_thickness");
-  double Ecal_Slab_PCB_thickness            = lcdd.constant<double>("Ecal_Slab_PCB_thickness");
-  double Ecal_Slab_glue_gap                 = lcdd.constant<double>("Ecal_Slab_glue_gap");
-  double Ecal_Slab_ground_thickness         = lcdd.constant<double>("Ecal_Slab_ground_thickness");
-  double Ecal_fiber_thickness               = lcdd.constant<double>("Ecal_fiber_thickness");
-  double Ecal_Si_thickness                  = lcdd.constant<double>("Ecal_Si_thickness");
+  double Ecal_Alveolus_Air_Gap              = theDetector.constant<double>("Ecal_Alveolus_Air_Gap");
+  double Ecal_Slab_shielding                = theDetector.constant<double>("Ecal_Slab_shielding");
+  double Ecal_Slab_copper_thickness         = theDetector.constant<double>("Ecal_Slab_copper_thickness");
+  double Ecal_Slab_PCB_thickness            = theDetector.constant<double>("Ecal_Slab_PCB_thickness");
+  double Ecal_Slab_glue_gap                 = theDetector.constant<double>("Ecal_Slab_glue_gap");
+  double Ecal_Slab_ground_thickness         = theDetector.constant<double>("Ecal_Slab_ground_thickness");
+  double Ecal_fiber_thickness_alveolus      = theDetector.constant<double>("Ecal_fiber_thickness_alveolus");
+  double Ecal_fiber_thickness_structure     = theDetector.constant<double>("Ecal_fiber_thickness_structure");
+  double Ecal_fiber_thickness_slabAbs       = theDetector.constant<double>("Ecal_fiber_thickness_slabAbs");
+  double Ecal_Si_thickness                  = theDetector.constant<double>("Ecal_Si_thickness");
   
-  double Ecal_radiator_thickness1           = lcdd.constant<double>("Ecal_radiator_layers_set1_thickness");
-  double Ecal_radiator_thickness2           = lcdd.constant<double>("Ecal_radiator_layers_set2_thickness");
-  double Ecal_radiator_thickness3           = lcdd.constant<double>("Ecal_radiator_layers_set3_thickness");
-  double Ecal_Barrel_halfZ                  = lcdd.constant<double>("Ecal_Barrel_halfZ");
+  double Ecal_radiator_thickness1           = theDetector.constant<double>("Ecal_radiator_layers_set1_thickness");
+  double Ecal_radiator_thickness2           = theDetector.constant<double>("Ecal_radiator_layers_set2_thickness");
+  double Ecal_radiator_thickness3           = theDetector.constant<double>("Ecal_radiator_layers_set3_thickness");
+  double Ecal_Barrel_halfZ                  = theDetector.constant<double>("Ecal_Barrel_halfZ");
   
-  double Ecal_support_thickness             = lcdd.constant<double>("Ecal_support_thickness");
-  double Ecal_front_face_thickness          = lcdd.constant<double>("Ecal_front_face_thickness");
-  double Ecal_lateral_face_thickness        = lcdd.constant<double>("Ecal_lateral_face_thickness");
+  double Ecal_support_thickness             = theDetector.constant<double>("Ecal_support_thickness");
+  double Ecal_front_face_thickness          = theDetector.constant<double>("Ecal_front_face_thickness");
+  double Ecal_lateral_face_thickness        = theDetector.constant<double>("Ecal_lateral_face_thickness");
  
-  double Ecal_Slab_Sc_PCB_thickness         = lcdd.constant<double>("Ecal_Slab_Sc_PCB_thickness");
-  double Ecal_Sc_thickness                  = lcdd.constant<double>("Ecal_Sc_thickness");
-  double Ecal_Sc_reflector_thickness        = lcdd.constant<double>("Ecal_Sc_reflector_thickness");
+  double Ecal_Slab_Sc_PCB_thickness         = theDetector.constant<double>("Ecal_Slab_Sc_PCB_thickness");
+  double Ecal_Sc_thickness                  = theDetector.constant<double>("Ecal_Sc_thickness");
+  double Ecal_Sc_reflector_thickness        = theDetector.constant<double>("Ecal_Sc_reflector_thickness");
 
-  double Ecal_EC_Ring_gap                   = lcdd.constant<double>("Ecal_EC_Ring_gap");
+  double Ecal_EC_Ring_gap                   = theDetector.constant<double>("Ecal_EC_Ring_gap");
 
-  double Ecal_cables_gap                    = lcdd.constant<double>("Ecal_cables_gap");
-  double Lcal_outer_radius                  = lcdd.constant<double>("Lcal_outer_radius");
-  double Ecal_Lcal_ring_gap                 = lcdd.constant<double>("Ecal_Lcal_ring_gap");
-  double Ecal_endcap_center_box_size        = lcdd.constant<double>("Ecal_endcap_center_box_size");
+  double Ecal_cables_gap                    = theDetector.constant<double>("Ecal_cables_gap");
+  double Lcal_outer_radius                  = theDetector.constant<double>("Lcal_outer_radius");
+  double Ecal_Lcal_ring_gap                 = theDetector.constant<double>("Ecal_Lcal_ring_gap");
+  double Ecal_endcap_center_box_size        = theDetector.constant<double>("Ecal_endcap_center_box_size");
 
-  int    Ecal_nlayers1                      = lcdd.constant<int>("Ecal_nlayers1");
-  int    Ecal_nlayers2                      = lcdd.constant<int>("Ecal_nlayers2");
-  int    Ecal_nlayers3                      = lcdd.constant<int>("Ecal_nlayers3");
+  int    Ecal_nlayers1                      = theDetector.constant<int>("Ecal_nlayers1");
+  int    Ecal_nlayers2                      = theDetector.constant<int>("Ecal_nlayers2");
+  int    Ecal_nlayers3                      = theDetector.constant<int>("Ecal_nlayers3");
   
 
-  //double      Ecal_cells_size               = lcdd.constant<double>("Ecal_cells_size");
-  double      EcalEndcapRing_inner_radius   = lcdd.constant<double>("EcalEndcapRing_inner_radius");
-  double      EcalEndcapRing_outer_radius   = lcdd.constant<double>("EcalEndcapRing_outer_radius");
-  double      EcalEndcapRing_min_z          = lcdd.constant<double>("EcalEndcapRing_min_z");
-  double      EcalEndcapRing_max_z          = lcdd.constant<double>("EcalEndcapRing_max_z");
+  //double      Ecal_cells_size               = theDetector.constant<double>("Ecal_cells_size");
+  double      EcalEndcapRing_inner_radius   = theDetector.constant<double>("EcalEndcapRing_inner_radius");
+  double      EcalEndcapRing_outer_radius   = theDetector.constant<double>("EcalEndcapRing_outer_radius");
+  double      EcalEndcapRing_min_z          = theDetector.constant<double>("EcalEndcapRing_min_z");
+  double      EcalEndcapRing_max_z          = theDetector.constant<double>("EcalEndcapRing_max_z");
 
 
-  double      crossing_angle = lcdd.constant<double>("ILC_Main_Crossing_Angle");
-  bool        Ecal_Barrel_PreshowerLayer         = lcdd.constant<int>("Ecal_Barrel_Preshower") > 0;
+  double      crossing_angle = theDetector.constant<double>("ILC_Main_Crossing_Angle");
+  bool        Ecal_Barrel_PreshowerLayer         = theDetector.constant<int>("Ecal_Barrel_Preshower") > 0;
 
 
 
   //========== fill data for reconstruction ============================
-  DDRec::LayeredCalorimeterData* caloData = new DDRec::LayeredCalorimeterData ;
-  caloData->layoutType = DDRec::LayeredCalorimeterData::EndcapLayout ;
+  dd4hep::rec::LayeredCalorimeterData* caloData = new dd4hep::rec::LayeredCalorimeterData ;
+  caloData->layoutType = dd4hep::rec::LayeredCalorimeterData::EndcapLayout ;
   caloData->inner_symmetry = 0  ; // hard code cernter pipe hole
   caloData->outer_symmetry = 4  ; // outer box
   caloData->phi0 = 0 ;
@@ -239,15 +261,13 @@ static Ref_t create_detector(LCDD& lcdd, xml_h element, SensitiveDetector sens) 
     Ecal_nlayers3 * Ecal_radiator_thickness3 +
     
     int(n_total_layers/2) * // fiber around W struct layers
-    (N_FIBERS_W_STRUCTURE * 2 *  Ecal_fiber_thickness) +
+    2*Ecal_fiber_thickness_structure + // (N_FIBERS_W_STRUCTURE * 2 *  Ecal_fiber_thickness) +
     
     Number_of_Si_Layers_in_Barrel * // Silicon slabs plus fiber around and inside
-    (Ecal_total_SiSlab_thickness +
-     (N_FIBERS_ALVOULUS + 1 ) * Ecal_fiber_thickness) +
+    (Ecal_total_SiSlab_thickness + Ecal_fiber_thickness_alveolus + Ecal_fiber_thickness_slabAbs) + //  (Ecal_total_SiSlab_thickness + (N_FIBERS_ALVOULUS + 1 ) * Ecal_fiber_thickness) +
     
     Number_of_Sc_Layers_in_Barrel * // Scintillator slabs plus fiber around and inside
-    (Ecal_total_ScSlab_thickness +
-     (N_FIBERS_ALVOULUS + 1 ) * Ecal_fiber_thickness) +
+    (Ecal_total_ScSlab_thickness + Ecal_fiber_thickness_alveolus + Ecal_fiber_thickness_slabAbs) + //  (N_FIBERS_ALVOULUS + 1 ) * Ecal_fiber_thickness) +
     
     Ecal_support_thickness + Ecal_front_face_thickness;
   
@@ -294,8 +314,8 @@ static Ref_t create_detector(LCDD& lcdd, xml_h element, SensitiveDetector sens) 
 
   SubtractionSolid ECRingSolid( CenterECBox, CenterECTub, hole_position);
 
-  //  Volume EnvLogECRing("ECRing",ECRingSolid,lcdd.material("g10"));
-  Volume EnvLogECRing("ECRing",ECRingSolid,lcdd.material("CarbonFiber")); // DJeans 5-sep-2016
+  //  Volume EnvLogECRing("ECRing",ECRingSolid,theDetector.material("g10"));
+  Volume EnvLogECRing("ECRing",ECRingSolid,theDetector.material("CarbonFiber")); // DJeans 5-sep-2016
 
   //==============================================================
   // build the layer and place into the ECRing
@@ -315,11 +335,11 @@ static Ref_t create_detector(LCDD& lcdd, xml_h element, SensitiveDetector sens) 
   double z_floor = 
     - module_thickness/2 +
     Ecal_front_face_thickness + 
-    N_FIBERS_ALVOULUS * Ecal_fiber_thickness;
+    Ecal_fiber_thickness_alveolus; //  N_FIBERS_ALVOULUS * Ecal_fiber_thickness;
 
   double l_pos_z = z_floor;
  
-  DDRec::LayeredCalorimeterData::Layer caloLayer ;
+  dd4hep::rec::LayeredCalorimeterData::Layer caloLayer ;
   caloLayer.cellSize0 = cell_sizeX;
   caloLayer.cellSize1 = cell_sizeY;
 
@@ -332,11 +352,14 @@ static Ref_t create_detector(LCDD& lcdd, xml_h element, SensitiveDetector sens) 
   double thickness_sum=0;
 
   nRadiationLengths   = Ecal_radiator_thickness1/(stave_material.radLength())
-    +(Ecal_front_face_thickness + N_FIBERS_ALVOULUS * Ecal_fiber_thickness)/air.radLength();
+    +(Ecal_front_face_thickness + Ecal_fiber_thickness_alveolus)/air.radLength();
+  //    +(Ecal_front_face_thickness + N_FIBERS_ALVOULUS * Ecal_fiber_thickness)/air.radLength();
   nInteractionLengths = Ecal_radiator_thickness1/(stave_material.intLength())
-    +(Ecal_front_face_thickness + N_FIBERS_ALVOULUS * Ecal_fiber_thickness)/air.intLength();
+    +(Ecal_front_face_thickness + Ecal_fiber_thickness_alveolus)/air.intLength();
+  //    +(Ecal_front_face_thickness + N_FIBERS_ALVOULUS * Ecal_fiber_thickness)/air.intLength();
   thickness_sum       = Ecal_radiator_thickness1
-    +(Ecal_front_face_thickness + N_FIBERS_ALVOULUS * Ecal_fiber_thickness);
+    +(Ecal_front_face_thickness + Ecal_fiber_thickness_alveolus);
+  //    +(Ecal_front_face_thickness + N_FIBERS_ALVOULUS * Ecal_fiber_thickness);
 
   int l_num = 1;
   bool isFirstSens = true;
@@ -359,8 +382,8 @@ static Ref_t create_detector(LCDD& lcdd, xml_h element, SensitiveDetector sens) 
       //double rad_pos_Z(0);
       double this_struct_CFthick_beforeAbs(0);
       double this_struct_CFthick_afterAbs(0);
-      double _CF_absWrap = Ecal_fiber_thickness*N_FIBERS_W_STRUCTURE;
-      double _CF_alvWall = N_FIBERS_ALVOULUS*Ecal_fiber_thickness;
+      double _CF_absWrap = Ecal_fiber_thickness_structure;
+      double _CF_alvWall = Ecal_fiber_thickness_alveolus;
       if ( isFrontFace ) { // the first part of the module depends on whether we have preshwer or not
 	if ( Ecal_Barrel_PreshowerLayer==1 ) { // don't include W+CF wrapping; only one side of alveolus
 	  this_struct_CFthick_beforeAbs = 0;
@@ -423,8 +446,8 @@ static Ref_t create_detector(LCDD& lcdd, xml_h element, SensitiveDetector sens) 
       //Box        EndcapStructureLayer_box(radiator_dim_x/2.,radiator_dim_z/2.,radiator_dim_y/2.);
       Box        EndcapStructureLayer_box(ECRingSiplateSize/ 2. - tolerance, ECRingSiplateSize/ 2. - tolerance, radiator_dim_y/2.);
       SubtractionSolid  EndcapStructureLayerSolid( EndcapStructureLayer_box, CenterECTubForSi, hole_position);
-      Volume     EndcapStructureLayer_vol(det_name+"_"+l_name+"_"+bs_name,EndcapStructureLayerSolid,lcdd.material(x_staves.materialStr()));
-      EndcapStructureLayer_vol.setVisAttributes(lcdd.visAttributes( x_staves.visStr()));	
+      Volume     EndcapStructureLayer_vol(det_name+"_"+l_name+"_"+bs_name,EndcapStructureLayerSolid,theDetector.material(x_staves.materialStr()));
+      EndcapStructureLayer_vol.setVisAttributes(theDetector.visAttributes( x_staves.visStr()));	
       
   
       // Without last W StructureLayer, the last part is Si SD even layer.
@@ -500,7 +523,7 @@ static Ref_t create_detector(LCDD& lcdd, xml_h element, SensitiveDetector sens) 
       Volume     l_vol(det_name+"_"+l_name+"_"+tower_name,ECRingSiSolid,air);
       DetElement layer(module_det, l_name+tower_name, det_id);
 	  
-      l_vol.setVisAttributes(lcdd.visAttributes( x_layer.visStr() ));
+      l_vol.setVisAttributes(theDetector.visAttributes( x_layer.visStr() ));
       
       
       
@@ -516,7 +539,7 @@ static Ref_t create_detector(LCDD& lcdd, xml_h element, SensitiveDetector sens) 
 	xml_comp_t x_slice = si;
 	string     s_name  =  _toString(s_num,"slice%d");
 	double     s_thick = x_slice.thickness();
-	Material slice_material  = lcdd.material(x_slice.materialStr());
+	Material slice_material  = theDetector.material(x_slice.materialStr());
 	  
 	double slab_dim_x = ECRingSiplateSize/2.-tolerance;
 	double slab_dim_y = s_thick/2.-tolerance;
@@ -529,7 +552,7 @@ static Ref_t create_detector(LCDD& lcdd, xml_h element, SensitiveDetector sens) 
 	Volume     s_vol(det_name+"_"+l_name+"_"+s_name,ECRingSiSliceSolid,slice_material);
 	DetElement slice(layer,s_name,det_id);
 	
-	s_vol.setVisAttributes(lcdd.visAttributes(x_slice.visStr()));
+	s_vol.setVisAttributes(theDetector.visAttributes(x_slice.visStr()));
 
 #ifdef VERBOSE	    
 	std::cout<<"x_slice.materialStr(): "<< x_slice.materialStr() <<std::endl;
@@ -610,7 +633,7 @@ static Ref_t create_detector(LCDD& lcdd, xml_h element, SensitiveDetector sens) 
 	nInteractionLengths += s_thick/(2.*slice_material.intLength());
 	thickness_sum       += s_thick/2;
 
-	slice.setAttributes(lcdd,s_vol,x_slice.regionStr(),x_slice.limitsStr(),x_slice.visStr());
+	slice.setAttributes(theDetector,s_vol,x_slice.regionStr(),x_slice.limitsStr(),x_slice.visStr());
 	
 	// Slice placement.
 	PlacedVolume slice_phv = l_vol.placeVolume(s_vol,Position(0,0,s_pos_z+s_thick/2));
@@ -630,11 +653,14 @@ static Ref_t create_detector(LCDD& lcdd, xml_h element, SensitiveDetector sens) 
 
 #if DD4HEP_VERSION_GE( 0, 15 )
       caloLayer.outer_nRadiationLengths   = nRadiationLengths
-	+ (Ecal_fiber_thickness * (N_FIBERS_ALVOULUS + N_FIBERS_W_STRUCTURE))/air.radLength();
+	+ (Ecal_fiber_thickness_alveolus + Ecal_fiber_thickness_structure )/air.radLength();
+      //	+ (Ecal_fiber_thickness * (N_FIBERS_ALVOULUS + N_FIBERS_W_STRUCTURE))/air.radLength();
       caloLayer.outer_nInteractionLengths = nInteractionLengths
-	+ (Ecal_fiber_thickness * (N_FIBERS_ALVOULUS + N_FIBERS_W_STRUCTURE))/air.intLength();
+	+ (Ecal_fiber_thickness_alveolus + Ecal_fiber_thickness_structure )/air.intLength();
+      //	+ (Ecal_fiber_thickness * (N_FIBERS_ALVOULUS + N_FIBERS_W_STRUCTURE))/air.intLength();
       caloLayer.outer_thickness           = thickness_sum
-	+ (Ecal_fiber_thickness * (N_FIBERS_ALVOULUS + N_FIBERS_W_STRUCTURE)); 
+	+ (Ecal_fiber_thickness_alveolus + Ecal_fiber_thickness_structure ); 
+      //	+ (Ecal_fiber_thickness * (N_FIBERS_ALVOULUS + N_FIBERS_W_STRUCTURE)); 
 
       if (!isFirstSens) caloData->layers.push_back( caloLayer ) ;
 #ifdef VERBOSE      
@@ -655,11 +681,11 @@ static Ref_t create_detector(LCDD& lcdd, xml_h element, SensitiveDetector sens) 
 #endif
       
       nRadiationLengths   = radiator_dim_y/(stave_material.radLength())
-	+ (Ecal_fiber_thickness * (N_FIBERS_ALVOULUS + N_FIBERS_W_STRUCTURE))/air.radLength();
+	+ (Ecal_fiber_thickness_alveolus + Ecal_fiber_thickness_structure )/air.radLength();
       nInteractionLengths = radiator_dim_y/(stave_material.intLength())
-	+ (Ecal_fiber_thickness * (N_FIBERS_ALVOULUS + N_FIBERS_W_STRUCTURE))/air.intLength();
+	+ (Ecal_fiber_thickness_alveolus + Ecal_fiber_thickness_structure )/air.intLength();
       thickness_sum       = radiator_dim_y
-	+ (Ecal_fiber_thickness * (N_FIBERS_ALVOULUS + N_FIBERS_W_STRUCTURE));  
+	+ (Ecal_fiber_thickness_alveolus + Ecal_fiber_thickness_structure );  
 
 
       if(radiator_dim_y <= 0) {
@@ -692,8 +718,8 @@ static Ref_t create_detector(LCDD& lcdd, xml_h element, SensitiveDetector sens) 
 //      //Box        EndcapStructureLayer_box(radiator_dim_x/2.,radiator_dim_z/2.,radiator_dim_y/2.);
 //      Box        EndcapStructureLayer_box(ECRingSiplateSize/ 2. - tolerance, ECRingSiplateSize/ 2. - tolerance, radiator_dim_y/2.);
 //      SubtractionSolid  EndcapStructureLayerSolid( EndcapStructureLayer_box, CenterECTubForSi, hole_position);
-//      Volume     EndcapStructureLayer_vol(det_name+"_"+l_name+"_"+bs_name,EndcapStructureLayerSolid,lcdd.material(x_staves.materialStr()));
-//      EndcapStructureLayer_vol.setVisAttributes(lcdd.visAttributes(x_layer.visStr()));	
+//      Volume     EndcapStructureLayer_vol(det_name+"_"+l_name+"_"+bs_name,EndcapStructureLayerSolid,theDetector.material(x_staves.materialStr()));
+//      EndcapStructureLayer_vol.setVisAttributes(theDetector.visAttributes(x_layer.visStr()));	
 //      
 //  
 //      // Without last W StructureLayer, the last part is Si SD even layer.
@@ -723,7 +749,7 @@ static Ref_t create_detector(LCDD& lcdd, xml_h element, SensitiveDetector sens) 
   
   // Set stave visualization.
   if (x_staves)   {
-    EnvLogECRing.setVisAttributes(lcdd.visAttributes(x_staves.visStr()));
+    EnvLogECRing.setVisAttributes(theDetector.visAttributes(x_staves.visStr()));
   }
   
 
@@ -753,7 +779,7 @@ static Ref_t create_detector(LCDD& lcdd, xml_h element, SensitiveDetector sens) 
 
   }
   
-  sdet.addExtension< DDRec::LayeredCalorimeterData >( caloData ) ; 
+  sdet.addExtension< dd4hep::rec::LayeredCalorimeterData >( caloData ) ; 
 
   return sdet;
   
