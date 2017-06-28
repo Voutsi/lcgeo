@@ -5,7 +5,7 @@
         <constant name="OuterTracker_Barrel_radius_1" value="1568*mm"/>
         <constant name="OuterTracker_Barrel_radius_2" value="2136*mm"/>
         
-        <constant name="OuterTracker_Barrel_half_length" value="1264*mm"/>
+        <constant name="OuterTracker_Barrel_half_length" value="1264.2*mm"/>
         
         <constant name="OuterTracker_Endcap_outer_radius" value="2080*mm"/>
         <constant name="OuterTracker_Endcap_inner_radius" value="718*mm"/>
