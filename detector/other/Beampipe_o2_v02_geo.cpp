@@ -303,7 +303,7 @@ static Ref_t create_element(Detector& theDetector,
 	    VolCone conSurf2( wallLog2, SurfaceType( SurfaceType::Helper ) , 0.5*thickness  , 0.5*thickness , v, ocon );
 
 	    // adding a golden surface for cone
-	    if (Name=="FirstCone"){
+	    if (Name=="FirstConeAu"){
 	      Vector3D aucon(  rInnerStart + 0.5 * dr - (goldWidth+goldTolerance) + goldWidth/2.  , 0. , 0. ) ;
 	      Vector3D auv( 1. , 0. , theta, Vector3D::spherical ) ;
 
@@ -337,7 +337,7 @@ static Ref_t create_element(Detector& theDetector,
 	tubeLog.placeVolume( wallLog,  Transform3D() );
 	tubeLog2.placeVolume( wallLog2,  Transform3D() );
 	
-	if( crossType == ODH::kCenter && (Name=="FirstCone" || Name=="VertexInner") ) { 	
+	if( crossType == ODH::kCenter && (Name=="FirstConeAu" || Name=="VertexInnerAu") ) { 	
 	  // place golad coating as a daughter of the wall (?)
 	  tubeLog.placeVolume( goldLog,  Transform3D() );
 	  tubeLog2.placeVolume( goldLog2,  Transform3D() );
