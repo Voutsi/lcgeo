@@ -129,13 +129,14 @@
         <constant name="ECalBarrel_half_length" value="2210*mm"/>
         <constant name="ECalBarrel_symmetry" value="12"/>
         
-        <constant name="ECalEndcap_inner_radius" value="250*mm"/>
+        <constant name="ECalEndcap_inner_radius" value="340*mm"/>
         <constant name="ECalEndcap_outer_radius" value="2350*mm"/>
         <constant name="ECalEndcap_min_z" value="2307*mm"/>
         <constant name="ECalEndcap_max_z" value="2509*mm"/>
         <constant name="ECalEndcap_outer_symmetry" value="12"/>
         <constant name="ECalEndcap_inner_symmetry" value="12"/>
-        
+
+        <!-- ECal plug not used -->
         <constant name="ECalPlug_inner_radius" value="260*mm"/>
         <constant name="ECalPlug_outer_radius" value="380*mm"/>
         <constant name="ECalPlug_min_z" value="2307*mm"/>
@@ -148,7 +149,7 @@
         <constant name="HCalBarrel_half_length" value="2210*mm"/>
         <constant name="HCalBarrel_symmetry" value="12"/>
         
-        <constant name="HCalEndcap_inner_radius" value="250*mm"/>
+        <constant name="HCalEndcap_inner_radius" value="340*mm"/>
         <constant name="HCalEndcap_outer_radius" value="3566*mm"/>
         <constant name="HCalEndcap_min_z" value="2539*mm"/>
         <constant name="HCalEndcap_max_z" value="3705*mm"/>
@@ -314,10 +315,9 @@
     <include ref="Beampipe_o4_v02_noNotch_Ta_cone.xml"/>  
     <include ref="BeamInstrumentation_o3_v01_overlap.xml"/> 
 
-    <include ref="LumiCal_o2_v01_02.xml"/>
-    <include ref="LumiCal_o2_v01_02_plusInstr.xml"/>
+    <include ref="LumiCal_o2_v01_03.xml"/>
 
-    <include ref="Vertex_o4_v02.xml"/>  
+    <include ref="Vertex_o4_v03.xml"/>  
     <include ref="InnerTracker_o2_v06_02.xml"/>  
     <include ref="OuterTracker_o2_v06_02.xml"/>
 
