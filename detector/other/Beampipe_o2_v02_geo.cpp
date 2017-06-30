@@ -677,7 +677,7 @@ static Ref_t create_element(Detector& theDetector,
   
   std::cout << std::setw(8) << " minimum radius" << min_radius << std::endl ;
   // add a surface just inside the beampipe for tracking:
-  Vector3D oIPCyl( (min_radius-1.e-3)  , 0. , 0.  ) ;
+  Vector3D oIPCyl( (min_radius-(goldWidth+1.e-3))  , 0. , 0.  ) ;
   SimpleCylinder ipCylSurf( envelope , SurfaceType( SurfaceType::Helper ) , 1.e-5  , 1e-5 , oIPCyl ) ;
   // the length does not really matter here as long as it is long enough for all tracks ...
   ipCylSurf->setHalfLength(  100*dd4hep::cm ) ; 
