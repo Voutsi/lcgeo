@@ -163,8 +163,6 @@ static Ref_t create_element(Detector& theDetector,
   //Parameters we have to know about
   dd4hep::xml::Component xmlParameter = xmlBeampipe.child(_Unicode(parameter));
   const double crossingAngle  = xmlParameter.attr< double >(_Unicode(crossingangle))*0.5; //  only half the angle
-  //const double goldWidth      = xmlParameter.attr<double>(_Unicode(beampipegoldwidth));
-  //const double goldTolerance      = xmlParameter.attr<double>(_Unicode(beampipegoldtolerance));
 
   double goldWidth      = theDetector.constant<double>("beampipegoldwidth");
   double goldTolerance      = theDetector.constant<double>("beampipegoldtolerance");
@@ -245,8 +243,6 @@ static Ref_t create_element(Detector& theDetector,
       // placement of the tube in the world, both at +z and -z
       envelope.placeVolume( tubeLog,  transformer );
       envelope.placeVolume( tubeLog2,  transmirror );
- 
-      std::cout <<  std::setw(350) << "Z half " << zHalf   << " rInnerStart " << rInnerStart << " rOuterStart " << rOuterStart  << " rInnerEnd " << rInnerEnd << " rOuterEnd " << rOuterEnd  << std::endl ;
 
       // if inner and outer radii are equal, then omit the tube wall
       if (rInnerStart != rOuterStart || rInnerEnd != rOuterEnd) {
@@ -280,14 +276,15 @@ static Ref_t create_element(Detector& theDetector,
 	    volSurfaceList( tube )->push_back( cylSurf2 );
 
 	    //---------------------------------------------------------------------------------------
-	    // adding provisionally a golden surface for the central cylinder only
-	    //Vector3D auocyl(  rInnerStart-0.006*dd4hep::mm + 0.005*dd4hep::mm/2.  , 0. , 0. ) ;
-	    Vector3D auocyl(  rInnerStart - (goldWidth+goldTolerance) + goldWidth/2.  , 0. , 0. ) ;
-	    VolCylinder aucylSurf1( goldLog , SurfaceType( SurfaceType::Helper ) , 0.5*goldWidth  , 0.5*goldWidth , auocyl );
-	    VolCylinder aucylSurf2( goldLog2, SurfaceType( SurfaceType::Helper ) , 0.5*goldWidth  , 0.5*goldWidth , auocyl );
+	    if (Name=="VertexInnerAu"){
+	      //Vector3D auocyl(  rInnerStart-0.006*dd4hep::mm + 0.005*dd4hep::mm/2.  , 0. , 0. ) ;
+	      Vector3D auocyl(  rInnerStart - (goldWidth+goldTolerance) + goldWidth/2.  , 0. , 0. ) ;
+	      VolCylinder aucylSurf1( goldLog , SurfaceType( SurfaceType::Helper ) , 0.5*goldWidth  , 0.5*goldWidth , auocyl );
+	      VolCylinder aucylSurf2( goldLog2, SurfaceType( SurfaceType::Helper ) , 0.5*goldWidth  , 0.5*goldWidth , auocyl );
 
-	    volSurfaceList( tube )->push_back( aucylSurf1 );
-	    volSurfaceList( tube )->push_back( aucylSurf2 );
+	      volSurfaceList( tube )->push_back( aucylSurf1 );
+	      volSurfaceList( tube )->push_back( aucylSurf2 );
+	    }
 	    //----------------------------------------------------------------------------------------
 
 	  }else{   // cone 
@@ -341,6 +338,8 @@ static Ref_t create_element(Detector& theDetector,
 	  // place golad coating as a daughter of the wall (?)
 	  tubeLog.placeVolume( goldLog,  Transform3D() );
 	  tubeLog2.placeVolume( goldLog2,  Transform3D() );
+ 
+	  std::cout <<  std::setw(350) << "Placement of gold: Z half " << zHalf   << " rInnerStart " << rInnerStart << " rOuterStart " << rOuterStart  << " rInnerEnd " << rInnerEnd << " rOuterEnd " << rOuterEnd  << std::endl ;
 	}	
       }
     }  
