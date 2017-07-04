@@ -65,15 +65,15 @@ static Ref_t create_detector(Detector& theDetector,
     // --- create an envelope volume and position it into the world ---------------------
     
     Volume envelope = dd4hep::xml::createPlacedEnvelope( theDetector, element , sdet ) ;
+    DetElement lumiCalDE_1(sdet,"Calorimeter1",1);
+    DetElement lumiCalDE_2(sdet,"Calorimeter2",2);
     
     sdet.setTypeFlag( DetType::CALORIMETER |  DetType::ENDCAP  | DetType::ELECTROMAGNETIC |  DetType::FORWARD ) ;
 
     if( theDetector.buildType() == BUILD_ENVELOPE ) return sdet ;
     
     //-----------------------------------------------------------------------------------
-    //Parameters we have to know about
-    dd4hep::xml::Component xmlParameter = xmlLumiCal.child(_Unicode(parameter));
-    const double fullCrossingAngle  = xmlParameter.attr< double >(_Unicode(crossingangle));
+
 
     dd4hep::xml::Dimension dimensions =  xmlLumiCal.dimensions();
     
@@ -122,7 +122,11 @@ static Ref_t create_detector(Detector& theDetector,
 
     // counter for the current layer to be placed
     int thisLayerId = 0;
-    
+
+    //Parameters we have to know about
+    dd4hep::xml::Component xmlParameter = xmlLumiCal.child(_Unicode(parameter));
+    const double fullCrossingAngle  = xmlParameter.attr< double >(_Unicode(crossingangle));
+    std::cout << " The crossing angle is: " << fullCrossingAngle << " radian"  << std::endl;    
     
     //Envelope to place the layers in
     ConeSegment envelopeCone (lcalThickness*0.5, rInnerStart, rOuterStart, rInnerEnd, rOuterEnd, phi1, phi2) ;
@@ -147,8 +151,8 @@ static Ref_t create_detector(Detector& theDetector,
         for(dd4hep::xml::Collection_t l(xmlLayer,_U(slice)); l; ++l)
             layerThickness += xml_comp_t(l).thickness();
         
-        std::cout << "Total Length "    << lcalThickness/dd4hep::cm  << " cm" << std::endl;
-        std::cout << "Layer Thickness " << layerThickness/dd4hep::cm << " cm" << std::endl;
+        //std::cout << "Total Length "    << lcalThickness/dd4hep::cm  << " cm" << std::endl;
+        //std::cout << "Layer Thickness " << layerThickness/dd4hep::cm << " cm" << std::endl;
         
 	// Initialisation for rInn1 and rOut1 for the first conical layer
 	double rInn1 = rInnerStart + 0.1*dd4hep::cm;
@@ -260,10 +264,6 @@ static Ref_t create_detector(Detector& theDetector,
 	    rInn1 = rInn2 ;
 	    rOut1 = rOut2 ;
 
-	    std::cout << " I am putting layer " << i << " at " << layer_pos << std::endl ;
-	    std::cout << " Starting radii for the NEXT layer " << i+1 << " rinn " << rInn1 << " rout " << rOut1 << std::endl ;
-    	    
-            
             ++thisLayerId;
             
         }//for all layers
@@ -280,9 +280,11 @@ static Ref_t create_detector(Detector& theDetector,
 
     PlacedVolume pv = envelope.placeVolume(envelopeVol, Transform3D( bcForwardRot, bcForwardPos ) );
     pv.addPhysVolID("barrel", 1);
+   lumiCalDE_1.setPlacement(pv);
 
     PlacedVolume pv2 = envelope.placeVolume(envelopeVol, Transform3D( bcBackwardRot, bcBackwardPos ) );
     pv2.addPhysVolID("barrel", 2);
+    lumiCalDE_2.setPlacement(pv2);
 
 
     sdet.addExtension< LayeredCalorimeterData >( caloData ) ;
