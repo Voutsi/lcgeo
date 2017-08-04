@@ -19,7 +19,7 @@
             <comment>Vertex Assembly</comment>
             <composite name="VertexBarrel"/>
             <composite name="VertexEndcap"/>
-            <composite name="VertexVerticalCable"/>
+            <!-- <composite name="VertexVerticalCable"/> -->
         </detector>
     </detectors>
     
@@ -190,14 +190,14 @@
             </layer>
 
     </detector>
-        <detector name="VertexVerticalCable" type="TrackerEndcapSupport_o1_v01" reflect="true"  region="VertexEndcapRegion">
-	    <envelope>
-		    <shape type="Assembly"/>
-	    </envelope>
-	    <layer id="1" inner_r="VertexBarrel_r1" inner_z="VertexBarrel_zmax+1*mm" outer_r="Vertex_outer_radius-5*env_safety" vis="SiVertexCableVis">
-		    <slice material="Copper" thickness="0.02*mm" />
-	    </layer>
-        </detector>
+        <!-- <detector name="VertexVerticalCable" type="TrackerEndcapSupport_o1_v01" reflect="true"  region="VertexEndcapRegion"> -->
+	<!--     <envelope> -->
+	<!--             <shape type="Assembly"/> -->
+	<!--     </envelope> -->
+	<!--     <layer id="1" inner_r="VertexBarrel_r1" inner_z="VertexBarrel_zmax+1*mm" outer_r="Vertex_outer_radius-5*env_safety" vis="SiVertexCableVis"> -->
+	<!--             <slice material="Copper" thickness="0.02*mm" /> -->
+	<!--     </layer> -->
+        <!-- </detector> -->
 
     </detectors> 
 
