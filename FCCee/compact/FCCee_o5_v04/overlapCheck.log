@@ -1,0 +1,867 @@
+Info in <TGeoManager::TGeoManager>: Geometry world, Detector Geometry created
+[?1034hXMLLoader        INFO  +++ Processing XML file: file:FCCee_o5_v03.xml
+DocumentHandler  INFO  +++ Loading document URI: file:FCCee_o5_v03.xml [Resolved:'FCCee_o5_v03.xml']
+DocumentHandler  INFO  +++ Document file:FCCee_o5_v03.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./elements.xml [Resolved:'./elements.xml']
+DocumentHandler  INFO  +++ Document ./elements.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./materials.xml [Resolved:'./materials.xml']
+DocumentHandler  INFO  +++ Document ./materials.xml succesfully parsed with TinyXML .....
+Info in <TGeoManager::SetTopVolume>: Top volume is world_volume. Master volume is world_volume
+Info in <TGeoNavigator::BuildCache>: --- Maximum geometry depth set to 100
+Detector         INFO   *********** created World volume with size :     610     610     610
+DocumentHandler  INFO  +++ Loading document URI: /cvmfs/clicdp.cern.ch/iLCSoft/builds/2017-06-21/x86_64-slc6-gcc62-opt/DD4hep/HEAD/DDDetectors/compact/detector_types.xml [Resolved:'/cvmfs/clicdp.cern.ch/iLCSoft/builds/2017-06-21/x86_64-slc6-gcc62-opt/DD4hep/HEAD/DDDetectors/compact/detector_types.xml']
+DocumentHandler  INFO  +++ Document /cvmfs/clicdp.cern.ch/iLCSoft/builds/2017-06-21/x86_64-slc6-gcc62-opt/DD4hep/HEAD/DDDetectors/compact/detector_types.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./Materials_v01.xml [Resolved:'./Materials_v01.xml']
+DocumentHandler  INFO  +++ Document ./Materials_v01.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./Beampipe_o4_v02_noNotch_Ta_cone.xml [Resolved:'./Beampipe_o4_v02_noNotch_Ta_cone.xml']
+DocumentHandler  INFO  +++ Document ./Beampipe_o4_v02_noNotch_Ta_cone.xml succesfully parsed with TinyXML .....
+This is the Beampipe:
+Utilities        INFO  +++ setDetectorTypeFlags for detector :Beampipe no xml element <type_flags/> found - nothing to set 
+       0     125      15      15    16.2    16.2     1.2       0                 tube_VertexInnerAu      Beryllium
+                                                                                                                                                                                                                                                                                                                                    Placement of gold: Z half 6.25 rInnerStart 1.5 rOuterStart 1.62 rInnerEnd 1.5 rOuterEnd 1.62
+     125     900      15  26.625      16  27.625       1       0                   tube_FirstConeAu      Beryllium
+                                                                                                                                                                                                                                                                                                                                    Placement of gold: Z half 38.75 rInnerStart 1.5 rOuterStart 1.6 rInnerEnd 2.6625 rOuterEnd 2.7625
+     900    1070  26.625  29.175  27.625  30.175       1       0                    tube_CopperCone         Copper
+    1070    1073      15      15  30.175   30.22  15.175       3              tube_SplitVacChambers         Copper
+  1073.2    6000      15      15      16      16       1       7          tube_DownStreamBeamPipe_1         Copper
+    1073    6000      15      15      16      16       1       6            tube_UpStreamBeamPipe_1         Copper
+ minimum radius1.5
+Compact          INFO  ++ Converted subdetector:Beampipe of type Beampipe_o2_v02 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++  The usage of the factory: "Mask_o1_v01" is DEPRECATED due to naming conventions.                                        ++
+++  Please use "DD4hep_Mask_o1_v01" instead.                                                                                ++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+This is the Mask:
+     128     219    1.63    1.63     3.6   4.965    1.97       3  tube_TaShield       Tantalum
+Compact          INFO  ++ Converted subdetector:BeamPipeShield of type Mask_o1_v01 
+DocumentHandler  INFO  +++ Loading document URI: ./BeamInstrumentation_o3_v01_overlap.xml [Resolved:'./BeamInstrumentation_o3_v01_overlap.xml']
+DocumentHandler  INFO  +++ Document ./BeamInstrumentation_o3_v01_overlap.xml succesfully parsed with TinyXML .....
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++  The usage of the factory: "Mask_o1_v01" is DEPRECATED due to naming conventions.                                        ++
+++  Please use "DD4hep_Mask_o1_v01" instead.                                                                                ++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+This is the Mask:
+     125     220    10.5      20    12.5      22       2       0   tube_CompSol           Iron
+Compact          INFO  ++ Converted subdetector:CompSol of type Mask_o1_v01 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++  The usage of the factory: "Mask_o1_v01" is DEPRECATED due to naming conventions.                                        ++
+++  Please use "DD4hep_Mask_o1_v01" instead.                                                                                ++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+This is the Mask:
+     220     225     4.1     4.1      22      22    17.9       3   tube_CompSol           Iron
+     225     540      20      20      22      22       2       0   tube_CompSol           Iron
+Compact          INFO  ++ Converted subdetector:ScreenSol of type Mask_o1_v01 
+DocumentHandler  INFO  +++ Loading document URI: ./LumiCal_o2_v01_03.xml [Resolved:'./LumiCal_o2_v01_03.xml']
+DocumentHandler  INFO  +++ Document ./LumiCal_o2_v01_03.xml succesfully parsed with TinyXML .....
+dd4hep::Ref_t create_detector(dd4hep::Detector&, xml_h, dd4hep::SensitiveDetector)
+Here is my LumiCal
+ and this is the sensitive detector: 0x7fff0578c130
+ caloData  -- LayeredCalorimeterData : 
+ LayoutType : ConicalLayout 
+  extent[ rmin, rmax, zmin, zmax, rEndMin, rEndMax ] : 5.250000e+00 1.012500e+01 1.050000e+02 1.180650e+02 5.446000e+00 1.136620e+01
+ outer_symmetry : 0
+ inner_symmetry : 0
+ outer_phi0 : 0.000000e+00
+ inner_phi0 : 0.000000e+00
+ gap1 : 0.000000e+00
+ gap2 : 0.000000e+00
+ Layers : 
+  distance      inner_nX0   outer_nX0    inner_nInt    outer_nInt  inner_thick outer_thick   sense_thick
+
+ The crossing angle is: 0.03 radian
+Compact          INFO  ++ Converted subdetector:LumiCal of type LumiCal_o2_v01 [calorimeter]
+dd4hep::Ref_t create_detector(dd4hep::Detector&, xml_h, dd4hep::SensitiveDetector)
+Here is my LumiCal
+ and this is the sensitive detector: 0x7fff0578c130
+ caloData  -- LayeredCalorimeterData : 
+ LayoutType : ConicalLayout 
+  extent[ rmin, rmax, zmin, zmax, rEndMin, rEndMax ] : 1.013500e+01 1.312500e+01 1.050000e+02 1.180650e+02 1.137620e+01 1.476000e+01
+ outer_symmetry : 0
+ inner_symmetry : 0
+ outer_phi0 : 0.000000e+00
+ inner_phi0 : 0.000000e+00
+ gap1 : 0.000000e+00
+ gap2 : 0.000000e+00
+ Layers : 
+  distance      inner_nX0   outer_nX0    inner_nInt    outer_nInt  inner_thick outer_thick   sense_thick
+
+ The crossing angle is: 0.03 radian
+Compact          INFO  ++ Converted subdetector:LumiCalInstrumentation of type LumiCal_o2_v01 [calorimeter]
+DocumentHandler  INFO  +++ Loading document URI: ./Vertex_o4_v04.xml [Resolved:'./Vertex_o4_v04.xml']
+DocumentHandler  INFO  +++ Document ./Vertex_o4_v04.xml succesfully parsed with TinyXML .....
+Utilities        INFO  +++ setDetectorTypeFlags for detector :Vertex no xml element <type_flags/> found - nothing to set 
+Compact          INFO  ++ Converted subdetector:Vertex of type DD4hep_SubdetectorAssembly 
+Compact          INFO  ++ Converted subdetector:VertexBarrel of type ZPlanarTracker [tracker]
+Detector         INFO  Added detector VertexBarrel to the parent:Vertex.
+XXX Vertex endcap layers: 6
+Compact          INFO  ++ Converted subdetector:VertexEndcap of type VertexEndcap_o1_v06 [tracker]
+Detector         INFO  Added detector VertexEndcap to the parent:Vertex.
+Compact          INFO  ++ Converted subdetector:VertexVerticalCable of type TrackerEndcapSupport_o1_v01 
+Detector         INFO  Added detector VertexVerticalCable to the parent:Vertex.
+VertexEndcap     INFO  +++ Processing SurfaceInstaller for subdetector: 'VertexEndcap'
+DD4hep_GenericSurfaceInstallerPlugin: argument[1] = dimension = 2
+DD4hep_GenericSurfaceInstallerPlugin: argument[2] = u_x = -1
+DD4hep_GenericSurfaceInstallerPlugin: argument[3] = v_z = 1
+DD4hep_GenericSurfaceInstallerPlugin: argument[4] = n_y = 1
+DD4hep_GenericSurfaceInstallerPlugin: vectors: u( -1 , 0 , 0) v( 0 , 0 , 1) n( 0 , 1 , 0) o( 0 , 0 , 0) 
+DocumentHandler  INFO  +++ Loading document URI: ./InnerTracker_o2_v06_02.xml [Resolved:'./InnerTracker_o2_v06_02.xml']
+DocumentHandler  INFO  +++ Document ./InnerTracker_o2_v06_02.xml succesfully parsed with TinyXML .....
+Utilities        INFO  +++ setDetectorTypeFlags for detector :InnerTrackers no xml element <type_flags/> found - nothing to set 
+Compact          INFO  ++ Converted subdetector:InnerTrackers of type DD4hep_SubdetectorAssembly 
+DocumentHandler  INFO  +++ Loading document URI: ./InnerTrackerBarrelModuleDown.xml [Resolved:'./InnerTrackerBarrelModuleDown.xml']
+DocumentHandler  INFO  +++ Document ./InnerTrackerBarrelModuleDown.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./InnerTrackerBarrelModuleDown.xml [Resolved:'./InnerTrackerBarrelModuleDown.xml']
+DocumentHandler  INFO  +++ Document ./InnerTrackerBarrelModuleDown.xml succesfully parsed with TinyXML .....
+Compact          INFO  ++ Converted subdetector:InnerTrackerBarrel of type TrackerBarrel_o1_v05 [tracker]
+Detector         INFO  Added detector InnerTrackerBarrel to the parent:InnerTrackers.
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+Compact          INFO  ++ Converted subdetector:InnerTrackerEndcap of type TrackerEndcap_o2_v06 [tracker]
+Detector         INFO  Added detector InnerTrackerEndcap to the parent:InnerTrackers.
+Compact          INFO  ++ Converted subdetector:InnerTrackerBarrelSupport of type TrackerBarrelSupport_o1_v01 
+Detector         INFO  Added detector InnerTrackerBarrelSupport to the parent:InnerTrackers.
+Compact          INFO  ++ Converted subdetector:InnerTrackerEndcapSupport of type TrackerEndcapSupport_o1_v01 
+Detector         INFO  Added detector InnerTrackerEndcapSupport to the parent:InnerTrackers.
+Compact          INFO  ++ Converted subdetector:InnerTrackerInterlink of type TubeSupport_o1_v01 
+Detector         INFO  Added detector InnerTrackerInterlink to the parent:InnerTrackers.
+Compact          INFO  ++ Converted subdetector:InnerTrackerVertexCable of type TubeSupport_o1_v01 
+Detector         INFO  Added detector InnerTrackerVertexCable to the parent:InnerTrackers.
+Compact          INFO  ++ Converted subdetector:BeampipeShell2 of type TrackerEndcapSupport_o1_v01 
+Detector         INFO  Added detector BeampipeShell2 to the parent:InnerTrackers.
+Compact          INFO  ++ Converted subdetector:BeampipeShell3 of type TrackerBarrelSupport_o1_v01 
+Detector         INFO  Added detector BeampipeShell3 to the parent:InnerTrackers.
+InnerTrackerBarrel INFO  +++ Processing SurfaceInstaller for subdetector: 'InnerTrackerBarrel'
+DD4hep_GenericSurfaceInstallerPlugin: argument[1] = dimension = 2
+DD4hep_GenericSurfaceInstallerPlugin: argument[2] = u_x = 1
+DD4hep_GenericSurfaceInstallerPlugin: argument[3] = v_y = 1
+DD4hep_GenericSurfaceInstallerPlugin: argument[4] = n_z = 1
+DD4hep_GenericSurfaceInstallerPlugin: vectors: u( 1 , 0 , 0) v( 0 , 1 , 0) n( 0 , 0 , 1) o( 0 , 0 , 0) 
+InnerTrackerEndcap INFO  +++ Processing SurfaceInstaller for subdetector: 'InnerTrackerEndcap'
+DD4hep_GenericSurfaceInstallerPlugin: argument[1] = dimension = 2
+DD4hep_GenericSurfaceInstallerPlugin: argument[2] = u_x = 1
+DD4hep_GenericSurfaceInstallerPlugin: argument[3] = v_y = 1
+DD4hep_GenericSurfaceInstallerPlugin: argument[4] = n_z = 1
+DD4hep_GenericSurfaceInstallerPlugin: vectors: u( 1 , 0 , 0) v( 0 , 1 , 0) n( 0 , 0 , 1) o( 0 , 0 , 0) 
+DocumentHandler  INFO  +++ Loading document URI: ./OuterTracker_o2_v06_02.xml [Resolved:'./OuterTracker_o2_v06_02.xml']
+DocumentHandler  INFO  +++ Document ./OuterTracker_o2_v06_02.xml succesfully parsed with TinyXML .....
+Utilities        INFO  +++ setDetectorTypeFlags for detector :OuterTrackers no xml element <type_flags/> found - nothing to set 
+Compact          INFO  ++ Converted subdetector:OuterTrackers of type DD4hep_SubdetectorAssembly 
+DocumentHandler  INFO  +++ Loading document URI: ./OuterTrackerBarrelModuleUp.xml [Resolved:'./OuterTrackerBarrelModuleUp.xml']
+DocumentHandler  INFO  +++ Document ./OuterTrackerBarrelModuleUp.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./OuterTrackerBarrelModuleUp.xml [Resolved:'./OuterTrackerBarrelModuleUp.xml']
+DocumentHandler  INFO  +++ Document ./OuterTrackerBarrelModuleUp.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./OuterTrackerBarrelModuleDown.xml [Resolved:'./OuterTrackerBarrelModuleDown.xml']
+DocumentHandler  INFO  +++ Document ./OuterTrackerBarrelModuleDown.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./OuterTrackerBarrelModuleDown.xml [Resolved:'./OuterTrackerBarrelModuleDown.xml']
+DocumentHandler  INFO  +++ Document ./OuterTrackerBarrelModuleDown.xml succesfully parsed with TinyXML .....
+Compact          INFO  ++ Converted subdetector:OuterTrackerBarrel of type TrackerBarrel_o1_v05 [tracker]
+Detector         INFO  Added detector OuterTrackerBarrel to the parent:OuterTrackers.
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+Compact          INFO  ++ Converted subdetector:OuterTrackerEndcap of type TrackerEndcap_o2_v06 [tracker]
+Detector         INFO  Added detector OuterTrackerEndcap to the parent:OuterTrackers.
+Compact          INFO  ++ Converted subdetector:OuterTrackerBarrelSupport of type TrackerBarrelSupport_o1_v01 
+Detector         INFO  Added detector OuterTrackerBarrelSupport to the parent:OuterTrackers.
+Compact          INFO  ++ Converted subdetector:OuterTrackerEndcapSupport of type TrackerEndcapSupport_o1_v01 
+Detector         INFO  Added detector OuterTrackerEndcapSupport to the parent:OuterTrackers.
+OuterTrackerBarrel INFO  +++ Processing SurfaceInstaller for subdetector: 'OuterTrackerBarrel'
+DD4hep_GenericSurfaceInstallerPlugin: argument[1] = dimension = 2
+DD4hep_GenericSurfaceInstallerPlugin: argument[2] = u_x = 1
+DD4hep_GenericSurfaceInstallerPlugin: argument[3] = v_y = 1
+DD4hep_GenericSurfaceInstallerPlugin: argument[4] = n_z = 1
+DD4hep_GenericSurfaceInstallerPlugin: vectors: u( 1 , 0 , 0) v( 0 , 1 , 0) n( 0 , 0 , 1) o( 0 , 0 , 0) 
+OuterTrackerEndcap INFO  +++ Processing SurfaceInstaller for subdetector: 'OuterTrackerEndcap'
+DD4hep_GenericSurfaceInstallerPlugin: argument[1] = dimension = 2
+DD4hep_GenericSurfaceInstallerPlugin: argument[2] = u_x = 1
+DD4hep_GenericSurfaceInstallerPlugin: argument[3] = v_y = 1
+DD4hep_GenericSurfaceInstallerPlugin: argument[4] = n_z = 1
+DD4hep_GenericSurfaceInstallerPlugin: vectors: u( 1 , 0 , 0) v( 0 , 1 , 0) n( 0 , 0 , 1) o( 0 , 0 , 0) 
+DocumentHandler  INFO  +++ Loading document URI: ./ECalBarrel_o2_v01_03.xml [Resolved:'./ECalBarrel_o2_v01_03.xml']
+DocumentHandler  INFO  +++ Document ./ECalBarrel_o2_v01_03.xml succesfully parsed with TinyXML .....
+Layer: 0 Rmin: 215 layer_pos_z: -9.8475 Dist: 215 inner_thickness: 0.24 outer_thickness: 0.265
+Layer: 1 Rmin: 215 layer_pos_z: -9.3425 Dist: 215.505 inner_thickness: 0.24 outer_thickness: 0.265
+Layer: 2 Rmin: 215 layer_pos_z: -8.8375 Dist: 216.01 inner_thickness: 0.24 outer_thickness: 0.265
+Layer: 3 Rmin: 215 layer_pos_z: -8.3325 Dist: 216.515 inner_thickness: 0.24 outer_thickness: 0.265
+Layer: 4 Rmin: 215 layer_pos_z: -7.8275 Dist: 217.02 inner_thickness: 0.24 outer_thickness: 0.265
+Layer: 5 Rmin: 215 layer_pos_z: -7.3225 Dist: 217.525 inner_thickness: 0.24 outer_thickness: 0.265
+Layer: 6 Rmin: 215 layer_pos_z: -6.8175 Dist: 218.03 inner_thickness: 0.24 outer_thickness: 0.265
+Layer: 7 Rmin: 215 layer_pos_z: -6.3125 Dist: 218.535 inner_thickness: 0.24 outer_thickness: 0.265
+Layer: 8 Rmin: 215 layer_pos_z: -5.8075 Dist: 219.04 inner_thickness: 0.24 outer_thickness: 0.265
+Layer: 9 Rmin: 215 layer_pos_z: -5.3025 Dist: 219.545 inner_thickness: 0.24 outer_thickness: 0.265
+Layer: 10 Rmin: 215 layer_pos_z: -4.7975 Dist: 220.05 inner_thickness: 0.24 outer_thickness: 0.265
+Layer: 11 Rmin: 215 layer_pos_z: -4.2925 Dist: 220.555 inner_thickness: 0.24 outer_thickness: 0.265
+Layer: 12 Rmin: 215 layer_pos_z: -3.7875 Dist: 221.06 inner_thickness: 0.24 outer_thickness: 0.265
+Layer: 13 Rmin: 215 layer_pos_z: -3.2825 Dist: 221.565 inner_thickness: 0.24 outer_thickness: 0.265
+Layer: 14 Rmin: 215 layer_pos_z: -2.7775 Dist: 222.07 inner_thickness: 0.24 outer_thickness: 0.265
+Layer: 15 Rmin: 215 layer_pos_z: -2.2725 Dist: 222.575 inner_thickness: 0.24 outer_thickness: 0.265
+Layer: 16 Rmin: 215 layer_pos_z: -1.7675 Dist: 223.08 inner_thickness: 0.24 outer_thickness: 0.265
+Layer: 17 Rmin: 215 layer_pos_z: -1.2625 Dist: 223.585 inner_thickness: 0.24 outer_thickness: 0.265
+Layer: 18 Rmin: 215 layer_pos_z: -0.7575 Dist: 224.09 inner_thickness: 0.24 outer_thickness: 0.265
+Layer: 19 Rmin: 215 layer_pos_z: -0.2525 Dist: 224.595 inner_thickness: 0.24 outer_thickness: 0.265
+Layer: 20 Rmin: 215 layer_pos_z: 0.2525 Dist: 225.1 inner_thickness: 0.24 outer_thickness: 0.265
+Layer: 21 Rmin: 215 layer_pos_z: 0.7575 Dist: 225.605 inner_thickness: 0.24 outer_thickness: 0.265
+Layer: 22 Rmin: 215 layer_pos_z: 1.2625 Dist: 226.11 inner_thickness: 0.24 outer_thickness: 0.265
+Layer: 23 Rmin: 215 layer_pos_z: 1.7675 Dist: 226.615 inner_thickness: 0.24 outer_thickness: 0.265
+Layer: 24 Rmin: 215 layer_pos_z: 2.2725 Dist: 227.12 inner_thickness: 0.24 outer_thickness: 0.265
+Layer: 25 Rmin: 215 layer_pos_z: 2.7775 Dist: 227.625 inner_thickness: 0.24 outer_thickness: 0.265
+Layer: 26 Rmin: 215 layer_pos_z: 3.2825 Dist: 228.13 inner_thickness: 0.24 outer_thickness: 0.265
+Layer: 27 Rmin: 215 layer_pos_z: 3.7875 Dist: 228.635 inner_thickness: 0.24 outer_thickness: 0.265
+Layer: 28 Rmin: 215 layer_pos_z: 4.2925 Dist: 229.14 inner_thickness: 0.24 outer_thickness: 0.265
+Layer: 29 Rmin: 215 layer_pos_z: 4.7975 Dist: 229.645 inner_thickness: 0.24 outer_thickness: 0.265
+Layer: 30 Rmin: 215 layer_pos_z: 5.3025 Dist: 230.15 inner_thickness: 0.24 outer_thickness: 0.265
+Layer: 31 Rmin: 215 layer_pos_z: 5.8075 Dist: 230.655 inner_thickness: 0.24 outer_thickness: 0.265
+Layer: 32 Rmin: 215 layer_pos_z: 6.3125 Dist: 231.16 inner_thickness: 0.24 outer_thickness: 0.265
+Layer: 33 Rmin: 215 layer_pos_z: 6.8175 Dist: 231.665 inner_thickness: 0.24 outer_thickness: 0.265
+Layer: 34 Rmin: 215 layer_pos_z: 7.3225 Dist: 232.17 inner_thickness: 0.24 outer_thickness: 0.265
+Layer: 35 Rmin: 215 layer_pos_z: 7.8275 Dist: 232.675 inner_thickness: 0.24 outer_thickness: 0.265
+Layer: 36 Rmin: 215 layer_pos_z: 8.3325 Dist: 233.18 inner_thickness: 0.24 outer_thickness: 0.265
+Layer: 37 Rmin: 215 layer_pos_z: 8.8375 Dist: 233.685 inner_thickness: 0.24 outer_thickness: 0.265
+Layer: 38 Rmin: 215 layer_pos_z: 9.3425 Dist: 234.19 inner_thickness: 0.24 outer_thickness: 0.265
+Layer: 39 Rmin: 215 layer_pos_z: 9.8475 Dist: 234.695 inner_thickness: 0.24 outer_thickness: 0.265
+Compact          INFO  ++ Converted subdetector:ECalBarrel of type GenericCalBarrel_o1_v01 [calorimeter]
+ECalBarrel       INFO  +++ Processing SurfaceInstaller for subdetector: 'ECalBarrel'
+DD4hep_CaloFaceBarrelSurfacePlugin INFO  install tracking surfaces for :  ECalBarrel 
+DocumentHandler  INFO  +++ Loading document URI: ./ECalEndcap_o2_v01_03.xml [Resolved:'./ECalEndcap_o2_v01_03.xml']
+DocumentHandler  INFO  +++ Document ./ECalEndcap_o2_v01_03.xml succesfully parsed with TinyXML .....
+Number of layers in group 0 : 40
+Compact          INFO  ++ Converted subdetector:ECalEndcap of type GenericCalEndcap_o1_v01 [calorimeter]
+ECalEndcap       INFO  +++ Processing SurfaceInstaller for subdetector: 'ECalEndcap'
+DD4hep_CaloFaceEndcapSurfacePlugin INFO  install tracking surfaces for :  ECalEndcap 
+DocumentHandler  INFO  +++ Loading document URI: ./HCalBarrel_o1_v01_01.xml [Resolved:'./HCalBarrel_o1_v01_01.xml']
+DocumentHandler  INFO  +++ Document ./HCalBarrel_o1_v01_01.xml succesfully parsed with TinyXML .....
+Layer: 0 Rmin: 240 layer_pos_z: -56.975 Dist: 240 inner_thickness: 2.1 outer_thickness: 0.55
+Layer: 1 Rmin: 240 layer_pos_z: -54.325 Dist: 242.65 inner_thickness: 2.1 outer_thickness: 0.55
+Layer: 2 Rmin: 240 layer_pos_z: -51.675 Dist: 245.3 inner_thickness: 2.1 outer_thickness: 0.55
+Layer: 3 Rmin: 240 layer_pos_z: -49.025 Dist: 247.95 inner_thickness: 2.1 outer_thickness: 0.55
+Layer: 4 Rmin: 240 layer_pos_z: -46.375 Dist: 250.6 inner_thickness: 2.1 outer_thickness: 0.55
+Layer: 5 Rmin: 240 layer_pos_z: -43.725 Dist: 253.25 inner_thickness: 2.1 outer_thickness: 0.55
+Layer: 6 Rmin: 240 layer_pos_z: -41.075 Dist: 255.9 inner_thickness: 2.1 outer_thickness: 0.55
+Layer: 7 Rmin: 240 layer_pos_z: -38.425 Dist: 258.55 inner_thickness: 2.1 outer_thickness: 0.55
+Layer: 8 Rmin: 240 layer_pos_z: -35.775 Dist: 261.2 inner_thickness: 2.1 outer_thickness: 0.55
+Layer: 9 Rmin: 240 layer_pos_z: -33.125 Dist: 263.85 inner_thickness: 2.1 outer_thickness: 0.55
+Layer: 10 Rmin: 240 layer_pos_z: -30.475 Dist: 266.5 inner_thickness: 2.1 outer_thickness: 0.55
+Layer: 11 Rmin: 240 layer_pos_z: -27.825 Dist: 269.15 inner_thickness: 2.1 outer_thickness: 0.55
+Layer: 12 Rmin: 240 layer_pos_z: -25.175 Dist: 271.8 inner_thickness: 2.1 outer_thickness: 0.55
+Layer: 13 Rmin: 240 layer_pos_z: -22.525 Dist: 274.45 inner_thickness: 2.1 outer_thickness: 0.55
+Layer: 14 Rmin: 240 layer_pos_z: -19.875 Dist: 277.1 inner_thickness: 2.1 outer_thickness: 0.55
+Layer: 15 Rmin: 240 layer_pos_z: -17.225 Dist: 279.75 inner_thickness: 2.1 outer_thickness: 0.55
+Layer: 16 Rmin: 240 layer_pos_z: -14.575 Dist: 282.4 inner_thickness: 2.1 outer_thickness: 0.55
+Layer: 17 Rmin: 240 layer_pos_z: -11.925 Dist: 285.05 inner_thickness: 2.1 outer_thickness: 0.55
+Layer: 18 Rmin: 240 layer_pos_z: -9.275 Dist: 287.7 inner_thickness: 2.1 outer_thickness: 0.55
+Layer: 19 Rmin: 240 layer_pos_z: -6.625 Dist: 290.35 inner_thickness: 2.1 outer_thickness: 0.55
+Layer: 20 Rmin: 240 layer_pos_z: -3.975 Dist: 293 inner_thickness: 2.1 outer_thickness: 0.55
+Layer: 21 Rmin: 240 layer_pos_z: -1.325 Dist: 295.65 inner_thickness: 2.1 outer_thickness: 0.55
+Layer: 22 Rmin: 240 layer_pos_z: 1.325 Dist: 298.3 inner_thickness: 2.1 outer_thickness: 0.55
+Layer: 23 Rmin: 240 layer_pos_z: 3.975 Dist: 300.95 inner_thickness: 2.1 outer_thickness: 0.55
+Layer: 24 Rmin: 240 layer_pos_z: 6.625 Dist: 303.6 inner_thickness: 2.1 outer_thickness: 0.55
+Layer: 25 Rmin: 240 layer_pos_z: 9.275 Dist: 306.25 inner_thickness: 2.1 outer_thickness: 0.55
+Layer: 26 Rmin: 240 layer_pos_z: 11.925 Dist: 308.9 inner_thickness: 2.1 outer_thickness: 0.55
+Layer: 27 Rmin: 240 layer_pos_z: 14.575 Dist: 311.55 inner_thickness: 2.1 outer_thickness: 0.55
+Layer: 28 Rmin: 240 layer_pos_z: 17.225 Dist: 314.2 inner_thickness: 2.1 outer_thickness: 0.55
+Layer: 29 Rmin: 240 layer_pos_z: 19.875 Dist: 316.85 inner_thickness: 2.1 outer_thickness: 0.55
+Layer: 30 Rmin: 240 layer_pos_z: 22.525 Dist: 319.5 inner_thickness: 2.1 outer_thickness: 0.55
+Layer: 31 Rmin: 240 layer_pos_z: 25.175 Dist: 322.15 inner_thickness: 2.1 outer_thickness: 0.55
+Layer: 32 Rmin: 240 layer_pos_z: 27.825 Dist: 324.8 inner_thickness: 2.1 outer_thickness: 0.55
+Layer: 33 Rmin: 240 layer_pos_z: 30.475 Dist: 327.45 inner_thickness: 2.1 outer_thickness: 0.55
+Layer: 34 Rmin: 240 layer_pos_z: 33.125 Dist: 330.1 inner_thickness: 2.1 outer_thickness: 0.55
+Layer: 35 Rmin: 240 layer_pos_z: 35.775 Dist: 332.75 inner_thickness: 2.1 outer_thickness: 0.55
+Layer: 36 Rmin: 240 layer_pos_z: 38.425 Dist: 335.4 inner_thickness: 2.1 outer_thickness: 0.55
+Layer: 37 Rmin: 240 layer_pos_z: 41.075 Dist: 338.05 inner_thickness: 2.1 outer_thickness: 0.55
+Layer: 38 Rmin: 240 layer_pos_z: 43.725 Dist: 340.7 inner_thickness: 2.1 outer_thickness: 0.55
+Layer: 39 Rmin: 240 layer_pos_z: 46.375 Dist: 343.35 inner_thickness: 2.1 outer_thickness: 0.55
+Layer: 40 Rmin: 240 layer_pos_z: 49.025 Dist: 346 inner_thickness: 2.1 outer_thickness: 0.55
+Layer: 41 Rmin: 240 layer_pos_z: 51.675 Dist: 348.65 inner_thickness: 2.1 outer_thickness: 0.55
+Layer: 42 Rmin: 240 layer_pos_z: 54.325 Dist: 351.3 inner_thickness: 2.1 outer_thickness: 0.55
+Layer: 43 Rmin: 240 layer_pos_z: 56.975 Dist: 353.95 inner_thickness: 2.1 outer_thickness: 0.55
+Compact          INFO  ++ Converted subdetector:HCalBarrel of type GenericCalBarrel_o1_v01 [calorimeter]
+DocumentHandler  INFO  +++ Loading document URI: ./HCalEndcap_o1_v01_01.xml [Resolved:'./HCalEndcap_o1_v01_01.xml']
+DocumentHandler  INFO  +++ Document ./HCalEndcap_o1_v01_01.xml succesfully parsed with TinyXML .....
+Utilities        INFO  +++ setDetectorTypeFlags for detector :HCalEndcaps no xml element <type_flags/> found - nothing to set 
+Compact          INFO  ++ Converted subdetector:HCalEndcaps of type DD4hep_SubdetectorAssembly 
+Cutout z width will be  21.2
+Number of layers in group 0 : 8
+Number of layers in group 1 : 36
+Compact          INFO  ++ Converted subdetector:HCalEndcap of type GenericCalEndcap_o1_v01 [calorimeter]
+Detector         INFO  Added detector HCalEndcap to the parent:HCalEndcaps.
+Cutout z width will be  18.55
+Number of layers in group 0 : 7
+Compact          INFO  ++ Converted subdetector:HCalRing of type GenericCalEndcap_o1_v01 [calorimeter]
+Detector         INFO  Added detector HCalRing to the parent:HCalEndcaps.
+DocumentHandler  INFO  +++ Loading document URI: ./Solenoid_o1_v01_02.xml [Resolved:'./Solenoid_o1_v01_02.xml']
+DocumentHandler  INFO  +++ Document ./Solenoid_o1_v01_02.xml succesfully parsed with TinyXML .....
+Utilities        INFO  +++ setDetectorTypeFlags for detector :Solenoid no xml element <type_flags/> found - nothing to set 
+Compact          INFO  ++ Converted subdetector:Solenoid of type DD4hep_SubdetectorAssembly 
+Compact          INFO  ++ Converted subdetector:SolenoidBarrel of type DD4hep_Solenoid_o1_v01 
+Detector         INFO  Added detector SolenoidBarrel to the parent:Solenoid.
+Compact          INFO  ++ Converted subdetector:SolenoidEndcaps of type DD4hep_DiskTracker 
+Detector         INFO  Added detector SolenoidEndcaps to the parent:Solenoid.
+DocumentHandler  INFO  +++ Loading document URI: ./YokeBarrel_o1_v01_02.xml [Resolved:'./YokeBarrel_o1_v01_02.xml']
+DocumentHandler  INFO  +++ Document ./YokeBarrel_o1_v01_02.xml succesfully parsed with TinyXML .....
+Layer: 0 Rmin: 447.9 layer_pos_z: -65.1 Dist: 447.9 inner_thickness: 0.75 outer_thickness: 20.95
+Layer: 1 Rmin: 447.9 layer_pos_z: -43.4 Dist: 469.6 inner_thickness: 0.75 outer_thickness: 20.95
+Layer: 2 Rmin: 447.9 layer_pos_z: -21.7 Dist: 491.3 inner_thickness: 0.75 outer_thickness: 20.95
+Layer: 3 Rmin: 447.9 layer_pos_z: 1.06581e-14 Dist: 513 inner_thickness: 0.75 outer_thickness: 20.95
+Layer: 4 Rmin: 447.9 layer_pos_z: 21.7 Dist: 534.7 inner_thickness: 0.75 outer_thickness: 20.95
+Layer: 5 Rmin: 447.9 layer_pos_z: 43.4 Dist: 556.4 inner_thickness: 0.75 outer_thickness: 20.95
+Layer: 6 Rmin: 447.9 layer_pos_z: 65.1 Dist: 578.1 inner_thickness: 0.75 outer_thickness: 20.95
+Compact          INFO  ++ Converted subdetector:YokeBarrel of type GenericCalBarrel_o1_v01 [calorimeter]
+DocumentHandler  INFO  +++ Loading document URI: ./YokeEndcap_o1_v01_02.xml [Resolved:'./YokeEndcap_o1_v01_02.xml']
+DocumentHandler  INFO  +++ Document ./YokeEndcap_o1_v01_02.xml succesfully parsed with TinyXML .....
+Number of layers in group 0 : 6
+Number of layers in group 1 : 1
+Compact          INFO  ++ Converted subdetector:YokeEndcap of type GenericCalEndcap_o1_v01 [calorimeter]
+Compact          INFO  ++ Converted field: Successfully created field GlobalSolenoid [solenoid]
+Compact          INFO  ++ Converted field: Successfully created field CompensatingSolenoidZplus [solenoid]
+Info in <TGeoManager::CheckGeometry>: Fixing runtime shapes...
+Info in <TGeoManager::CheckGeometry>: ...Nothing to fix
+Info in <TGeoManager::CloseGeometry>: Counting nodes...
+Info in <TGeoManager::Voxelize>: Voxelizing...
+Info in <TGeoManager::CloseGeometry>: Building cache...
+Info in <TGeoManager::CountLevels>: max level = 5, max placements = 37968
+Info in <TGeoManager::CloseGeometry>: 2033370 nodes/ 506 volume UID's in Detector Geometry
+Info in <TGeoManager::CloseGeometry>: ----------------modeler ready----------------
+Compact          INFO  ++ Converted field: Successfully created field CompensatingSolenoidZminus [solenoid]
+Detector         INFO  +++ Patching names of anonymous shapes....
+DD4hepVolumeManager INFO  **** running plugin DD4hepVolumeManager ! 
+VolumeManager    INFO   - populating volume ids - be patient ...
+VolumeManager    INFO   - populating volume ids - done
+VolumeManager    INFO  +++ Volume manager populated and loaded.
+InstallSurfaceManager INFO  **** running plugin InstallSurfaceManager ! 
+InstallSurfaceManager INFO  --------  SurfaceManager contains the following maps : --------- 
+  key: BeamPipeShield 	 number of surfaces : 0
+  key: Beampipe 	 number of surfaces : 11
+  key: BeampipeShell2 	 number of surfaces : 4
+  key: BeampipeShell3 	 number of surfaces : 1
+  key: CompSol 	 number of surfaces : 0
+  key: ECalBarrel 	 number of surfaces : 12
+  key: ECalEndcap 	 number of surfaces : 2
+  key: HCalBarrel 	 number of surfaces : 0
+  key: HCalEndcap 	 number of surfaces : 0
+  key: HCalEndcaps 	 number of surfaces : 0
+  key: HCalRing 	 number of surfaces : 0
+  key: InnerTrackerBarrel 	 number of surfaces : 10180
+  key: InnerTrackerBarrelSupport 	 number of surfaces : 4
+  key: InnerTrackerEndcap 	 number of surfaces : 1800
+  key: InnerTrackerEndcapSupport 	 number of surfaces : 18
+  key: InnerTrackerInterlink 	 number of surfaces : 2
+  key: InnerTrackerVertexCable 	 number of surfaces : 2
+  key: InnerTrackers 	 number of surfaces : 12011
+  key: LumiCal 	 number of surfaces : 0
+  key: LumiCalInstrumentation 	 number of surfaces : 0
+  key: OuterTrackerBarrel 	 number of surfaces : 83664
+  key: OuterTrackerBarrelSupport 	 number of surfaces : 3
+  key: OuterTrackerEndcap 	 number of surfaces : 1536
+  key: OuterTrackerEndcapSupport 	 number of surfaces : 10
+  key: OuterTrackers 	 number of surfaces : 85213
+  key: ScreenSol 	 number of surfaces : 0
+  key: Solenoid 	 number of surfaces : 0
+  key: SolenoidBarrel 	 number of surfaces : 0
+  key: SolenoidEndcaps 	 number of surfaces : 0
+  key: Vertex 	 number of surfaces : 186
+  key: VertexBarrel 	 number of surfaces : 88
+  key: VertexEndcap 	 number of surfaces : 96
+  key: VertexVerticalCable 	 number of surfaces : 2
+  key: YokeBarrel 	 number of surfaces : 0
+  key: YokeEndcap 	 number of surfaces : 0
+  key: calorimeter 	 number of surfaces : 14
+  key: compound 	 number of surfaces : 97410
+  key: passive 	 number of surfaces : 57
+  key: tracker 	 number of surfaces : 97364
+  key: world 	 number of surfaces : 194845
+---------------------------------------------------------------- 
+
++++ Imported 232 global values to namespace:DDG4
+Geant4Kernel           OutputLevel:  2
+Geant4Kernel           UI:           UI
+Geant4Kernel           NumEvents:    10
+Geant4Kernel           NumThreads:   0
++++  List of sensitive detectors:
++++  ECalBarrel                       type:calorimeter   --> Sensitive type: Geant4ScintillatorCalorimeterAction
++++  ECalEndcap                       type:calorimeter   --> Sensitive type: Geant4ScintillatorCalorimeterAction
++++  HCalBarrel                       type:calorimeter   --> Sensitive type: Geant4ScintillatorCalorimeterAction
++++  HCalEndcap                       type:calorimeter   --> Sensitive type: Geant4ScintillatorCalorimeterAction
++++  HCalRing                         type:calorimeter   --> Sensitive type: Geant4ScintillatorCalorimeterAction
++++  InnerTrackerBarrel               type:tracker       --> Sensitive type: ('Geant4TrackerWeightedAction', {'HitPositionCombination': 2, 'CollectSingleDeposits': False})
++++  InnerTrackerEndcap               type:tracker       --> Sensitive type: ('Geant4TrackerWeightedAction', {'HitPositionCombination': 2, 'CollectSingleDeposits': False})
++++  LumiCal                          type:calorimeter   --> Sensitive type: Geant4ScintillatorCalorimeterAction
++++  LumiCalInstrumentation           type:calorimeter   --> Sensitive type: Geant4ScintillatorCalorimeterAction
++++  OuterTrackerBarrel               type:tracker       --> Sensitive type: ('Geant4TrackerWeightedAction', {'HitPositionCombination': 2, 'CollectSingleDeposits': False})
++++  OuterTrackerEndcap               type:tracker       --> Sensitive type: ('Geant4TrackerWeightedAction', {'HitPositionCombination': 2, 'CollectSingleDeposits': False})
++++  VertexBarrel                     type:tracker       --> Sensitive type: ('Geant4TrackerWeightedAction', {'HitPositionCombination': 2, 'CollectSingleDeposits': False})
++++  VertexEndcap                     type:tracker       --> Sensitive type: ('Geant4TrackerWeightedAction', {'HitPositionCombination': 2, 'CollectSingleDeposits': False})
++++  YokeBarrel                       type:calorimeter   --> Sensitive type: Geant4ScintillatorCalorimeterAction
++++  YokeEndcap                       type:calorimeter   --> Sensitive type: Geant4ScintillatorCalorimeterAction
+Geant4Kernel     INFO  ++ Registered global action UI of type dd4hep::sim::Geant4UIManager
+Geant4UIMessenger INFO  +++ MagFieldTrackingSetup> Install Geant4 control directory:/ddg4/MagFieldTrackingSetup/
+Geant4Kernel     INFO  ++ Registered global action RunInit of type dd4hep::sim::Test::Geant4TestRunAction
+Geant4UIMessenger INFO  +++ RunAction> Install Geant4 control directory:/ddg4/RunAction/
+Choosing random seed for you: 618317889
+Geant4UIMessenger INFO  +++ LcioOutput> Install Geant4 control directory:/ddg4/LcioOutput/
+Geant4UIMessenger INFO  +++ EventAction> Install Geant4 control directory:/ddg4/EventAction/
+Geant4UIMessenger INFO  +++ TrackingAction> Install Geant4 control directory:/ddg4/TrackingAction/
+Geant4UIMessenger INFO  +++ SteppingAction> Install Geant4 control directory:/ddg4/SteppingAction/
+Geant4UIMessenger INFO  +++ GeneratorAction> Install Geant4 control directory:/ddg4/GeneratorAction/
+Geant4UIMessenger INFO  +++ ParticleHandler> Install Geant4 control directory:/ddg4/ParticleHandler/
+ *** definition of tracker region *** 
+    tracker_region_zmax =  2300
+    tracker_region_rmax =  2145
+ ************************************ 
+ReqFilt set(['edep0', 'edep1kev'])
+getDetectorLists - found active detctor  ECalBarrel  type:  calorimeter
+getDetectorLists - found active detctor  ECalEndcap  type:  calorimeter
+getDetectorLists - found active detctor  HCalBarrel  type:  calorimeter
+getDetectorLists - found active detctor  HCalEndcap  type:  calorimeter
+getDetectorLists - found active detctor  HCalRing  type:  calorimeter
+getDetectorLists - found active detctor  InnerTrackerBarrel  type:  tracker
+getDetectorLists - found active detctor  InnerTrackerEndcap  type:  tracker
+getDetectorLists - found active detctor  LumiCal  type:  calorimeter
+getDetectorLists - found active detctor  LumiCalInstrumentation  type:  calorimeter
+getDetectorLists - found active detctor  OuterTrackerBarrel  type:  tracker
+getDetectorLists - found active detctor  OuterTrackerEndcap  type:  tracker
+getDetectorLists - found active detctor  VertexBarrel  type:  tracker
+getDetectorLists - found active detctor  VertexEndcap  type:  tracker
+getDetectorLists - found active detctor  YokeBarrel  type:  calorimeter
+getDetectorLists - found active detctor  YokeEndcap  type:  calorimeter
+Setting up SD for InnerTrackerBarrel
+Geant4UIMessenger INFO  +++ InnerTrackerBarrel> Install Geant4 control directory:/ddg4/InnerTrackerBarrel/
+Geant4UIMessenger INFO  +++ InnerTrackerBarrelHandler> Install Geant4 control directory:/ddg4/InnerTrackerBarrelHandler/
+Setting up SD for InnerTrackerEndcap
+Geant4UIMessenger INFO  +++ InnerTrackerEndcap> Install Geant4 control directory:/ddg4/InnerTrackerEndcap/
+Geant4UIMessenger INFO  +++ InnerTrackerEndcapHandler> Install Geant4 control directory:/ddg4/InnerTrackerEndcapHandler/
+Setting up SD for OuterTrackerBarrel
+Geant4UIMessenger INFO  +++ OuterTrackerBarrel> Install Geant4 control directory:/ddg4/OuterTrackerBarrel/
+Geant4UIMessenger INFO  +++ OuterTrackerBarrelHandler> Install Geant4 control directory:/ddg4/OuterTrackerBarrelHandler/
+Setting up SD for OuterTrackerEndcap
+Geant4UIMessenger INFO  +++ OuterTrackerEndcap> Install Geant4 control directory:/ddg4/OuterTrackerEndcap/
+Geant4UIMessenger INFO  +++ OuterTrackerEndcapHandler> Install Geant4 control directory:/ddg4/OuterTrackerEndcapHandler/
+Setting up SD for VertexBarrel
+Geant4UIMessenger INFO  +++ VertexBarrel> Install Geant4 control directory:/ddg4/VertexBarrel/
+Geant4UIMessenger INFO  +++ VertexBarrelHandler> Install Geant4 control directory:/ddg4/VertexBarrelHandler/
+Setting up SD for VertexEndcap
+Geant4UIMessenger INFO  +++ VertexEndcap> Install Geant4 control directory:/ddg4/VertexEndcap/
+Geant4UIMessenger INFO  +++ VertexEndcapHandler> Install Geant4 control directory:/ddg4/VertexEndcapHandler/
+Setting up SD for ECalBarrel
+Geant4UIMessenger INFO  +++ ECalBarrel> Install Geant4 control directory:/ddg4/ECalBarrel/
+Geant4UIMessenger INFO  +++ ECalBarrelHandler> Install Geant4 control directory:/ddg4/ECalBarrelHandler/
+Setting up SD for ECalEndcap
+Geant4UIMessenger INFO  +++ ECalEndcap> Install Geant4 control directory:/ddg4/ECalEndcap/
+Geant4UIMessenger INFO  +++ ECalEndcapHandler> Install Geant4 control directory:/ddg4/ECalEndcapHandler/
+Setting up SD for HCalBarrel
+Geant4UIMessenger INFO  +++ HCalBarrel> Install Geant4 control directory:/ddg4/HCalBarrel/
+Geant4UIMessenger INFO  +++ HCalBarrelHandler> Install Geant4 control directory:/ddg4/HCalBarrelHandler/
+Setting up SD for HCalEndcap
+Geant4UIMessenger INFO  +++ HCalEndcap> Install Geant4 control directory:/ddg4/HCalEndcap/
+Geant4UIMessenger INFO  +++ HCalEndcapHandler> Install Geant4 control directory:/ddg4/HCalEndcapHandler/
+Setting up SD for HCalRing
+Geant4UIMessenger INFO  +++ HCalRing> Install Geant4 control directory:/ddg4/HCalRing/
+Geant4UIMessenger INFO  +++ HCalRingHandler> Install Geant4 control directory:/ddg4/HCalRingHandler/
+Setting up SD for LumiCal
+Geant4UIMessenger INFO  +++ LumiCal> Install Geant4 control directory:/ddg4/LumiCal/
+Geant4UIMessenger INFO  +++ LumiCalHandler> Install Geant4 control directory:/ddg4/LumiCalHandler/
+Setting up SD for LumiCalInstrumentation
+Geant4UIMessenger INFO  +++ LumiCalInstrumentation> Install Geant4 control directory:/ddg4/LumiCalInstrumentation/
+Geant4UIMessenger INFO  +++ LumiCalInstrumentationHandler> Install Geant4 control directory:/ddg4/LumiCalInstrumentationHandler/
+Setting up SD for YokeBarrel
+Geant4UIMessenger INFO  +++ YokeBarrel> Install Geant4 control directory:/ddg4/YokeBarrel/
+Geant4UIMessenger INFO  +++ YokeBarrelHandler> Install Geant4 control directory:/ddg4/YokeBarrelHandler/
+Setting up SD for YokeEndcap
+Geant4UIMessenger INFO  +++ YokeEndcap> Install Geant4 control directory:/ddg4/YokeEndcap/
+Geant4UIMessenger INFO  +++ YokeEndcapHandler> Install Geant4 control directory:/ddg4/YokeEndcapHandler/
+Geant4UIMessenger INFO  +++ PhysicsList> Install Geant4 control directory:/ddg4/PhysicsList/
+PhysicsList            +++ Dump
+PhysicsList            +++ Extension name       FTFP_BERT
+PhysicsList            +++ Transportation flag: 0
+PhysicsList            +++ Program decays:      1
+PhysicsList            +++ RangeCut:            0.700000
+Geant4UIMessenger INFO  +++ GlobalRangeCut> Install Geant4 control directory:/ddg4/GlobalRangeCut/
+FieldSetup       INFO  Geant4 magnetic field tracking configured.
+FieldSetup       INFO  G4MagIntegratorStepper:HelixSimpleRunge G4Mag_EqRhs:Mag_UsualEqRhs
+FieldSetup       INFO  Epsilon:[min:0.000050 mm max:0.001000 mm]
+FieldSetup       INFO  Delta:[chord:0.250000 1-step:0.000100 intersect:0.000010] LargestStep 10000.000000 mm
+
+*************************************************************
+ Geant4 version Name: geant4-10-02-patch-02 [MT]   (17-June-2016)
+                      Copyright : Geant4 Collaboration
+                      Reference : NIM A 506 (2003), 250-303
+                            WWW : http://cern.ch/geant4
+*************************************************************
+
+Geant4UIMessenger INFO  +++ StackingAction> Install Geant4 control directory:/ddg4/StackingAction/
+Geant4Exec       WARN  +++ Building default Geant4DetectorConstruction for single threaded compatibility.
+G4PhysListFactory::GetReferencePhysList <FTFP_BERT>  EMoption= 0
+<<< Geant4 Physics List simulation engine: FTFP_BERT 2.0
+
+<<< Reference Physics List FTFP_BERT is built
+
+UserInitialization INFO  +++ Executing Geant4UserActionInitialization::Build. Context:0x78a81d0 Kernel:0xea8290 [-1]
+Geant4Converter  INFO  +++  Successfully converted geometry to Geant4.
+### Adding tracking cuts for neutron  TimeCut(ns)= 10000  KinEnergyCut(MeV)= 0
+GlobalRangeCut   INFO  +++ Set PhysicsList RangeCut to 0.700000 mm
+PhysicsList      INFO  ConstructDecays 0x2dbe3a60
+Warning : Region <BeampipeRegion> does not have specific production cuts,
+even though it appears in the current tracking world.
+Default cuts are used for this region.
+Warning : Region <VertexBarrelRegion> does not have specific production cuts,
+even though it appears in the current tracking world.
+Default cuts are used for this region.
+Warning : Region <VertexEndcapRegion> does not have specific production cuts,
+even though it appears in the current tracking world.
+Default cuts are used for this region.
+Warning : Region <InnerTrackerBarrelRegion> does not have specific production cuts,
+even though it appears in the current tracking world.
+Default cuts are used for this region.
+Warning : Region <OuterTrackerBarrelRegion> does not have specific production cuts,
+even though it appears in the current tracking world.
+Default cuts are used for this region.
+Warning : Region <InnerTrackerEndcapRegion> does not have specific production cuts,
+even though it appears in the current tracking world.
+Default cuts are used for this region.
+Warning : Region <OuterTrackerEndcapRegion> does not have specific production cuts,
+even though it appears in the current tracking world.
+Default cuts are used for this region.
+Geant4UIManager  INFO  +++ Starting G4VisExecutive ....
+Visualization Manager instantiating with verbosity "warnings (3)"...
+Visualization Manager initialising...
+Registering graphics systems...
+
+You have successfully registered the following graphics systems.
+Current available graphics systems are:
+ASCIITree (ATree)
+DAWNFILE (DAWNFILE)
+G4HepRep (HepRepXML)
+G4HepRepFile (HepRepFile)
+RayTracer (RayTracer)
+VRML1FILE (VRML1FILE)
+VRML2FILE (VRML2FILE)
+gMocrenFile (gMocrenFile)
+OpenGLImmediateX (OGLIX, OGLI)
+OpenGLStoredX (OGLSX, OGL, OGLS)
+
+Registering model factories...
+
+You have successfully registered the following model factories.
+Registered model factories:
+  generic
+  drawByCharge
+  drawByParticleID
+  drawByOriginVolume
+  drawByAttribute
+
+Registered filter factories:
+  chargeFilter
+  particleFilter
+  originVolumeFilter
+  attributeFilter
+
+You have successfully registered the following user vis actions.
+Run Duration User Vis Actions: none
+End of Event User Vis Actions: none
+End of Run User Vis Actions: none
+
+Some /vis commands (optionally) take a string to specify colour.
+Available colours:
+  black, blue, brown, cyan, gray, green, grey, magenta, red, white, yellow
+
+Geant4UIManager  INFO  +++ Starting G4UIExecutive 'DDG4' of type csh....
+Available UI session types: [ GAG, tcsh, csh ]
+Idle> 

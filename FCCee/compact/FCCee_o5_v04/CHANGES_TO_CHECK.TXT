@@ -1,0 +1,4 @@
+in Vertex:
+<shape type="Tube" rmin="Vertex_inner_radius+env_safety" rmax="Vertex_outer_radius" dz="Vertex_half_length" material="Air"/>
+-->
+<shape type="Tube" rmin="Vertex_inner_radius+env_safety" rmax="Vertex_outer_radius+0.11*cm" dz="Vertex_half_length" material="Air"/>
