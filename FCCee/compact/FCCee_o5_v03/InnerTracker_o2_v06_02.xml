@@ -567,7 +567,7 @@
     <!--             <slice material="CarbonFiber" thickness="VertexCoolingShellThickness" /> -->
     <!--         </layer> -->
     <!--     </detector> -->
-    <!-- </detectors> -->
+    </detectors>
 
     <plugins>
         <plugin name="DD4hep_GenericSurfaceInstallerPlugin">
