@@ -5,7 +5,7 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xs:noNamespaceSchemaLocation="http://www.lcsim.org/schemas/compact/1.0/compact.xsd">
     
-    <info name="FCCee_o5_v02"
+    <info name="FCCee_o5_v04"
         title="FCCee detector model based on CLIC detector model option 2 version 04, with the new IR design"
         author="Yorgos Voutsinas"
         url="http://ilcsoft.desy.de"
