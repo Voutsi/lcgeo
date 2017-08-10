@@ -39,11 +39,11 @@
     <!--  Definition of the readout segmentation/definition  -->
     <readouts>
         <readout name="HCalEndcapCollection">
-            <segmentation type="CartesianGridXY" grid_size_x="3.5" grid_size_y="3.5" />
+            <segmentation type="CartesianGridXY" grid_size_x="HCal_cell_size" grid_size_y="HCal_cell_size" />
             <id>system:5,side:2,module:8,stave:4,layer:9,submodule:4,x:32:-16,y:-16</id>
         </readout>
         <readout name="HCalRingCollection">
-            <segmentation type="CartesianGridXY" grid_size_x="3.5" grid_size_y="3.5" />
+            <segmentation type="CartesianGridXY" grid_size_x="HCal_cell_size" grid_size_y="HCal_cell_size" />
             <id>system:5,side:2,module:8,stave:4,layer:9,submodule:4,x:32:-16,y:-16</id>
         </readout>
     </readouts>
