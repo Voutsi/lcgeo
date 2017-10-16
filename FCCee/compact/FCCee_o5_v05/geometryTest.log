@@ -1,0 +1,1513 @@
+Info in <TGeoManager::TGeoManager>: Geometry world, Detector Geometry created
+[?1034hXMLLoader        INFO  +++ Processing XML file: file:FCCee_o5_v03.xml
+DocumentHandler  INFO  +++ Loading document URI: file:FCCee_o5_v03.xml [Resolved:'FCCee_o5_v03.xml']
+DocumentHandler  INFO  +++ Document file:FCCee_o5_v03.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./elements.xml [Resolved:'./elements.xml']
+DocumentHandler  INFO  +++ Document ./elements.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./materials.xml [Resolved:'./materials.xml']
+DocumentHandler  INFO  +++ Document ./materials.xml succesfully parsed with TinyXML .....
+Info in <TGeoManager::SetTopVolume>: Top volume is world_volume. Master volume is world_volume
+Info in <TGeoNavigator::BuildCache>: --- Maximum geometry depth set to 100
+Detector         INFO   *********** created World volume with size :     610     610     610
+DocumentHandler  INFO  +++ Loading document URI: /cvmfs/clicdp.cern.ch/iLCSoft/builds/2017-06-21/x86_64-slc6-gcc62-opt/DD4hep/HEAD/DDDetectors/compact/detector_types.xml [Resolved:'/cvmfs/clicdp.cern.ch/iLCSoft/builds/2017-06-21/x86_64-slc6-gcc62-opt/DD4hep/HEAD/DDDetectors/compact/detector_types.xml']
+DocumentHandler  INFO  +++ Document /cvmfs/clicdp.cern.ch/iLCSoft/builds/2017-06-21/x86_64-slc6-gcc62-opt/DD4hep/HEAD/DDDetectors/compact/detector_types.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./Materials_v01.xml [Resolved:'./Materials_v01.xml']
+DocumentHandler  INFO  +++ Document ./Materials_v01.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./Vertex_o4_v04.xml [Resolved:'./Vertex_o4_v04.xml']
+DocumentHandler  INFO  +++ Document ./Vertex_o4_v04.xml succesfully parsed with TinyXML .....
+Utilities        INFO  +++ setDetectorTypeFlags for detector :Vertex no xml element <type_flags/> found - nothing to set 
+Compact          INFO  ++ Converted subdetector:Vertex of type DD4hep_SubdetectorAssembly 
+Compact          INFO  ++ Converted subdetector:VertexBarrel of type ZPlanarTracker [tracker]
+Detector         INFO  Added detector VertexBarrel to the parent:Vertex.
+XXX Vertex endcap layers: 6
+Compact          INFO  ++ Converted subdetector:VertexEndcap of type VertexEndcap_o1_v06 [tracker]
+Detector         INFO  Added detector VertexEndcap to the parent:Vertex.
+VertexEndcap     INFO  +++ Processing SurfaceInstaller for subdetector: 'VertexEndcap'
+DD4hep_GenericSurfaceInstallerPlugin: argument[1] = dimension = 2
+DD4hep_GenericSurfaceInstallerPlugin: argument[2] = u_x = -1
+DD4hep_GenericSurfaceInstallerPlugin: argument[3] = v_z = 1
+DD4hep_GenericSurfaceInstallerPlugin: argument[4] = n_y = 1
+DD4hep_GenericSurfaceInstallerPlugin: vectors: u( -1 , 0 , 0) v( 0 , 0 , 1) n( 0 , 1 , 0) o( 0 , 0 , 0) 
+DocumentHandler  INFO  +++ Loading document URI: ./InnerTracker_o2_v06_02.xml [Resolved:'./InnerTracker_o2_v06_02.xml']
+DocumentHandler  INFO  +++ Document ./InnerTracker_o2_v06_02.xml succesfully parsed with TinyXML .....
+Utilities        INFO  +++ setDetectorTypeFlags for detector :InnerTrackers no xml element <type_flags/> found - nothing to set 
+Compact          INFO  ++ Converted subdetector:InnerTrackers of type DD4hep_SubdetectorAssembly 
+DocumentHandler  INFO  +++ Loading document URI: ./InnerTrackerBarrelModuleDown.xml [Resolved:'./InnerTrackerBarrelModuleDown.xml']
+DocumentHandler  INFO  +++ Document ./InnerTrackerBarrelModuleDown.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./InnerTrackerBarrelModuleDown.xml [Resolved:'./InnerTrackerBarrelModuleDown.xml']
+DocumentHandler  INFO  +++ Document ./InnerTrackerBarrelModuleDown.xml succesfully parsed with TinyXML .....
+Compact          INFO  ++ Converted subdetector:InnerTrackerBarrel of type TrackerBarrel_o1_v05 [tracker]
+Detector         INFO  Added detector InnerTrackerBarrel to the parent:InnerTrackers.
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+Compact          INFO  ++ Converted subdetector:InnerTrackerEndcap of type TrackerEndcap_o2_v06 [tracker]
+Detector         INFO  Added detector InnerTrackerEndcap to the parent:InnerTrackers.
+InnerTrackerBarrel INFO  +++ Processing SurfaceInstaller for subdetector: 'InnerTrackerBarrel'
+DD4hep_GenericSurfaceInstallerPlugin: argument[1] = dimension = 2
+DD4hep_GenericSurfaceInstallerPlugin: argument[2] = u_x = 1
+DD4hep_GenericSurfaceInstallerPlugin: argument[3] = v_y = 1
+DD4hep_GenericSurfaceInstallerPlugin: argument[4] = n_z = 1
+DD4hep_GenericSurfaceInstallerPlugin: vectors: u( 1 , 0 , 0) v( 0 , 1 , 0) n( 0 , 0 , 1) o( 0 , 0 , 0) 
+InnerTrackerEndcap INFO  +++ Processing SurfaceInstaller for subdetector: 'InnerTrackerEndcap'
+DD4hep_GenericSurfaceInstallerPlugin: argument[1] = dimension = 2
+DD4hep_GenericSurfaceInstallerPlugin: argument[2] = u_x = 1
+DD4hep_GenericSurfaceInstallerPlugin: argument[3] = v_y = 1
+DD4hep_GenericSurfaceInstallerPlugin: argument[4] = n_z = 1
+DD4hep_GenericSurfaceInstallerPlugin: vectors: u( 1 , 0 , 0) v( 0 , 1 , 0) n( 0 , 0 , 1) o( 0 , 0 , 0) 
+DocumentHandler  INFO  +++ Loading document URI: ./OuterTracker_o2_v06_02.xml [Resolved:'./OuterTracker_o2_v06_02.xml']
+DocumentHandler  INFO  +++ Document ./OuterTracker_o2_v06_02.xml succesfully parsed with TinyXML .....
+Utilities        INFO  +++ setDetectorTypeFlags for detector :OuterTrackers no xml element <type_flags/> found - nothing to set 
+Compact          INFO  ++ Converted subdetector:OuterTrackers of type DD4hep_SubdetectorAssembly 
+DocumentHandler  INFO  +++ Loading document URI: ./OuterTrackerBarrelModuleUp.xml [Resolved:'./OuterTrackerBarrelModuleUp.xml']
+DocumentHandler  INFO  +++ Document ./OuterTrackerBarrelModuleUp.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./OuterTrackerBarrelModuleUp.xml [Resolved:'./OuterTrackerBarrelModuleUp.xml']
+DocumentHandler  INFO  +++ Document ./OuterTrackerBarrelModuleUp.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./OuterTrackerBarrelModuleDown.xml [Resolved:'./OuterTrackerBarrelModuleDown.xml']
+DocumentHandler  INFO  +++ Document ./OuterTrackerBarrelModuleDown.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./OuterTrackerBarrelModuleDown.xml [Resolved:'./OuterTrackerBarrelModuleDown.xml']
+DocumentHandler  INFO  +++ Document ./OuterTrackerBarrelModuleDown.xml succesfully parsed with TinyXML .....
+Compact          INFO  ++ Converted subdetector:OuterTrackerBarrel of type TrackerBarrel_o1_v05 [tracker]
+Detector         INFO  Added detector OuterTrackerBarrel to the parent:OuterTrackers.
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleIn.xml [Resolved:'./TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: ./TrackerDiskModuleOut.xml [Resolved:'./TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document ./TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+Compact          INFO  ++ Converted subdetector:OuterTrackerEndcap of type TrackerEndcap_o2_v06 [tracker]
+Detector         INFO  Added detector OuterTrackerEndcap to the parent:OuterTrackers.
+OuterTrackerBarrel INFO  +++ Processing SurfaceInstaller for subdetector: 'OuterTrackerBarrel'
+DD4hep_GenericSurfaceInstallerPlugin: argument[1] = dimension = 2
+DD4hep_GenericSurfaceInstallerPlugin: argument[2] = u_x = 1
+DD4hep_GenericSurfaceInstallerPlugin: argument[3] = v_y = 1
+DD4hep_GenericSurfaceInstallerPlugin: argument[4] = n_z = 1
+DD4hep_GenericSurfaceInstallerPlugin: vectors: u( 1 , 0 , 0) v( 0 , 1 , 0) n( 0 , 0 , 1) o( 0 , 0 , 0) 
+OuterTrackerEndcap INFO  +++ Processing SurfaceInstaller for subdetector: 'OuterTrackerEndcap'
+DD4hep_GenericSurfaceInstallerPlugin: argument[1] = dimension = 2
+DD4hep_GenericSurfaceInstallerPlugin: argument[2] = u_x = 1
+DD4hep_GenericSurfaceInstallerPlugin: argument[3] = v_y = 1
+DD4hep_GenericSurfaceInstallerPlugin: argument[4] = n_z = 1
+DD4hep_GenericSurfaceInstallerPlugin: vectors: u( 1 , 0 , 0) v( 0 , 1 , 0) n( 0 , 0 , 1) o( 0 , 0 , 0) 
+Compact          INFO  ++ Converted field: Successfully created field GlobalSolenoid [solenoid]
+Compact          INFO  ++ Converted field: Successfully created field CompensatingSolenoidZplus [solenoid]
+Info in <TGeoManager::CheckGeometry>: Fixing runtime shapes...
+Info in <TGeoManager::CheckGeometry>: ...Nothing to fix
+Info in <TGeoManager::CloseGeometry>: Counting nodes...
+Info in <TGeoManager::Voxelize>: Voxelizing...
+Info in <TGeoManager::CloseGeometry>: Building cache...
+Info in <TGeoManager::CountLevels>: max level = 5, max placements = 37968
+Info in <TGeoManager::CloseGeometry>: 2021002 nodes/ 136 volume UID's in Detector Geometry
+Info in <TGeoManager::CloseGeometry>: ----------------modeler ready----------------
+Compact          INFO  ++ Converted field: Successfully created field CompensatingSolenoidZminus [solenoid]
+Detector         INFO  +++ Patching names of anonymous shapes....
+DD4hepVolumeManager INFO  **** running plugin DD4hepVolumeManager ! 
+VolumeManager    INFO   - populating volume ids - be patient ...
+VolumeManager    INFO   - populating volume ids - done
+VolumeManager    INFO  +++ Volume manager populated and loaded.
+InstallSurfaceManager INFO  **** running plugin InstallSurfaceManager ! 
+InstallSurfaceManager INFO  --------  SurfaceManager contains the following maps : --------- 
+  key: InnerTrackerBarrel 	 number of surfaces : 10180
+  key: InnerTrackerEndcap 	 number of surfaces : 1800
+  key: InnerTrackers 	 number of surfaces : 11980
+  key: OuterTrackerBarrel 	 number of surfaces : 83664
+  key: OuterTrackerEndcap 	 number of surfaces : 1536
+  key: OuterTrackers 	 number of surfaces : 85200
+  key: Vertex 	 number of surfaces : 184
+  key: VertexBarrel 	 number of surfaces : 88
+  key: VertexEndcap 	 number of surfaces : 96
+  key: compound 	 number of surfaces : 97364
+  key: tracker 	 number of surfaces : 97364
+  key: world 	 number of surfaces : 194728
+---------------------------------------------------------------- 
+
++++ Imported 218 global values to namespace:DDG4
+Geant4Kernel           OutputLevel:  2
+Geant4Kernel           UI:           UI
+Geant4Kernel           NumEvents:    10
+Geant4Kernel           NumThreads:   0
++++  List of sensitive detectors:
++++  InnerTrackerBarrel               type:tracker       --> Sensitive type: ('Geant4TrackerWeightedAction', {'HitPositionCombination': 2, 'CollectSingleDeposits': False})
++++  InnerTrackerEndcap               type:tracker       --> Sensitive type: ('Geant4TrackerWeightedAction', {'HitPositionCombination': 2, 'CollectSingleDeposits': False})
++++  OuterTrackerBarrel               type:tracker       --> Sensitive type: ('Geant4TrackerWeightedAction', {'HitPositionCombination': 2, 'CollectSingleDeposits': False})
++++  OuterTrackerEndcap               type:tracker       --> Sensitive type: ('Geant4TrackerWeightedAction', {'HitPositionCombination': 2, 'CollectSingleDeposits': False})
++++  VertexBarrel                     type:tracker       --> Sensitive type: ('Geant4TrackerWeightedAction', {'HitPositionCombination': 2, 'CollectSingleDeposits': False})
++++  VertexEndcap                     type:tracker       --> Sensitive type: ('Geant4TrackerWeightedAction', {'HitPositionCombination': 2, 'CollectSingleDeposits': False})
+Geant4Kernel     INFO  ++ Registered global action UI of type dd4hep::sim::Geant4UIManager
+Geant4UIMessenger INFO  +++ MagFieldTrackingSetup> Install Geant4 control directory:/ddg4/MagFieldTrackingSetup/
+Geant4Kernel     INFO  ++ Registered global action RunInit of type dd4hep::sim::Test::Geant4TestRunAction
+Geant4UIMessenger INFO  +++ RunAction> Install Geant4 control directory:/ddg4/RunAction/
+Choosing random seed for you: 660960857
+Geant4UIMessenger INFO  +++ LcioOutput> Install Geant4 control directory:/ddg4/LcioOutput/
+Geant4UIMessenger INFO  +++ EventAction> Install Geant4 control directory:/ddg4/EventAction/
+Geant4UIMessenger INFO  +++ TrackingAction> Install Geant4 control directory:/ddg4/TrackingAction/
+Geant4UIMessenger INFO  +++ SteppingAction> Install Geant4 control directory:/ddg4/SteppingAction/
+Geant4UIMessenger INFO  +++ GeneratorAction> Install Geant4 control directory:/ddg4/GeneratorAction/
+Geant4UIMessenger INFO  +++ ParticleHandler> Install Geant4 control directory:/ddg4/ParticleHandler/
+ *** definition of tracker region *** 
+    tracker_region_zmax =  2300
+    tracker_region_rmax =  2145
+ ************************************ 
+ReqFilt set(['edep0', 'edep1kev'])
+getDetectorLists - found active detctor  InnerTrackerBarrel  type:  tracker
+getDetectorLists - found active detctor  InnerTrackerEndcap  type:  tracker
+getDetectorLists - found active detctor  OuterTrackerBarrel  type:  tracker
+getDetectorLists - found active detctor  OuterTrackerEndcap  type:  tracker
+getDetectorLists - found active detctor  VertexBarrel  type:  tracker
+getDetectorLists - found active detctor  VertexEndcap  type:  tracker
+Setting up SD for InnerTrackerBarrel
+Geant4UIMessenger INFO  +++ InnerTrackerBarrel> Install Geant4 control directory:/ddg4/InnerTrackerBarrel/
+Geant4UIMessenger INFO  +++ InnerTrackerBarrelHandler> Install Geant4 control directory:/ddg4/InnerTrackerBarrelHandler/
+Setting up SD for InnerTrackerEndcap
+Geant4UIMessenger INFO  +++ InnerTrackerEndcap> Install Geant4 control directory:/ddg4/InnerTrackerEndcap/
+Geant4UIMessenger INFO  +++ InnerTrackerEndcapHandler> Install Geant4 control directory:/ddg4/InnerTrackerEndcapHandler/
+Setting up SD for OuterTrackerBarrel
+Geant4UIMessenger INFO  +++ OuterTrackerBarrel> Install Geant4 control directory:/ddg4/OuterTrackerBarrel/
+Geant4UIMessenger INFO  +++ OuterTrackerBarrelHandler> Install Geant4 control directory:/ddg4/OuterTrackerBarrelHandler/
+Setting up SD for OuterTrackerEndcap
+Geant4UIMessenger INFO  +++ OuterTrackerEndcap> Install Geant4 control directory:/ddg4/OuterTrackerEndcap/
+Geant4UIMessenger INFO  +++ OuterTrackerEndcapHandler> Install Geant4 control directory:/ddg4/OuterTrackerEndcapHandler/
+Setting up SD for VertexBarrel
+Geant4UIMessenger INFO  +++ VertexBarrel> Install Geant4 control directory:/ddg4/VertexBarrel/
+Geant4UIMessenger INFO  +++ VertexBarrelHandler> Install Geant4 control directory:/ddg4/VertexBarrelHandler/
+Setting up SD for VertexEndcap
+Geant4UIMessenger INFO  +++ VertexEndcap> Install Geant4 control directory:/ddg4/VertexEndcap/
+Geant4UIMessenger INFO  +++ VertexEndcapHandler> Install Geant4 control directory:/ddg4/VertexEndcapHandler/
+Geant4UIMessenger INFO  +++ PhysicsList> Install Geant4 control directory:/ddg4/PhysicsList/
+PhysicsList            +++ Dump
+PhysicsList            +++ Extension name       FTFP_BERT
+PhysicsList            +++ Transportation flag: 0
+PhysicsList            +++ Program decays:      1
+PhysicsList            +++ RangeCut:            0.700000
+Geant4UIMessenger INFO  +++ GlobalRangeCut> Install Geant4 control directory:/ddg4/GlobalRangeCut/
+FieldSetup       INFO  Geant4 magnetic field tracking configured.
+FieldSetup       INFO  G4MagIntegratorStepper:HelixSimpleRunge G4Mag_EqRhs:Mag_UsualEqRhs
+FieldSetup       INFO  Epsilon:[min:0.000050 mm max:0.001000 mm]
+FieldSetup       INFO  Delta:[chord:0.250000 1-step:0.000100 intersect:0.000010] LargestStep 10000.000000 mm
+
+*************************************************************
+ Geant4 version Name: geant4-10-02-patch-02 [MT]   (17-June-2016)
+                      Copyright : Geant4 Collaboration
+                      Reference : NIM A 506 (2003), 250-303
+                            WWW : http://cern.ch/geant4
+*************************************************************
+
+Geant4UIMessenger INFO  +++ StackingAction> Install Geant4 control directory:/ddg4/StackingAction/
+Geant4Exec       WARN  +++ Building default Geant4DetectorConstruction for single threaded compatibility.
+G4PhysListFactory::GetReferencePhysList <FTFP_BERT>  EMoption= 0
+<<< Geant4 Physics List simulation engine: FTFP_BERT 2.0
+
+<<< Reference Physics List FTFP_BERT is built
+
+UserInitialization INFO  +++ Executing Geant4UserActionInitialization::Build. Context:0x850e4b0 Kernel:0x84d4da0 [-1]
+Geant4Converter  INFO  +++  Successfully converted geometry to Geant4.
+### Adding tracking cuts for neutron  TimeCut(ns)= 10000  KinEnergyCut(MeV)= 0
+GlobalRangeCut   INFO  +++ Set PhysicsList RangeCut to 0.700000 mm
+PhysicsList      INFO  ConstructDecays 0x2e45c1c0
+Warning : Region <VertexBarrelRegion> does not have specific production cuts,
+even though it appears in the current tracking world.
+Default cuts are used for this region.
+Warning : Region <VertexEndcapRegion> does not have specific production cuts,
+even though it appears in the current tracking world.
+Default cuts are used for this region.
+Warning : Region <InnerTrackerBarrelRegion> does not have specific production cuts,
+even though it appears in the current tracking world.
+Default cuts are used for this region.
+Warning : Region <OuterTrackerBarrelRegion> does not have specific production cuts,
+even though it appears in the current tracking world.
+Default cuts are used for this region.
+Warning : Region <InnerTrackerEndcapRegion> does not have specific production cuts,
+even though it appears in the current tracking world.
+Default cuts are used for this region.
+Warning : Region <OuterTrackerEndcapRegion> does not have specific production cuts,
+even though it appears in the current tracking world.
+Default cuts are used for this region.
+Geant4UIManager  INFO  +++ Starting G4VisExecutive ....
+Visualization Manager instantiating with verbosity "warnings (3)"...
+Visualization Manager initialising...
+Registering graphics systems...
+
+You have successfully registered the following graphics systems.
+Current available graphics systems are:
+ASCIITree (ATree)
+DAWNFILE (DAWNFILE)
+G4HepRep (HepRepXML)
+G4HepRepFile (HepRepFile)
+RayTracer (RayTracer)
+VRML1FILE (VRML1FILE)
+VRML2FILE (VRML2FILE)
+gMocrenFile (gMocrenFile)
+OpenGLImmediateX (OGLIX, OGLI)
+OpenGLStoredX (OGLSX, OGL, OGLS)
+
+Registering model factories...
+
+You have successfully registered the following model factories.
+Registered model factories:
+  generic
+  drawByCharge
+  drawByParticleID
+  drawByOriginVolume
+  drawByAttribute
+
+Registered filter factories:
+  chargeFilter
+  particleFilter
+  originVolumeFilter
+  attributeFilter
+
+You have successfully registered the following user vis actions.
+Run Duration User Vis Actions: none
+End of Event User Vis Actions: none
+End of Run User Vis Actions: none
+
+Some /vis commands (optionally) take a string to specify colour.
+Available colours:
+  black, blue, brown, cyan, gray, green, grey, magenta, red, white, yellow
+
+Geant4UIManager  INFO  +++ Starting G4UIExecutive 'DDG4' of type csh....
+Available UI session types: [ GAG, tcsh, csh ]
+Idle> exit    /geometry/test/maximum_errors 100
+Idle> /geometry/test/maximum_errors 100                  ru                 /geometry/test/run 
+Running geometry overlaps check...
+Checking overlaps for volume OuterTrackers_2 ... OK! 
+Checking overlaps for volume av_13_impr_2_OuterTrackerBarrelModule_In_pv_0 ... OK! 
+Checking overlaps for volume component3_3 ... OK! 
+Checking overlaps for volume component4_4 ... OK! 
+Checking overlaps for volume component5_5 ... OK! 
+Checking overlaps for volume component6_6 ... OK! 
+Checking overlaps for volume component7_7 ... OK! 
+Checking overlaps for volume component8_8 ... OK! 
+Checking overlaps for volume component9_9 ... OK! 
+Checking overlaps for volume component10_10 ... OK! 
+Checking overlaps for volume component11_11 ... OK! 
+Checking overlaps for volume component12_12 ... OK! 
+Checking overlaps for volume component13_13 ... OK! 
+Checking overlaps for volume component14_14 ... OK! 
+Checking overlaps for volume component15_15 ... OK! 
+Checking overlaps for volume component16_16 ... OK! 
+Checking overlaps for volume component17_17 ... OK! 
+Checking overlaps for volume component18_18 ... OK! 
+Checking overlaps for volume component19_19 ... OK! 
+Checking overlaps for volume component0_0 ... OK! 
+Checking overlaps for volume component1_1 ... OK! 
+Checking overlaps for volume component2_2 ... OK! 
+Checking overlaps for volume av_13_impr_4_OuterTrackerBarrelModule_Out_pv_0 ... OK! 
+Checking overlaps for volume component4_4 ... OK! 
+Checking overlaps for volume component5_5 ... OK! 
+Checking overlaps for volume component6_6 ... OK! 
+Checking overlaps for volume component7_7 ... OK! 
+Checking overlaps for volume component8_8 ... OK! 
+Checking overlaps for volume component0_0 ... OK! 
+Checking overlaps for volume component1_1 ... OK! 
+Checking overlaps for volume component2_2 ... OK! 
+Checking overlaps for volume component3_3 ... OK! 
+Checking overlaps for volume component9_9 ... OK! 
+Checking overlaps for volume component10_10 ... OK! 
+Checking overlaps for volume component11_11 ... OK! 
+Checking overlaps for volume component12_12 ... OK! 
+Checking overlaps for volume component13_13 ... OK! 
+Checking overlaps for volume component14_14 ... OK! 
+Checking overlaps for volume component15_15 ... OK! 
+Checking overlaps for volume component16_16 ... OK! 
+Checking overlaps for volume component17_17 ... OK! 
+Checking overlaps for volume component18_18 ... OK! 
+Checking overlaps for volume component19_19 ... OK! 
+Checking overlaps for volume av_18_impr_1_OuterTrackerEndcapModule_0_In_pv_0 ... OK! 
+Checking overlaps for volume component0_0 ... OK! 
+Checking overlaps for volume component1_1 ... OK! 
+Checking overlaps for volume component2_2 ... OK! 
+Checking overlaps for volume component3_3 ... OK! 
+Checking overlaps for volume component4_4 ... OK! 
+Checking overlaps for volume component5_5 ... OK! 
+Checking overlaps for volume component6_6 ... OK! 
+Checking overlaps for volume component7_7 ... OK! 
+Checking overlaps for volume component8_8 ... OK! 
+Checking overlaps for volume component9_9 ... OK! 
+Checking overlaps for volume component10_10 ... OK! 
+Checking overlaps for volume component11_11 ... OK! 
+Checking overlaps for volume component12_12 ... OK! 
+Checking overlaps for volume component13_13 ... OK! 
+Checking overlaps for volume component14_14 ... OK! 
+Checking overlaps for volume component15_15 ... OK! 
+Checking overlaps for volume component16_16 ... OK! 
+Checking overlaps for volume component17_17 ... OK! 
+Checking overlaps for volume component18_18 ... OK! 
+Checking overlaps for volume component19_19 ... OK! 
+Checking overlaps for volume av_18_impr_1_OuterTrackerEndcapModule_1_In_pv_96 ... OK! 
+Checking overlaps for volume component0_0 ... OK! 
+Checking overlaps for volume component1_1 ... OK! 
+Checking overlaps for volume component2_2 ... OK! 
+Checking overlaps for volume component3_3 ... OK! 
+Checking overlaps for volume component4_4 ... OK! 
+Checking overlaps for volume component5_5 ... OK! 
+Checking overlaps for volume component6_6 ... OK! 
+Checking overlaps for volume component7_7 ... OK! 
+Checking overlaps for volume component8_8 ... OK! 
+Checking overlaps for volume component9_9 ... OK! 
+Checking overlaps for volume component10_10 ... OK! 
+Checking overlaps for volume component11_11 ... OK! 
+Checking overlaps for volume component12_12 ... OK! 
+Checking overlaps for volume component13_13 ... OK! 
+Checking overlaps for volume component14_14 ... OK! 
+Checking overlaps for volume component15_15 ... OK! 
+Checking overlaps for volume component16_16 ... OK! 
+Checking overlaps for volume component17_17 ... OK! 
+Checking overlaps for volume component18_18 ... OK! 
+Checking overlaps for volume component19_19 ... OK! 
+Checking overlaps for volume av_18_impr_1_OuterTrackerEndcapModule_2_In_pv_192 ... OK! 
+Checking overlaps for volume component0_0 ... OK! 
+Checking overlaps for volume component1_1 ... OK! 
+Checking overlaps for volume component2_2 ... OK! 
+Checking overlaps for volume component3_3 ... OK! 
+Checking overlaps for volume component4_4 ... OK! 
+Checking overlaps for volume component5_5 ... OK! 
+Checking overlaps for volume component6_6 ... OK! 
+Checking overlaps for volume component7_7 ... OK! 
+Checking overlaps for volume component8_8 ... OK! 
+Checking overlaps for volume component9_9 ... OK! 
+Checking overlaps for volume component10_10 ... OK! 
+Checking overlaps for volume component11_11 ... OK! 
+Checking overlaps for volume component12_12 ... OK! 
+Checking overlaps for volume component13_13 ... OK! 
+Checking overlaps for volume component14_14 ... OK! 
+Checking overlaps for volume component15_15 ... OK! 
+Checking overlaps for volume component16_16 ... OK! 
+Checking overlaps for volume component17_17 ... OK! 
+Checking overlaps for volume component18_18 ... OK! 
+Checking overlaps for volume component19_19 ... OK! 
+Checking overlaps for volume av_18_impr_1_OuterTrackerEndcapModule_3_In_pv_288 ... OK! 
+Checking overlaps for volume component0_0 ... OK! 
+Checking overlaps for volume component1_1 ... OK! 
+Checking overlaps for volume component2_2 ... OK! 
+Checking overlaps for volume component3_3 ... OK! 
+Checking overlaps for volume component4_4 ... OK! 
+Checking overlaps for volume component5_5 ... OK! 
+Checking overlaps for volume component6_6 ... OK! 
+Checking overlaps for volume component7_7 ... OK! 
+Checking overlaps for volume component8_8 ... OK! 
+Checking overlaps for volume component9_9 ... OK! 
+Checking overlaps for volume component10_10 ... OK! 
+Checking overlaps for volume component11_11 ... OK! 
+Checking overlaps for volume component12_12 ... OK! 
+Checking overlaps for volume component13_13 ... OK! 
+Checking overlaps for volume component14_14 ... OK! 
+Checking overlaps for volume component15_15 ... OK! 
+Checking overlaps for volume component16_16 ... OK! 
+Checking overlaps for volume component17_17 ... OK! 
+Checking overlaps for volume component18_18 ... OK! 
+Checking overlaps for volume component19_19 ... OK! 
+Checking overlaps for volume av_18_impr_1_OuterTrackerEndcapModule_0_Out_pv_384 ... OK! 
+Checking overlaps for volume component0_0 ... OK! 
+Checking overlaps for volume component1_1 ... OK! 
+Checking overlaps for volume component2_2 ... OK! 
+Checking overlaps for volume component3_3 ... OK! 
+Checking overlaps for volume component4_4 ... OK! 
+Checking overlaps for volume component5_5 ... OK! 
+Checking overlaps for volume component6_6 ... OK! 
+Checking overlaps for volume component7_7 ... OK! 
+Checking overlaps for volume component8_8 ... OK! 
+Checking overlaps for volume component9_9 ... OK! 
+Checking overlaps for volume component10_10 ... OK! 
+Checking overlaps for volume component11_11 ... OK! 
+Checking overlaps for volume component12_12 ... OK! 
+Checking overlaps for volume component13_13 ... OK! 
+Checking overlaps for volume component14_14 ... OK! 
+Checking overlaps for volume component15_15 ... OK! 
+Checking overlaps for volume component16_16 ... OK! 
+Checking overlaps for volume component17_17 ... OK! 
+Checking overlaps for volume component18_18 ... OK! 
+Checking overlaps for volume component19_19 ... OK! 
+Checking overlaps for volume av_18_impr_1_OuterTrackerEndcapModule_1_Out_pv_480 ... OK! 
+Checking overlaps for volume component0_0 ... OK! 
+Checking overlaps for volume component1_1 ... OK! 
+Checking overlaps for volume component2_2 ... OK! 
+Checking overlaps for volume component3_3 ... OK! 
+Checking overlaps for volume component4_4 ... OK! 
+Checking overlaps for volume component5_5 ... OK! 
+Checking overlaps for volume component6_6 ... OK! 
+Checking overlaps for volume component7_7 ... OK! 
+Checking overlaps for volume component8_8 ... OK! 
+Checking overlaps for volume component9_9 ... OK! 
+Checking overlaps for volume component10_10 ... OK! 
+Checking overlaps for volume component11_11 ... OK! 
+Checking overlaps for volume component12_12 ... OK! 
+Checking overlaps for volume component13_13 ... OK! 
+Checking overlaps for volume component14_14 ... OK! 
+Checking overlaps for volume component15_15 ... OK! 
+Checking overlaps for volume component16_16 ... OK! 
+Checking overlaps for volume component17_17 ... OK! 
+Checking overlaps for volume component18_18 ... OK! 
+Checking overlaps for volume component19_19 ... OK! 
+Checking overlaps for volume av_18_impr_1_OuterTrackerEndcapModule_2_Out_pv_576 ... OK! 
+Checking overlaps for volume component0_0 ... OK! 
+Checking overlaps for volume component1_1 ... OK! 
+Checking overlaps for volume component2_2 ... OK! 
+Checking overlaps for volume component3_3 ... OK! 
+Checking overlaps for volume component4_4 ... OK! 
+Checking overlaps for volume component5_5 ... OK! 
+Checking overlaps for volume component6_6 ... OK! 
+Checking overlaps for volume component7_7 ... OK! 
+Checking overlaps for volume component8_8 ... OK! 
+Checking overlaps for volume component9_9 ... OK! 
+Checking overlaps for volume component10_10 ... OK! 
+Checking overlaps for volume component11_11 ... OK! 
+Checking overlaps for volume component12_12 ... OK! 
+Checking overlaps for volume component13_13 ... OK! 
+Checking overlaps for volume component14_14 ... OK! 
+Checking overlaps for volume component15_15 ... OK! 
+Checking overlaps for volume component16_16 ... OK! 
+Checking overlaps for volume component17_17 ... OK! 
+Checking overlaps for volume component18_18 ... OK! 
+Checking overlaps for volume component19_19 ... OK! 
+Checking overlaps for volume av_18_impr_1_OuterTrackerEndcapModule_3_Out_pv_672 ... OK! 
+Checking overlaps for volume component0_0 ... OK! 
+Checking overlaps for volume component1_1 ... OK! 
+Checking overlaps for volume component2_2 ... OK! 
+Checking overlaps for volume component3_3 ... OK! 
+Checking overlaps for volume component4_4 ... OK! 
+Checking overlaps for volume component5_5 ... OK! 
+Checking overlaps for volume component6_6 ... OK! 
+Checking overlaps for volume component7_7 ... OK! 
+Checking overlaps for volume component8_8 ... OK! 
+Checking overlaps for volume component9_9 ... OK! 
+Checking overlaps for volume component10_10 ... OK! 
+Checking overlaps for volume component11_11 ... OK! 
+Checking overlaps for volume component12_12 ... OK! 
+Checking overlaps for volume component13_13 ... OK! 
+Checking overlaps for volume component14_14 ... OK! 
+Checking overlaps for volume component15_15 ... OK! 
+Checking overlaps for volume component16_16 ... OK! 
+Checking overlaps for volume component17_17 ... OK! 
+Checking overlaps for volume component18_18 ... OK! 
+Checking overlaps for volume component19_19 ... OK! 
+Checking overlaps for volume InnerTrackers_1 ... OK! 
+Checking overlaps for volume av_14_impr_2_InnerTrackerBarrelModule_01_pv_0 ... OK! 
+Checking overlaps for volume component0_0 ... OK! 
+Checking overlaps for volume component1_1 ... OK! 
+Checking overlaps for volume component2_2 ... OK! 
+Checking overlaps for volume component3_3 ... OK! 
+Checking overlaps for volume component4_4 ... OK! 
+Checking overlaps for volume component5_5 ... OK! 
+Checking overlaps for volume component6_6 ... OK! 
+Checking overlaps for volume component7_7 ... OK! 
+Checking overlaps for volume component8_8 ... OK! 
+Checking overlaps for volume component9_9 ... OK! 
+Checking overlaps for volume component10_10 ... OK! 
+Checking overlaps for volume component11_11 ... OK! 
+Checking overlaps for volume component12_12 ... OK! 
+Checking overlaps for volume component13_13 ... OK! 
+Checking overlaps for volume component14_14 ... OK! 
+Checking overlaps for volume component15_15 ... OK! 
+Checking overlaps for volume component16_16 ... OK! 
+Checking overlaps for volume component17_17 ... OK! 
+Checking overlaps for volume av_17_impr_1_InnerTrackerEndcapModule_2x2_Out_pv_0 ... OK! 
+Checking overlaps for volume component0_0 ... OK! 
+Checking overlaps for volume component1_1 ... OK! 
+Checking overlaps for volume component2_2 ... OK! 
+Checking overlaps for volume component3_3 ... OK! 
+Checking overlaps for volume component4_4 ... OK! 
+Checking overlaps for volume component5_5 ... OK! 
+Checking overlaps for volume component6_6 ... OK! 
+Checking overlaps for volume component7_7 ... OK! 
+Checking overlaps for volume component8_8 ... OK! 
+Checking overlaps for volume component9_9 ... OK! 
+Checking overlaps for volume component10_10 ... OK! 
+Checking overlaps for volume component11_11 ... OK! 
+Checking overlaps for volume component12_12 ... OK! 
+Checking overlaps for volume component13_13 ... OK! 
+Checking overlaps for volume component14_14 ... OK! 
+Checking overlaps for volume component15_15 ... OK! 
+Checking overlaps for volume component16_16 ... OK! 
+Checking overlaps for volume component17_17 ... OK! 
+Checking overlaps for volume component18_18 ... OK! 
+Checking overlaps for volume component19_19 ... OK! 
+Checking overlaps for volume av_17_impr_1_InnerTrackerEndcapModule_3x4_Out_pv_48 ... OK! 
+Checking overlaps for volume component0_0 ... OK! 
+Checking overlaps for volume component1_1 ... OK! 
+Checking overlaps for volume component2_2 ... OK! 
+Checking overlaps for volume component3_3 ... OK! 
+Checking overlaps for volume component4_4 ... OK! 
+Checking overlaps for volume component5_5 ... OK! 
+Checking overlaps for volume component6_6 ... OK! 
+Checking overlaps for volume component7_7 ... OK! 
+Checking overlaps for volume component8_8 ... OK! 
+Checking overlaps for volume component9_9 ... OK! 
+Checking overlaps for volume component10_10 ... OK! 
+Checking overlaps for volume component11_11 ... OK! 
+Checking overlaps for volume component12_12 ... OK! 
+Checking overlaps for volume component13_13 ... OK! 
+Checking overlaps for volume component14_14 ... OK! 
+Checking overlaps for volume component15_15 ... OK! 
+Checking overlaps for volume component16_16 ... OK! 
+Checking overlaps for volume component17_17 ... OK! 
+Checking overlaps for volume component18_18 ... OK! 
+Checking overlaps for volume component19_19 ... OK! 
+Checking overlaps for volume av_17_impr_1_InnerTrackerEndcapModule_4x4_Out_pv_96 ... OK! 
+Checking overlaps for volume component0_0 ... OK! 
+Checking overlaps for volume component1_1 ... OK! 
+Checking overlaps for volume component2_2 ... OK! 
+Checking overlaps for volume component3_3 ... OK! 
+Checking overlaps for volume component4_4 ... OK! 
+Checking overlaps for volume component5_5 ... OK! 
+Checking overlaps for volume component6_6 ... OK! 
+Checking overlaps for volume component7_7 ... OK! 
+Checking overlaps for volume component8_8 ... OK! 
+Checking overlaps for volume component9_9 ... OK! 
+Checking overlaps for volume component10_10 ... OK! 
+Checking overlaps for volume component11_11 ... OK! 
+Checking overlaps for volume component12_12 ... OK! 
+Checking overlaps for volume component13_13 ... OK! 
+Checking overlaps for volume component14_14 ... OK! 
+Checking overlaps for volume component15_15 ... OK! 
+Checking overlaps for volume component16_16 ... OK! 
+Checking overlaps for volume component17_17 ... OK! 
+Checking overlaps for volume component18_18 ... OK! 
+Checking overlaps for volume component19_19 ... OK! 
+Checking overlaps for volume av_17_impr_1_InnerTrackerEndcapModule_5x4_Out_pv_144 ... OK! 
+Checking overlaps for volume component0_0 ... OK! 
+Checking overlaps for volume component1_1 ... OK! 
+Checking overlaps for volume component2_2 ... OK! 
+Checking overlaps for volume component3_3 ... OK! 
+Checking overlaps for volume component4_4 ... OK! 
+Checking overlaps for volume component5_5 ... OK! 
+Checking overlaps for volume component6_6 ... OK! 
+Checking overlaps for volume component7_7 ... OK! 
+Checking overlaps for volume component8_8 ... OK! 
+Checking overlaps for volume component9_9 ... OK! 
+Checking overlaps for volume component10_10 ... OK! 
+Checking overlaps for volume component11_11 ... OK! 
+Checking overlaps for volume component12_12 ... OK! 
+Checking overlaps for volume component13_13 ... OK! 
+Checking overlaps for volume component14_14 ... OK! 
+Checking overlaps for volume component15_15 ... OK! 
+Checking overlaps for volume component16_16 ... OK! 
+Checking overlaps for volume component17_17 ... OK! 
+Checking overlaps for volume component18_18 ... OK! 
+Checking overlaps for volume component19_19 ... OK! 
+Checking overlaps for volume av_17_impr_1_InnerTrackerEndcapModule_6x4_Out_pv_192 ... OK! 
+Checking overlaps for volume component16_16 ... OK! 
+Checking overlaps for volume component17_17 ... OK! 
+Checking overlaps for volume component0_0 ... OK! 
+Checking overlaps for volume component1_1 ... OK! 
+Checking overlaps for volume component2_2 ... OK! 
+Checking overlaps for volume component3_3 ... OK! 
+Checking overlaps for volume component4_4 ... OK! 
+Checking overlaps for volume component5_5 ... OK! 
+Checking overlaps for volume component6_6 ... OK! 
+Checking overlaps for volume component7_7 ... OK! 
+Checking overlaps for volume component8_8 ... OK! 
+Checking overlaps for volume component9_9 ... OK! 
+Checking overlaps for volume component10_10 ... OK! 
+Checking overlaps for volume component11_11 ... OK! 
+Checking overlaps for volume component12_12 ... OK! 
+Checking overlaps for volume component13_13 ... OK! 
+Checking overlaps for volume component14_14 ... OK! 
+Checking overlaps for volume component15_15 ... OK! 
+Checking overlaps for volume component18_18 ... OK! 
+Checking overlaps for volume component19_19 ... OK! 
+Checking overlaps for volume av_17_impr_1_InnerTrackerEndcapModule_8x7_Out_pv_240 ... OK! 
+Checking overlaps for volume component0_0 ... OK! 
+Checking overlaps for volume component1_1 ... OK! 
+Checking overlaps for volume component2_2 ... OK! 
+Checking overlaps for volume component3_3 ... OK! 
+Checking overlaps for volume component4_4 ... OK! 
+Checking overlaps for volume component5_5 ... OK! 
+Checking overlaps for volume component6_6 ... OK! 
+Checking overlaps for volume component7_7 ... OK! 
+Checking overlaps for volume component8_8 ... OK! 
+Checking overlaps for volume component9_9 ... OK! 
+Checking overlaps for volume component10_10 ... OK! 
+Checking overlaps for volume component11_11 ... OK! 
+Checking overlaps for volume component12_12 ... OK! 
+Checking overlaps for volume component13_13 ... OK! 
+Checking overlaps for volume component14_14 ... OK! 
+Checking overlaps for volume component15_15 ... OK! 
+Checking overlaps for volume component16_16 ... OK! 
+Checking overlaps for volume component17_17 ... OK! 
+Checking overlaps for volume component18_18 ... OK! 
+Checking overlaps for volume component19_19 ... OK! 
+Checking overlaps for volume av_17_impr_1_InnerTrackerEndcapModule_3x2_In_pv_288 ... OK! 
+Checking overlaps for volume component0_0 ... OK! 
+Checking overlaps for volume component1_1 ... OK! 
+Checking overlaps for volume component2_2 ... OK! 
+Checking overlaps for volume component3_3 ... OK! 
+Checking overlaps for volume component4_4 ... OK! 
+Checking overlaps for volume component5_5 ... OK! 
+Checking overlaps for volume component6_6 ... OK! 
+Checking overlaps for volume component7_7 ... OK! 
+Checking overlaps for volume component8_8 ... OK! 
+Checking overlaps for volume component9_9 ... OK! 
+Checking overlaps for volume component10_10 ... OK! 
+Checking overlaps for volume component11_11 ... OK! 
+Checking overlaps for volume component12_12 ... OK! 
+Checking overlaps for volume component13_13 ... OK! 
+Checking overlaps for volume component14_14 ... OK! 
+Checking overlaps for volume component15_15 ... OK! 
+Checking overlaps for volume component16_16 ... OK! 
+Checking overlaps for volume component17_17 ... OK! 
+Checking overlaps for volume component18_18 ... OK! 
+Checking overlaps for volume component19_19 ... OK! 
+Checking overlaps for volume av_17_impr_1_InnerTrackerEndcapModule_4x2_In_pv_336 ... OK! 
+Checking overlaps for volume component0_0 ... OK! 
+Checking overlaps for volume component1_1 ... OK! 
+Checking overlaps for volume component2_2 ... OK! 
+Checking overlaps for volume component3_3 ... OK! 
+Checking overlaps for volume component4_4 ... OK! 
+Checking overlaps for volume component5_5 ... OK! 
+Checking overlaps for volume component6_6 ... OK! 
+Checking overlaps for volume component7_7 ... OK! 
+Checking overlaps for volume component8_8 ... OK! 
+Checking overlaps for volume component9_9 ... OK! 
+Checking overlaps for volume component10_10 ... OK! 
+Checking overlaps for volume component11_11 ... OK! 
+Checking overlaps for volume component12_12 ... OK! 
+Checking overlaps for volume component13_13 ... OK! 
+Checking overlaps for volume component14_14 ... OK! 
+Checking overlaps for volume component15_15 ... OK! 
+Checking overlaps for volume component16_16 ... OK! 
+Checking overlaps for volume component17_17 ... OK! 
+Checking overlaps for volume component18_18 ... OK! 
+Checking overlaps for volume component19_19 ... OK! 
+Checking overlaps for volume av_17_impr_1_InnerTrackerEndcapModule_6x7_In_pv_384 ... OK! 
+Checking overlaps for volume component0_0 ... OK! 
+Checking overlaps for volume component1_1 ... OK! 
+Checking overlaps for volume component2_2 ... OK! 
+Checking overlaps for volume component3_3 ... OK! 
+Checking overlaps for volume component4_4 ... OK! 
+Checking overlaps for volume component5_5 ... OK! 
+Checking overlaps for volume component6_6 ... OK! 
+Checking overlaps for volume component7_7 ... OK! 
+Checking overlaps for volume component8_8 ... OK! 
+Checking overlaps for volume component9_9 ... OK! 
+Checking overlaps for volume component10_10 ... OK! 
+Checking overlaps for volume component11_11 ... OK! 
+Checking overlaps for volume component12_12 ... OK! 
+Checking overlaps for volume component13_13 ... OK! 
+Checking overlaps for volume component14_14 ... OK! 
+Checking overlaps for volume component15_15 ... OK! 
+Checking overlaps for volume component16_16 ... OK! 
+Checking overlaps for volume component17_17 ... OK! 
+Checking overlaps for volume component18_18 ... OK! 
+Checking overlaps for volume component19_19 ... OK! 
+Checking overlaps for volume av_17_impr_1_InnerTrackerEndcapModule_8x8_In_pv_432 ... OK! 
+Checking overlaps for volume component0_0 ... OK! 
+Checking overlaps for volume component1_1 ... OK! 
+Checking overlaps for volume component2_2 ... OK! 
+Checking overlaps for volume component3_3 ... OK! 
+Checking overlaps for volume component4_4 ... OK! 
+Checking overlaps for volume component5_5 ... OK! 
+Checking overlaps for volume component6_6 ... OK! 
+Checking overlaps for volume component7_7 ... OK! 
+Checking overlaps for volume component8_8 ... OK! 
+Checking overlaps for volume component9_9 ... OK! 
+Checking overlaps for volume component10_10 ... OK! 
+Checking overlaps for volume component11_11 ... OK! 
+Checking overlaps for volume component12_12 ... OK! 
+Checking overlaps for volume component13_13 ... OK! 
+Checking overlaps for volume component14_14 ... OK! 
+Checking overlaps for volume component15_15 ... OK! 
+Checking overlaps for volume component16_16 ... OK! 
+Checking overlaps for volume component17_17 ... OK! 
+Checking overlaps for volume component18_18 ... OK! 
+Checking overlaps for volume component19_19 ... OK! 
+Checking overlaps for volume av_17_impr_1_InnerTrackerEndcapModule_9x8_In_pv_480 ... OK! 
+Checking overlaps for volume component0_0 ... OK! 
+Checking overlaps for volume component1_1 ... OK! 
+Checking overlaps for volume component2_2 ... OK! 
+Checking overlaps for volume component3_3 ... OK! 
+Checking overlaps for volume component4_4 ... OK! 
+Checking overlaps for volume component5_5 ... OK! 
+Checking overlaps for volume component6_6 ... OK! 
+Checking overlaps for volume component7_7 ... OK! 
+Checking overlaps for volume component8_8 ... OK! 
+Checking overlaps for volume component9_9 ... OK! 
+Checking overlaps for volume component10_10 ... OK! 
+Checking overlaps for volume component11_11 ... OK! 
+Checking overlaps for volume component12_12 ... OK! 
+Checking overlaps for volume component13_13 ... OK! 
+Checking overlaps for volume component14_14 ... OK! 
+Checking overlaps for volume component15_15 ... OK! 
+Checking overlaps for volume component16_16 ... OK! 
+Checking overlaps for volume component17_17 ... OK! 
+Checking overlaps for volume component18_18 ... OK! 
+Checking overlaps for volume component19_19 ... OK! 
+Checking overlaps for volume av_17_impr_1_InnerTrackerEndcapModule_11x3_In_pv_528 ... OK! 
+Checking overlaps for volume component0_0 ... OK! 
+Checking overlaps for volume component1_1 ... OK! 
+Checking overlaps for volume component2_2 ... OK! 
+Checking overlaps for volume component3_3 ... OK! 
+Checking overlaps for volume component4_4 ... OK! 
+Checking overlaps for volume component5_5 ... OK! 
+Checking overlaps for volume component6_6 ... OK! 
+Checking overlaps for volume component7_7 ... OK! 
+Checking overlaps for volume component8_8 ... OK! 
+Checking overlaps for volume component9_9 ... OK! 
+Checking overlaps for volume component10_10 ... OK! 
+Checking overlaps for volume component11_11 ... OK! 
+Checking overlaps for volume component12_12 ... OK! 
+Checking overlaps for volume component13_13 ... OK! 
+Checking overlaps for volume component14_14 ... OK! 
+Checking overlaps for volume component15_15 ... OK! 
+Checking overlaps for volume component16_16 ... OK! 
+Checking overlaps for volume component17_17 ... OK! 
+Checking overlaps for volume component18_18 ... OK! 
+Checking overlaps for volume component19_19 ... OK! 
+Checking overlaps for volume av_17_impr_1_InnerTrackerEndcapModule_8x5_In_pv_576 ... OK! 
+Checking overlaps for volume component0_0 ... OK! 
+Checking overlaps for volume component1_1 ... OK! 
+Checking overlaps for volume component2_2 ... OK! 
+Checking overlaps for volume component3_3 ... OK! 
+Checking overlaps for volume component4_4 ... OK! 
+Checking overlaps for volume component5_5 ... OK! 
+Checking overlaps for volume component6_6 ... OK! 
+Checking overlaps for volume component7_7 ... OK! 
+Checking overlaps for volume component8_8 ... OK! 
+Checking overlaps for volume component9_9 ... OK! 
+Checking overlaps for volume component10_10 ... OK! 
+Checking overlaps for volume component11_11 ... OK! 
+Checking overlaps for volume component12_12 ... OK! 
+Checking overlaps for volume component13_13 ... OK! 
+Checking overlaps for volume component14_14 ... OK! 
+Checking overlaps for volume component15_15 ... OK! 
+Checking overlaps for volume component16_16 ... OK! 
+Checking overlaps for volume component17_17 ... OK! 
+Checking overlaps for volume component18_18 ... OK! 
+Checking overlaps for volume component19_19 ... OK! 
+Checking overlaps for volume av_17_impr_1_InnerTrackerEndcapModule_4x2_Out_pv_648 ... OK! 
+Checking overlaps for volume component0_0 ... OK! 
+Checking overlaps for volume component1_1 ... OK! 
+Checking overlaps for volume component2_2 ... OK! 
+Checking overlaps for volume component3_3 ... OK! 
+Checking overlaps for volume component4_4 ... OK! 
+Checking overlaps for volume component5_5 ... OK! 
+Checking overlaps for volume component6_6 ... OK! 
+Checking overlaps for volume component7_7 ... OK! 
+Checking overlaps for volume component8_8 ... OK! 
+Checking overlaps for volume component9_9 ... OK! 
+Checking overlaps for volume component10_10 ... OK! 
+Checking overlaps for volume component11_11 ... OK! 
+Checking overlaps for volume component12_12 ... OK! 
+Checking overlaps for volume component13_13 ... OK! 
+Checking overlaps for volume component14_14 ... OK! 
+Checking overlaps for volume component15_15 ... OK! 
+Checking overlaps for volume component16_16 ... OK! 
+Checking overlaps for volume component17_17 ... OK! 
+Checking overlaps for volume component18_18 ... OK! 
+Checking overlaps for volume component19_19 ... OK! 
+Checking overlaps for volume av_17_impr_1_InnerTrackerEndcapModule_6x7_Out_pv_696 ... OK! 
+Checking overlaps for volume component0_0 ... OK! 
+Checking overlaps for volume component1_1 ... OK! 
+Checking overlaps for volume component2_2 ... OK! 
+Checking overlaps for volume component3_3 ... OK! 
+Checking overlaps for volume component4_4 ... OK! 
+Checking overlaps for volume component5_5 ... OK! 
+Checking overlaps for volume component6_6 ... OK! 
+Checking overlaps for volume component7_7 ... OK! 
+Checking overlaps for volume component8_8 ... OK! 
+Checking overlaps for volume component9_9 ... OK! 
+Checking overlaps for volume component10_10 ... OK! 
+Checking overlaps for volume component11_11 ... OK! 
+Checking overlaps for volume component12_12 ... OK! 
+Checking overlaps for volume component13_13 ... OK! 
+Checking overlaps for volume component14_14 ... OK! 
+Checking overlaps for volume component15_15 ... OK! 
+Checking overlaps for volume component16_16 ... OK! 
+Checking overlaps for volume component17_17 ... OK! 
+Checking overlaps for volume component18_18 ... OK! 
+Checking overlaps for volume component19_19 ... OK! 
+Checking overlaps for volume av_17_impr_1_InnerTrackerEndcapModule_8x8_Out_pv_744 ... OK! 
+Checking overlaps for volume component0_0 ... OK! 
+Checking overlaps for volume component1_1 ... OK! 
+Checking overlaps for volume component2_2 ... OK! 
+Checking overlaps for volume component3_3 ... OK! 
+Checking overlaps for volume component4_4 ... OK! 
+Checking overlaps for volume component5_5 ... OK! 
+Checking overlaps for volume component6_6 ... OK! 
+Checking overlaps for volume component7_7 ... OK! 
+Checking overlaps for volume component8_8 ... OK! 
+Checking overlaps for volume component9_9 ... OK! 
+Checking overlaps for volume component10_10 ... OK! 
+Checking overlaps for volume component11_11 ... OK! 
+Checking overlaps for volume component12_12 ... OK! 
+Checking overlaps for volume component13_13 ... OK! 
+Checking overlaps for volume component14_14 ... OK! 
+Checking overlaps for volume component15_15 ... OK! 
+Checking overlaps for volume component16_16 ... OK! 
+Checking overlaps for volume component17_17 ... OK! 
+Checking overlaps for volume component18_18 ... OK! 
+Checking overlaps for volume component19_19 ... OK! 
+Checking overlaps for volume av_17_impr_1_InnerTrackerEndcapModule_10x8_Out_pv_792 ... OK! 
+Checking overlaps for volume component0_0 ... OK! 
+Checking overlaps for volume component1_1 ... OK! 
+Checking overlaps for volume component2_2 ... OK! 
+Checking overlaps for volume component3_3 ... OK! 
+Checking overlaps for volume component4_4 ... OK! 
+Checking overlaps for volume component5_5 ... OK! 
+Checking overlaps for volume component6_6 ... OK! 
+Checking overlaps for volume component7_7 ... OK! 
+Checking overlaps for volume component8_8 ... OK! 
+Checking overlaps for volume component9_9 ... OK! 
+Checking overlaps for volume component10_10 ... OK! 
+Checking overlaps for volume component11_11 ... OK! 
+Checking overlaps for volume component12_12 ... OK! 
+Checking overlaps for volume component13_13 ... OK! 
+Checking overlaps for volume component14_14 ... OK! 
+Checking overlaps for volume component15_15 ... OK! 
+Checking overlaps for volume component16_16 ... OK! 
+Checking overlaps for volume component17_17 ... OK! 
+Checking overlaps for volume component18_18 ... OK! 
+Checking overlaps for volume component19_19 ... OK! 
+Checking overlaps for volume av_17_impr_1_InnerTrackerEndcapModule_12x3_Out_pv_840 ... OK! 
+Checking overlaps for volume component0_0 ... OK! 
+Checking overlaps for volume component1_1 ... OK! 
+Checking overlaps for volume component2_2 ... OK! 
+Checking overlaps for volume component3_3 ... OK! 
+Checking overlaps for volume component4_4 ... OK! 
+Checking overlaps for volume component5_5 ... OK! 
+Checking overlaps for volume component6_6 ... OK! 
+Checking overlaps for volume component7_7 ... OK! 
+Checking overlaps for volume component8_8 ... OK! 
+Checking overlaps for volume component9_9 ... OK! 
+Checking overlaps for volume component10_10 ... OK! 
+Checking overlaps for volume component11_11 ... OK! 
+Checking overlaps for volume component12_12 ... OK! 
+Checking overlaps for volume component13_13 ... OK! 
+Checking overlaps for volume component14_14 ... OK! 
+Checking overlaps for volume component15_15 ... OK! 
+Checking overlaps for volume component16_16 ... OK! 
+Checking overlaps for volume component17_17 ... OK! 
+Checking overlaps for volume component18_18 ... OK! 
+Checking overlaps for volume component19_19 ... OK! 
+Checking overlaps for volume av_17_impr_1_InnerTrackerEndcapModule_12x5_Out_pv_888 ... OK! 
+Checking overlaps for volume component0_0 ... OK! 
+Checking overlaps for volume component1_1 ... OK! 
+Checking overlaps for volume component2_2 ... OK! 
+Checking overlaps for volume component3_3 ... OK! 
+Checking overlaps for volume component4_4 ... OK! 
+Checking overlaps for volume component5_5 ... OK! 
+Checking overlaps for volume component6_6 ... OK! 
+Checking overlaps for volume component7_7 ... OK! 
+Checking overlaps for volume component8_8 ... OK! 
+Checking overlaps for volume component9_9 ... OK! 
+Checking overlaps for volume component10_10 ... OK! 
+Checking overlaps for volume component11_11 ... OK! 
+Checking overlaps for volume component12_12 ... OK! 
+Checking overlaps for volume component13_13 ... OK! 
+Checking overlaps for volume component14_14 ... OK! 
+Checking overlaps for volume component15_15 ... OK! 
+Checking overlaps for volume component16_16 ... OK! 
+Checking overlaps for volume component17_17 ... OK! 
+Checking overlaps for volume component18_18 ... OK! 
+Checking overlaps for volume component19_19 ... OK! 
+Checking overlaps for volume av_17_impr_1_InnerTrackerEndcapModule_5x5_In_pv_936 ... OK! 
+Checking overlaps for volume component0_0 ... OK! 
+Checking overlaps for volume component1_1 ... OK! 
+Checking overlaps for volume component2_2 ... OK! 
+Checking overlaps for volume component3_3 ... OK! 
+Checking overlaps for volume component4_4 ... OK! 
+Checking overlaps for volume component5_5 ... OK! 
+Checking overlaps for volume component6_6 ... OK! 
+Checking overlaps for volume component7_7 ... OK! 
+Checking overlaps for volume component8_8 ... OK! 
+Checking overlaps for volume component9_9 ... OK! 
+Checking overlaps for volume component10_10 ... OK! 
+Checking overlaps for volume component11_11 ... OK! 
+Checking overlaps for volume component12_12 ... OK! 
+Checking overlaps for volume component13_13 ... OK! 
+Checking overlaps for volume component14_14 ... OK! 
+Checking overlaps for volume component15_15 ... OK! 
+Checking overlaps for volume component16_16 ... OK! 
+Checking overlaps for volume component17_17 ... OK! 
+Checking overlaps for volume component18_18 ... OK! 
+Checking overlaps for volume component19_19 ... OK! 
+Checking overlaps for volume av_17_impr_1_InnerTrackerEndcapModule_7x8_In_pv_984 ... OK! 
+Checking overlaps for volume component0_0 ... OK! 
+Checking overlaps for volume component1_1 ... OK! 
+Checking overlaps for volume component2_2 ... OK! 
+Checking overlaps for volume component3_3 ... OK! 
+Checking overlaps for volume component4_4 ... OK! 
+Checking overlaps for volume component5_5 ... OK! 
+Checking overlaps for volume component6_6 ... OK! 
+Checking overlaps for volume component7_7 ... OK! 
+Checking overlaps for volume component8_8 ... OK! 
+Checking overlaps for volume component9_9 ... OK! 
+Checking overlaps for volume component10_10 ... OK! 
+Checking overlaps for volume component11_11 ... OK! 
+Checking overlaps for volume component12_12 ... OK! 
+Checking overlaps for volume component13_13 ... OK! 
+Checking overlaps for volume component14_14 ... OK! 
+Checking overlaps for volume component15_15 ... OK! 
+Checking overlaps for volume component16_16 ... OK! 
+Checking overlaps for volume component17_17 ... OK! 
+Checking overlaps for volume component18_18 ... OK! 
+Checking overlaps for volume component19_19 ... OK! 
+Checking overlaps for volume av_17_impr_1_InnerTrackerEndcapModule_10x9_In_pv_1032 ... OK! 
+Checking overlaps for volume component0_0 ... OK! 
+Checking overlaps for volume component1_1 ... OK! 
+Checking overlaps for volume component2_2 ... OK! 
+Checking overlaps for volume component3_3 ... OK! 
+Checking overlaps for volume component4_4 ... OK! 
+Checking overlaps for volume component5_5 ... OK! 
+Checking overlaps for volume component6_6 ... OK! 
+Checking overlaps for volume component7_7 ... OK! 
+Checking overlaps for volume component8_8 ... OK! 
+Checking overlaps for volume component9_9 ... OK! 
+Checking overlaps for volume component10_10 ... OK! 
+Checking overlaps for volume component11_11 ... OK! 
+Checking overlaps for volume component12_12 ... OK! 
+Checking overlaps for volume component13_13 ... OK! 
+Checking overlaps for volume component14_14 ... OK! 
+Checking overlaps for volume component15_15 ... OK! 
+Checking overlaps for volume component16_16 ... OK! 
+Checking overlaps for volume component17_17 ... OK! 
+Checking overlaps for volume component18_18 ... OK! 
+Checking overlaps for volume component19_19 ... OK! 
+Checking overlaps for volume av_17_impr_1_InnerTrackerEndcapModule_12x8_In_pv_1080 ... OK! 
+Checking overlaps for volume component0_0 ... OK! 
+Checking overlaps for volume component1_1 ... OK! 
+Checking overlaps for volume component2_2 ... OK! 
+Checking overlaps for volume component3_3 ... OK! 
+Checking overlaps for volume component4_4 ... OK! 
+Checking overlaps for volume component5_5 ... OK! 
+Checking overlaps for volume component6_6 ... OK! 
+Checking overlaps for volume component7_7 ... OK! 
+Checking overlaps for volume component8_8 ... OK! 
+Checking overlaps for volume component9_9 ... OK! 
+Checking overlaps for volume component10_10 ... OK! 
+Checking overlaps for volume component11_11 ... OK! 
+Checking overlaps for volume component12_12 ... OK! 
+Checking overlaps for volume component13_13 ... OK! 
+Checking overlaps for volume component14_14 ... OK! 
+Checking overlaps for volume component15_15 ... OK! 
+Checking overlaps for volume component16_16 ... OK! 
+Checking overlaps for volume component17_17 ... OK! 
+Checking overlaps for volume component18_18 ... OK! 
+Checking overlaps for volume component19_19 ... OK! 
+Checking overlaps for volume av_17_impr_1_InnerTrackerEndcapModule_9x5_Out_pv_1224 ... OK! 
+Checking overlaps for volume component4_4 ... OK! 
+Checking overlaps for volume component5_5 ... OK! 
+Checking overlaps for volume component6_6 ... OK! 
+Checking overlaps for volume component7_7 ... OK! 
+Checking overlaps for volume component8_8 ... OK! 
+Checking overlaps for volume component9_9 ... OK! 
+Checking overlaps for volume component10_10 ... OK! 
+Checking overlaps for volume component11_11 ... OK! 
+Checking overlaps for volume component0_0 ... OK! 
+Checking overlaps for volume component1_1 ... OK! 
+Checking overlaps for volume component2_2 ... OK! 
+Checking overlaps for volume component3_3 ... OK! 
+Checking overlaps for volume component12_12 ... OK! 
+Checking overlaps for volume component13_13 ... OK! 
+Checking overlaps for volume component14_14 ... OK! 
+Checking overlaps for volume component15_15 ... OK! 
+Checking overlaps for volume component16_16 ... OK! 
+Checking overlaps for volume component17_17 ... OK! 
+Checking overlaps for volume component18_18 ... OK! 
+Checking overlaps for volume component19_19 ... OK! 
+Checking overlaps for volume av_17_impr_1_InnerTrackerEndcapModule_10x4_Out_pv_1272 ... OK! 
+Checking overlaps for volume component0_0 ... OK! 
+Checking overlaps for volume component1_1 ... OK! 
+Checking overlaps for volume component2_2 ... OK! 
+Checking overlaps for volume component3_3 ... OK! 
+Checking overlaps for volume component4_4 ... OK! 
+Checking overlaps for volume component5_5 ... OK! 
+Checking overlaps for volume component6_6 ... OK! 
+Checking overlaps for volume component7_7 ... OK! 
+Checking overlaps for volume component8_8 ... OK! 
+Checking overlaps for volume component9_9 ... OK! 
+Checking overlaps for volume component10_10 ... OK! 
+Checking overlaps for volume component11_11 ... OK! 
+Checking overlaps for volume component12_12 ... OK! 
+Checking overlaps for volume component13_13 ... OK! 
+Checking overlaps for volume component14_14 ... OK! 
+Checking overlaps for volume component15_15 ... OK! 
+Checking overlaps for volume component16_16 ... OK! 
+Checking overlaps for volume component17_17 ... OK! 
+Checking overlaps for volume component18_18 ... OK! 
+Checking overlaps for volume component19_19 ... OK! 
+Checking overlaps for volume av_17_impr_1_InnerTrackerEndcapModule_11x3_Out_pv_1320 ... OK! 
+Checking overlaps for volume component0_0 ... OK! 
+Checking overlaps for volume component1_1 ... OK! 
+Checking overlaps for volume component2_2 ... OK! 
+Checking overlaps for volume component3_3 ... OK! 
+Checking overlaps for volume component4_4 ... OK! 
+Checking overlaps for volume component5_5 ... OK! 
+Checking overlaps for volume component6_6 ... OK! 
+Checking overlaps for volume component7_7 ... OK! 
+Checking overlaps for volume component8_8 ... OK! 
+Checking overlaps for volume component9_9 ... OK! 
+Checking overlaps for volume component10_10 ... OK! 
+Checking overlaps for volume component11_11 ... OK! 
+Checking overlaps for volume component12_12 ... OK! 
+Checking overlaps for volume component13_13 ... OK! 
+Checking overlaps for volume component14_14 ... OK! 
+Checking overlaps for volume component15_15 ... OK! 
+Checking overlaps for volume component16_16 ... OK! 
+Checking overlaps for volume component17_17 ... OK! 
+Checking overlaps for volume component18_18 ... OK! 
+Checking overlaps for volume component19_19 ... OK! 
+Checking overlaps for volume av_17_impr_1_InnerTrackerEndcapModule_7x5_In_pv_1416 ... OK! 
+Checking overlaps for volume component0_0 ... OK! 
+Checking overlaps for volume component1_1 ... OK! 
+Checking overlaps for volume component2_2 ... OK! 
+Checking overlaps for volume component3_3 ... OK! 
+Checking overlaps for volume component4_4 ... OK! 
+Checking overlaps for volume component5_5 ... OK! 
+Checking overlaps for volume component6_6 ... OK! 
+Checking overlaps for volume component7_7 ... OK! 
+Checking overlaps for volume component8_8 ... OK! 
+Checking overlaps for volume component9_9 ... OK! 
+Checking overlaps for volume component10_10 ... OK! 
+Checking overlaps for volume component11_11 ... OK! 
+Checking overlaps for volume component12_12 ... OK! 
+Checking overlaps for volume component13_13 ... OK! 
+Checking overlaps for volume component14_14 ... OK! 
+Checking overlaps for volume component15_15 ... OK! 
+Checking overlaps for volume component16_16 ... OK! 
+Checking overlaps for volume component17_17 ... OK! 
+Checking overlaps for volume component18_18 ... OK! 
+Checking overlaps for volume component19_19 ... OK! 
+Checking overlaps for volume av_17_impr_1_InnerTrackerEndcapModule_10x4_In_pv_1512 ... OK! 
+Checking overlaps for volume component0_0 ... OK! 
+Checking overlaps for volume component1_1 ... OK! 
+Checking overlaps for volume component2_2 ... OK! 
+Checking overlaps for volume component3_3 ... OK! 
+Checking overlaps for volume component4_4 ... OK! 
+Checking overlaps for volume component5_5 ... OK! 
+Checking overlaps for volume component6_6 ... OK! 
+Checking overlaps for volume component7_7 ... OK! 
+Checking overlaps for volume component8_8 ... OK! 
+Checking overlaps for volume component9_9 ... OK! 
+Checking overlaps for volume component10_10 ... OK! 
+Checking overlaps for volume component11_11 ... OK! 
+Checking overlaps for volume component12_12 ... OK! 
+Checking overlaps for volume component13_13 ... OK! 
+Checking overlaps for volume component14_14 ... OK! 
+Checking overlaps for volume component15_15 ... OK! 
+Checking overlaps for volume component16_16 ... OK! 
+Checking overlaps for volume component17_17 ... OK! 
+Checking overlaps for volume component18_18 ... OK! 
+Checking overlaps for volume component19_19 ... OK! 
+Checking overlaps for volume av_17_impr_1_InnerTrackerEndcapModule_11x6_In_pv_1560 ... OK! 
+Checking overlaps for volume component0_0 ... OK! 
+Checking overlaps for volume component1_1 ... OK! 
+Checking overlaps for volume component2_2 ... OK! 
+Checking overlaps for volume component3_3 ... OK! 
+Checking overlaps for volume component4_4 ... OK! 
+Checking overlaps for volume component5_5 ... OK! 
+Checking overlaps for volume component6_6 ... OK! 
+Checking overlaps for volume component7_7 ... OK! 
+Checking overlaps for volume component8_8 ... OK! 
+Checking overlaps for volume component9_9 ... OK! 
+Checking overlaps for volume component10_10 ... OK! 
+Checking overlaps for volume component11_11 ... OK! 
+Checking overlaps for volume component12_12 ... OK! 
+Checking overlaps for volume component13_13 ... OK! 
+Checking overlaps for volume component14_14 ... OK! 
+Checking overlaps for volume component15_15 ... OK! 
+Checking overlaps for volume component16_16 ... OK! 
+Checking overlaps for volume component17_17 ... OK! 
+Checking overlaps for volume component18_18 ... OK! 
+Checking overlaps for volume component19_19 ... OK! 
+Checking overlaps for volume av_17_impr_1_InnerTrackerEndcapModule_7x5_Out_pv_1608 ... OK! 
+Checking overlaps for volume component0_0 ... OK! 
+Checking overlaps for volume component1_1 ... OK! 
+Checking overlaps for volume component2_2 ... OK! 
+Checking overlaps for volume component3_3 ... OK! 
+Checking overlaps for volume component4_4 ... OK! 
+Checking overlaps for volume component5_5 ... OK! 
+Checking overlaps for volume component6_6 ... OK! 
+Checking overlaps for volume component7_7 ... OK! 
+Checking overlaps for volume component8_8 ... OK! 
+Checking overlaps for volume component9_9 ... OK! 
+Checking overlaps for volume component10_10 ... OK! 
+Checking overlaps for volume component11_11 ... OK! 
+Checking overlaps for volume component12_12 ... OK! 
+Checking overlaps for volume component13_13 ... OK! 
+Checking overlaps for volume component14_14 ... OK! 
+Checking overlaps for volume component15_15 ... OK! 
+Checking overlaps for volume component16_16 ... OK! 
+Checking overlaps for volume component17_17 ... OK! 
+Checking overlaps for volume component18_18 ... OK! 
+Checking overlaps for volume component19_19 ... OK! 
+Checking overlaps for volume av_17_impr_1_InnerTrackerEndcapModule_9x3_Out_pv_1656 ... OK! 
+Checking overlaps for volume component0_0 ... OK! 
+Checking overlaps for volume component1_1 ... OK! 
+Checking overlaps for volume component2_2 ... OK! 
+Checking overlaps for volume component3_3 ... OK! 
+Checking overlaps for volume component4_4 ... OK! 
+Checking overlaps for volume component5_5 ... OK! 
+Checking overlaps for volume component6_6 ... OK! 
+Checking overlaps for volume component7_7 ... OK! 
+Checking overlaps for volume component8_8 ... OK! 
+Checking overlaps for volume component9_9 ... OK! 
+Checking overlaps for volume component10_10 ... OK! 
+Checking overlaps for volume component11_11 ... OK! 
+Checking overlaps for volume component12_12 ... OK! 
+Checking overlaps for volume component13_13 ... OK! 
+Checking overlaps for volume component14_14 ... OK! 
+Checking overlaps for volume component15_15 ... OK! 
+Checking overlaps for volume component16_16 ... OK! 
+Checking overlaps for volume component17_17 ... OK! 
+Checking overlaps for volume component18_18 ... OK! 
+Checking overlaps for volume component19_19 ... OK! 
+Checking overlaps for volume av_17_impr_1_InnerTrackerEndcapModule_12x8_Out_pv_1752 ... OK! 
+Checking overlaps for volume component0_0 ... OK! 
+Checking overlaps for volume component1_1 ... OK! 
+Checking overlaps for volume component2_2 ... OK! 
+Checking overlaps for volume component3_3 ... OK! 
+Checking overlaps for volume component4_4 ... OK! 
+Checking overlaps for volume component5_5 ... OK! 
+Checking overlaps for volume component6_6 ... OK! 
+Checking overlaps for volume component7_7 ... OK! 
+Checking overlaps for volume component8_8 ... OK! 
+Checking overlaps for volume component9_9 ... OK! 
+Checking overlaps for volume component10_10 ... OK! 
+Checking overlaps for volume component11_11 ... OK! 
+Checking overlaps for volume component12_12 ... OK! 
+Checking overlaps for volume component13_13 ... OK! 
+Checking overlaps for volume component14_14 ... OK! 
+Checking overlaps for volume component15_15 ... OK! 
+Checking overlaps for volume component16_16 ... OK! 
+Checking overlaps for volume component17_17 ... OK! 
+Checking overlaps for volume component18_18 ... OK! 
+Checking overlaps for volume component19_19 ... OK! 
+Checking overlaps for volume Vertex_0 ... OK! 
+Checking overlaps for volume av_15_impr_2_VertexBarrel_layer0_supp_pv_0 ... OK! 
+Checking overlaps for volume av_15_impr_2_VertexBarrel_layer0_sens_pv_1 ... OK! 
+Checking overlaps for volume av_15_impr_3_VertexBarrel_layer1_supp_pv_0 ... OK! 
+Checking overlaps for volume av_15_impr_3_VertexBarrel_layer1_sens_pv_1 ... OK! 
+Checking overlaps for volume av_15_impr_4_VertexBarrel_layer2_supp_pv_0 ... OK! 
+Checking overlaps for volume av_15_impr_4_VertexBarrel_layer2_sens_pv_1 ... OK! 
+Checking overlaps for volume av_15_impr_5_VertexBarrel_layer3_supp_pv_0 ... OK! 
+Checking overlaps for volume av_15_impr_5_VertexBarrel_layer3_sens_pv_1 ... OK! 
+Checking overlaps for volume av_15_impr_6_VertexBarrel_layer4_supp_pv_0 ... OK! 
+Checking overlaps for volume av_15_impr_6_VertexBarrel_layer4_sens_pv_1 ... OK! 
+Checking overlaps for volume av_15_impr_7_VertexBarrel_layer5_supp_pv_0 ... OK! 
+Checking overlaps for volume av_15_impr_7_VertexBarrel_layer5_sens_pv_1 ... OK! 
+Checking overlaps for volume av_16_impr_1_SiVertexEndcapModule1_pv_0 ... OK! 
+Checking overlaps for volume component0_0 ... OK! 
+Checking overlaps for volume component1_1 ... OK! 
+Checking overlaps for volume component2_2 ... OK! 
+Checking overlaps for volume av_16_impr_1_SiVertexEndcapModule2_pv_16 ... OK! 
+Checking overlaps for volume component0_0 ... OK! 
+Checking overlaps for volume component1_1 ... OK! 
+Checking overlaps for volume component2_2 ... OK! 
+Checking overlaps for volume av_16_impr_1_SiVertexEndcapModule3_pv_32 ... OK! 
+Checking overlaps for volume component0_0 ... OK! 
+Checking overlaps for volume component1_1 ... OK! 
+Checking overlaps for volume component2_2 ... OK! 
+Checking overlaps for volume av_16_impr_1_SiVertexEndcapModule4_pv_48 ... OK! 
+Checking overlaps for volume component0_0 ... OK! 
+Checking overlaps for volume component1_1 ... OK! 
+Checking overlaps for volume component2_2 ... OK! 
+Checking overlaps for volume av_16_impr_1_SiVertexEndcapModule5_pv_64 ... OK! 
+Checking overlaps for volume component0_0 ... OK! 
+Checking overlaps for volume component1_1 ... OK! 
+Checking overlaps for volume component2_2 ... OK! 
+Checking overlaps for volume av_16_impr_1_SiVertexEndcapModule6_pv_80 ... OK! 
+Checking overlaps for volume component0_0 ... OK! 
+Checking overlaps for volume component1_1 ... OK! 
+Checking overlaps for volume component2_2 ... OK! 
+Geometry overlaps check completed !
+Idle> exit
+Graphics systems deleted.
+Visualization Manager deleting...
+Geant4Kernel     INFO  ++ Terminate Geant4 and delete associated actions.
+DDSim            INFO  Execution Time: 455.24 s (User), 0.48 s (System)
